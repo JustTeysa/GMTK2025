@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk38quxm6hjr"]
+
+[ext_resource type="Script" uid="uid://bnec8i4jmlmjq" path="res://entities/player/Player.cs" id="1_symyc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_symyc"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_symyc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_symyc")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
