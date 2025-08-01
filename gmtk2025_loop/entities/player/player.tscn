@@ -141,14 +141,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
+size = Vector2(220, 257)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_symyc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(15.87, 16)
 sprite_frames = SubResource("SpriteFrames_symyc")
 animation = &"walk"
-frame_progress = 0.848556
+frame_progress = 0.553886
+offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -128.5)
 shape = SubResource("RectangleShape2D_abrql")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -250)

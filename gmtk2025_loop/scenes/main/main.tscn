@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc5ub2feucfkv"]
+[gd_scene load_steps=6 format=3 uid="uid://dc5ub2feucfkv"]
 
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="2_iuonh"]
-[ext_resource type="AudioStream" uid="uid://b3jvyf2gdg2ih" path="res://Audio/Originals/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav" id="3_k2fmo"]
+[ext_resource type="AudioStream" uid="uid://df76g1jl64y0g" path="res://Audio/Originals/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav" id="3_k2fmo"]
 [ext_resource type="PackedScene" uid="uid://n5pxfrjgfsmt" path="res://scenes/building/test_building.tscn" id="3_l3cfh"]
-[ext_resource type="PackedScene" uid="uid://bei8udgxpulau" path="res://scenes/utility/teleport.tscn" id="4_l3cfh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
 
@@ -31,13 +30,6 @@ position = Vector2(2762, 0)
 position = Vector2(1381, 0)
 
 [node name="TestBuilding" parent="." instance=ExtResource("3_l3cfh")]
-
-[node name="Teleport" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_l3cfh")]
-position = Vector2(500, 0)
-target = NodePath("Node2D")
-
-[node name="Node2D" type="Node2D" parent="Teleport"]
-position = Vector2(500, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_iuonh")]
 position = Vector2(0, -11)
