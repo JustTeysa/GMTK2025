@@ -8,11 +8,13 @@ public partial class Player : Area2D
 	public Vector2 ScreenSize;
 	public Vector2 Velocity;
 	
+	//[Export]
+	//public AnimatedSprite2D animatedSprite2d;
+	
 	public const int MAX_VELOCITY = 5;
 	
-	private AnimatedSprite2D animatedSprite2d;
-	private const string moveRight = "move_right";
-	private const string moveLeft = "move_left";
+	private const string moveRight = "walk_right";
+	private const string moveLeft = "walk_left";
 	private const string interact = "interact";
 	private const string jump = "jump";
 	
@@ -20,14 +22,17 @@ public partial class Player : Area2D
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
+		//animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		//Position = new Vector2(ScreenSize.X / 2, ScreenSize.Y / 2);
+		
 	}
 	
-	public void Start(Vector2 position)
+	public void Start(Vector2 spawnPosition)
 	{
-		Position = position;
+		//Position = spawnPosition;
 		//Show();
 		GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
-		//animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
