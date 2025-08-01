@@ -143,6 +143,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
 
 [node name="Player" type="Area2D"]
+scale = Vector2(10, 10)
 script = ExtResource("1_symyc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
