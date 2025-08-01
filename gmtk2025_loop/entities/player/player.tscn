@@ -147,7 +147,7 @@ size = Vector2(220, 257)
 script = ExtResource("1_symyc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(15.87, 16)
+scale = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_symyc")
 animation = &"walk"
 frame_progress = 0.553886
