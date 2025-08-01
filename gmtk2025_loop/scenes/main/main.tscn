@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="2_iuonh"]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" node_paths=PackedStringArray("Player")]
 script = ExtResource("1_hyk8p")
+Player = NodePath("Player")
 
 [node name="Player" parent="." instance=ExtResource("2_iuonh")]
+position = Vector2(576, 625)
 
 [node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(576, 626)
