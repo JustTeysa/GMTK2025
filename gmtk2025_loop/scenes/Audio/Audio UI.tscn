@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://12xc8q2oes40"]
+
+[node name="AudioUi" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"UI"
