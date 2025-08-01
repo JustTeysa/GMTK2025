@@ -3,4 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://ct20lwigv8s3u" path="res://scenes/towns/v2 House.png" id="1_4xg7y"]
 
 [node name="TowntestV2" type="Sprite2D"]
+position = Vector2(-14, -464)
 texture = ExtResource("1_4xg7y")
