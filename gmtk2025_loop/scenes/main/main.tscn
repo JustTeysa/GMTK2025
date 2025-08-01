@@ -2,27 +2,34 @@
 
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="2_iuonh"]
-[ext_resource type="AudioStream" uid="uid://b3jvyf2gdg2ih" path="res://Audio/Originals/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav" id="3_k2fmo"]
-[ext_resource type="PackedScene" uid="uid://bk0aw27h3xkjo" path="res://scenes/towns/towntest_v1.tscn" id="4_6q06x"]
-[ext_resource type="PackedScene" uid="uid://bmbhtr5x347a2" path="res://scenes/towns/towntest_v2.tscn" id="5_ow5a4"]
+[ext_resource type="AudioStream" uid="uid://df76g1jl64y0g" path="res://Audio/Originals/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://n5pxfrjgfsmt" path="res://scenes/building/test_building.tscn" id="3_l3cfh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_hyk8p")
 
-[node name="TowntestV2" parent="." instance=ExtResource("5_ow5a4")]
-position = Vector2(963, 544)
+[node name="Floor" type="StaticBody2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("2_iuonh")]
-position = Vector2(1215, 936)
-scale = Vector2(10, 10)
-
-[node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(138, 350)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape2D_6q06x")
 
 [node name="Audio2DPlayerTest" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(82, 155)
 stream = ExtResource("3_k2fmo")
 bus = &"BGs"
 
-[node name="Towntest" parent="." instance=ExtResource("4_6q06x")]
-position = Vector2(-424, 594)
+[node name="TestBuilding4" parent="." instance=ExtResource("3_l3cfh")]
+position = Vector2(-1550, 0)
+
+[node name="TestBuilding3" parent="." instance=ExtResource("3_l3cfh")]
+position = Vector2(2762, 0)
+
+[node name="TestBuilding2" parent="." instance=ExtResource("3_l3cfh")]
+position = Vector2(1381, 0)
+
+[node name="TestBuilding" parent="." instance=ExtResource("3_l3cfh")]
+
+[node name="Player" parent="." instance=ExtResource("2_iuonh")]
+position = Vector2(0, -11)
