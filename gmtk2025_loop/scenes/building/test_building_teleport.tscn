@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqb8iw5dw6its"]
+
+[ext_resource type="PackedScene" uid="uid://bmbhtr5x347a2" path="res://scenes/towns/towntest_v2.tscn" id="1_6x75i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ll78"]
+size = Vector2(618.5, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oon8x"]
+size = Vector2(590, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxh22"]
+size = Vector2(176, 46)
+
+[node name="TestBuilding_Teleport" type="Node2D"]
+
+[node name="TowntestV2" parent="." instance=ExtResource("1_6x75i")]
+position = Vector2(0, -463)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4.75, -402.5)
+shape = SubResource("RectangleShape2D_6ll78")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-16, -921)
+shape = SubResource("RectangleShape2D_oon8x")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(210, -493)
+shape = SubResource("RectangleShape2D_yxh22")
