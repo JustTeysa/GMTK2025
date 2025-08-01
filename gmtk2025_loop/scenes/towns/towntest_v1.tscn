@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk0aw27h3xkjo"]
+
+[ext_resource type="Texture2D" uid="uid://crw0pwpr60jot" path="res://scenes/towns/v1 House.png" id="1_2giej"]
+
+[node name="Towntest" type="Sprite2D"]
+texture = ExtResource("1_2giej")
