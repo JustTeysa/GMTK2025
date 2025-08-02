@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://dumy4tgy0qua5" path="res://scenes/background/background.tscn" id="2_ow5a4"]
-[ext_resource type="Script" uid="uid://xsird80rcrpq" path="res://scenes/building/building_loop.gd" id="3_6q06x"]
+[ext_resource type="Script" path="res://scenes/building/building_loop.gd" id="3_6q06x"]
 [ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/building_1/building_1.tscn" id="4_ow5a4"]
 [ext_resource type="PackedScene" uid="uid://b8mmi6dxcnio3" path="res://scenes/building/building_5/building_5.tscn" id="4_th5th"]
 [ext_resource type="PackedScene" uid="uid://x64qpfdessdf" path="res://scenes/building/building_6/building_6.tscn" id="5_7smn1"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cl5te2w3te4i" path="res://scenes/building/building_7/building_7.tscn" id="8_a8run"]
 [ext_resource type="PackedScene" uid="uid://dr7ixkvujrogy" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_Loop_Global.tscn" id="8_yyfjg"]
 [ext_resource type="PackedScene" uid="uid://h1o06clo8sb5" path="res://scenes/building/building_4/building_4.tscn" id="11_hxu8e"]
-[ext_resource type="PackedScene" uid="uid://wjrr3qcq0jt8" path="res://scenes/Audio/Music.tscn" id="14_7smn1"]
+[ext_resource type="PackedScene" path="res://scenes/Audio/Music.tscn" id="14_7smn1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
 
