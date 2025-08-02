@@ -30,41 +30,41 @@ gravity_scale = 0.0
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_cxr6w")
 
-[node name="NPC" parent="." instance=ExtResource("2_levci")]
+[node name="ALBERT" parent="." instance=ExtResource("2_levci")]
 position = Vector2(279, -92)
 
-[node name="NPC2" parent="." instance=ExtResource("3_f1wi1")]
+[node name="ARC" parent="." instance=ExtResource("3_f1wi1")]
 position = Vector2(477, -94)
 
-[node name="NPC3" parent="." instance=ExtResource("4_dadpm")]
+[node name="COILETTE" parent="." instance=ExtResource("4_dadpm")]
 position = Vector2(671, -92)
 
-[node name="NPC4" parent="." instance=ExtResource("5_755be")]
+[node name="EGGBERT" parent="." instance=ExtResource("5_755be")]
 position = Vector2(864, -94)
 
-[node name="NPC5" parent="." instance=ExtResource("6_hni17")]
+[node name="HOLLY" parent="." instance=ExtResource("6_hni17")]
 position = Vector2(1048, -91)
 
-[node name="NPC6" parent="." instance=ExtResource("7_2uqcq")]
+[node name="KIRK" parent="." instance=ExtResource("7_2uqcq")]
 position = Vector2(1246, -94)
 
-[node name="NPC7" parent="." instance=ExtResource("8_4bj14")]
+[node name="LARRY" parent="." instance=ExtResource("8_4bj14")]
 position = Vector2(1435, -94)
 
-[node name="NPC8" parent="." instance=ExtResource("9_oioxx")]
+[node name="LUPIN" parent="." instance=ExtResource("9_oioxx")]
 position = Vector2(1633, -94)
 
-[node name="NPC9" parent="." instance=ExtResource("10_k04ce")]
+[node name="MOM2" parent="." instance=ExtResource("10_k04ce")]
 position = Vector2(1828, -92)
 
-[node name="NPC10" parent="." instance=ExtResource("11_r2w5d")]
+[node name="MOM" parent="." instance=ExtResource("11_r2w5d")]
 position = Vector2(2011, -94)
 
-[node name="NPC11" parent="." instance=ExtResource("12_pvv55")]
+[node name="RACK" parent="." instance=ExtResource("12_pvv55")]
 position = Vector2(2199, -91)
 
-[node name="NPC12" parent="." instance=ExtResource("13_hdcdl")]
+[node name="SPINEL" parent="." instance=ExtResource("13_hdcdl")]
 position = Vector2(2382, -95)
 
-[node name="NPC13" parent="." instance=ExtResource("14_iohgh")]
+[node name="WIZBERT" parent="." instance=ExtResource("14_iohgh")]
 position = Vector2(2564, -98)
