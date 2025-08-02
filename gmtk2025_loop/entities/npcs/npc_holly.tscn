@@ -10,6 +10,7 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_gq01h")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
+npcGreetingText = "Well... I did have it... But.. Holly said she needed it for a quick second..."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ugih3")

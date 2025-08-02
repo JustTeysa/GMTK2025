@@ -10,6 +10,7 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_bc3or")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
+npcGreetingText = "Sorry, can't talk kid. Those Bert brothers took Spinel's fancy Mower in a poker game.... I didn't even know you could win a hand with that many jokers..."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_hdbjm")
