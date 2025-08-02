@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var speechBubble: SpeechBuble
+@export var Name: String;
 @export var npcGreetingText: String;
 @export var npcSwapText: String;
 @export var npcEndedText: String;
@@ -22,7 +23,7 @@ func _on_body_entered(body: Node2D) -> void:
 		#if (swapped)
 			#UpdatedTextFields(npcEndedText)
 		speechBubble.visible = true
-		speechBubble.set_text(npcGreetingText)
+		speechBubble.set_text(Name + ": " + npcGreetingText)
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -50,4 +51,4 @@ func AttemptItemSwap(player: CharacterBody2D) -> bool:
 	return true
 	
 func UpdatedTextFields(newText: String):
-	speechBubble.set_text(npcGreetingText)
+	speechBubble.set_text(Name + ": " + newText)
