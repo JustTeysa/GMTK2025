@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bnec8i4jmlmjq" path="res://entities/player/Player.cs" id="1_symyc"]
 [ext_resource type="Texture2D" uid="uid://cx0jpiefsm18t" path="res://entities/player/mushroom_spritesheet.png" id="2_abrql"]
-[ext_resource type="Texture2D" uid="uid://corwlgprkkpvu" path="res://entities/player/GJ_25_Ch_SPINEL_v002.png" id="2_sglur"]
+[ext_resource type="Texture2D" uid="uid://bldhedfidax3g" path="res://entities/player/Gj_25_ch_PLAYER_TEST_v001.png" id="2_sglur"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mtric"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bls4j"]
 atlas = ExtResource("2_sglur")
-region = Rect2(0, 0, 94, 140)
+region = Rect2(0, 0, 58, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sglur"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkugw"]
 atlas = ExtResource("2_sglur")
-region = Rect2(0, 0, 94, 140)
+region = Rect2(0, 0, 58, 86)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bectd"]
 atlas = ExtResource("2_abrql")
@@ -24,15 +24,15 @@ region = Rect2(16, 48, 16, 16)
 atlas = ExtResource("2_abrql")
 region = Rect2(32, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bls4j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fjmc"]
 atlas = ExtResource("2_sglur")
-region = Rect2(0, 0, 94, 140)
+region = Rect2(0, 0, 58, 86)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_symyc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mtric")
+"texture": SubResource("AtlasTexture_bls4j")
 }],
 "loop": true,
 "name": &"idle",
@@ -40,7 +40,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sglur")
+"texture": SubResource("AtlasTexture_fkugw")
 }],
 "loop": true,
 "name": &"jump",
@@ -62,7 +62,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bls4j")
+"texture": SubResource("AtlasTexture_8fjmc")
 }],
 "loop": true,
 "name": &"walk",
@@ -70,7 +70,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
-size = Vector2(98, 141)
+size = Vector2(47, 85.5)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_symyc")
@@ -80,14 +80,14 @@ GravityMod = 3.1
 TotalJumps = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -62)
+position = Vector2(0, -35)
 sprite_frames = SubResource("SpriteFrames_symyc")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -70.5)
+position = Vector2(-2.5, -43.25)
 shape = SubResource("RectangleShape2D_abrql")
 
 [node name="Camera2D" type="Camera2D" parent="."]

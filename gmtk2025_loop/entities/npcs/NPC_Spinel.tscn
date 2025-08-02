@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tu6ai5exyyrq"]
+
+[ext_resource type="Texture2D" uid="uid://corwlgprkkpvu" path="res://entities/player/GJ_25_Ch_SPINEL_v002.png" id="1_3onkb"]
+
+[node name="NpcSpinel" type="Sprite2D"]
+position = Vector2(-47, -141)
+texture = ExtResource("1_3onkb")
+centered = false
