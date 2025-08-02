@@ -12,7 +12,7 @@ offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u1dx8")
-label = NodePath("")
+label = NodePath("Panel/RichTextLabel")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

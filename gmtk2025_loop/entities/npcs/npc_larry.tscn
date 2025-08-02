@@ -1,18 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cov1vu4kbfw65"]
+[gd_scene load_steps=5 format=3 uid="uid://ca4lfx17hk7mk"]
 
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="1_aqmvp"]
-[ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_ii8d2"]
-[ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="2_bw2bh"]
+[ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_vjsj4"]
+[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_cub0i"]
+[ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_pkm6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(156, 152)
 
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
-script = ExtResource("1_ii8d2")
+script = ExtResource("1_vjsj4")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_aqmvp")
+texture = ExtResource("2_cub0i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ii8d2")
@@ -20,7 +20,7 @@ shape = SubResource("RectangleShape2D_ii8d2")
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]
 position = Vector2(0, -136)
 
-[node name="SpeechBubble" parent="SpeechBubbleRoot" instance=ExtResource("2_bw2bh")]
+[node name="SpeechBubble" parent="SpeechBubbleRoot" instance=ExtResource("3_pkm6j")]
 visible = false
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

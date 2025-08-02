@@ -1,11 +1,13 @@
 extends Area2D
 
 @export var speechBubble: SpeechBuble
+@export var npcGreetingText: String;
 
 var player_in_range:bool = false
 
 func _ready():
 	print("wassup bitches i'm mario")
+	speechBubble.set_text(npcGreetingText);
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
