@@ -20,6 +20,7 @@ func _ready():
 	ItemWant.to_upper()
 	ItemHave.to_upper()
 	Name.to_upper()
+	speechBubble = get_node("/root/Main/CanvasLayer/StoryTimeText")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

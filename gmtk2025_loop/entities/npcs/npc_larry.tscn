@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b75o4ax81fqqy"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_vjsj4"]
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_cub0i"]
+[ext_resource type="Texture2D" uid="uid://bpu82qu7y071v" path="res://entities/npcs/character_art/Ch-LARRY-V001.png" id="2_vjsj4"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_pkm6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
@@ -13,9 +13,11 @@ speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Larry"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_cub0i")
+position = Vector2(0, -41)
+texture = ExtResource("2_vjsj4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -76)
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]

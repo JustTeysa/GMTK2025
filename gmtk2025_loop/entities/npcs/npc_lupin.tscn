@@ -1,24 +1,25 @@
 [gd_scene load_steps=5 format=3 uid="uid://bn3brfmy3blc0"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_87stq"]
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_xtfkv"]
+[ext_resource type="Texture2D" uid="uid://d4hcf7xxq8r6" path="res://entities/npcs/character_art/Ch-LUPIN-V001.png" id="2_87stq"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_ttlh0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
-size = Vector2(156, 152)
+size = Vector2(156, 184)
 
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_87stq")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Lupin"
 npcGreetingText = "Hey Lil' Dude! Long time no see.... Your mom's Mower huh?... Sorry, I let Kirk borrow it the other day. They're just next door though, the walk'll do ya good."
+npcItemCompletedText = "Dude! You got your mom's mower back from Kirk? Nice! It's looking rad if I do say so myself, better get it home before your mom loses her mind."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -65)
-texture = ExtResource("2_xtfkv")
+position = Vector2(0, -75)
+texture = ExtResource("2_87stq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -76)
+position = Vector2(0, -92)
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]
