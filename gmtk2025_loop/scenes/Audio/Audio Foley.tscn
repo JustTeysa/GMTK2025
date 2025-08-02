@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8xlr0krbpbet"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5l8kx"]
+
+[node name="AudioFoley" type="Node"]
+
+[node name="Char_Foley_Feet" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_5l8kx")
+attenuation = 0.203063
+bus = &"Foley"

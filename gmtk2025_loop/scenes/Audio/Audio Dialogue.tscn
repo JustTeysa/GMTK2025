@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://rroqlrl8vb0b"]
+
+[node name="AudioDialogue" type="Node"]
+
+[node name="DX_Positional" type="AudioStreamPlayer2D" parent="."]
+bus = &"Dialog"
+
+[node name="DX_Global" type="AudioStreamPlayer" parent="."]

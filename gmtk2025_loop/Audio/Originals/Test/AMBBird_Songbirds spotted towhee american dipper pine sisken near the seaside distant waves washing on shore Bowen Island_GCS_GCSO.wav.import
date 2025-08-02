@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://df76g1jl64y0g"
+path="res://.godot/imported/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav-8e7c67725e73860b472faab9f58b64d3.sample"
+
+[deps]
+
+source_file="res://Audio/Originals/Test/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav"
+dest_files=["res://.godot/imported/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav-8e7c67725e73860b472faab9f58b64d3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmt3y14lghkio"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w2jtn"]
+streams_count = 4
+
+[node name="AudioBGs" type="Node2D"]
+
+[node name="BG_Bed_Positional_Looping" type="AudioStreamPlayer2D" parent="."]
+bus = &"BGs"
+
+[node name="BG_OneShot_Looping" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_w2jtn")
+bus = &"BGs"
+
+[node name="BG_Bed_Global_Looping" type="AudioStreamPlayer" parent="."]
