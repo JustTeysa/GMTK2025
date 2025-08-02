@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dc5ub2feucfkv"]
+[gd_scene load_steps=19 format=3 uid="uid://dc5ub2feucfkv"]
 
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://dkyasldmvencx" path="res://scenes/menu.tscn" id="2_nvumn"]
 [ext_resource type="PackedScene" uid="uid://dumy4tgy0qua5" path="res://scenes/background/background.tscn" id="2_ow5a4"]
 [ext_resource type="Script" uid="uid://dp3l4vnupso50" path="res://scenes/speech_bubble/speech_bubble.gd" id="2_raeie"]
 [ext_resource type="Script" uid="uid://xsird80rcrpq" path="res://scenes/building/building_loop.gd" id="3_6q06x"]
@@ -21,6 +22,8 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_hyk8p")
+
+[node name="Menu" parent="." instance=ExtResource("2_nvumn")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
