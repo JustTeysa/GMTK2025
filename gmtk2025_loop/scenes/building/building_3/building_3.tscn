@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bghyeuq6ya5s6"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_3jywt"]
-[ext_resource type="Texture2D" path="res://scenes/building/building_3/Camp_Full.png" id="3_yd3j0"]
-[ext_resource type="Texture2D" path="res://scenes/building/building_3/Camp_Awning_3.png" id="4_238r5"]
+[ext_resource type="Texture2D" uid="uid://k4at38guxmgr" path="res://scenes/building/building_3/Camp_Full.png" id="3_yd3j0"]
+[ext_resource type="Texture2D" uid="uid://dtvit0ivnge8r" path="res://scenes/building/building_3/Camp_Awning_3.png" id="4_238r5"]
 [ext_resource type="PackedScene" uid="uid://deg8amqvntudx" path="res://entities/npcs/npc_kirk.tscn" id="5_7q6j6"]
-[ext_resource type="Texture2D" path="res://scenes/building/building_3/Camp_Awning_5.png" id="5_cn8q0"]
+[ext_resource type="Texture2D" uid="uid://bp468prc43ums" path="res://scenes/building/building_3/Camp_Awning_5.png" id="5_cn8q0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(804, 5000)
