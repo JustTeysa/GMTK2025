@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvrf8kb353mpq"
+path="res://.godot/imported/GMTK 2025 - Main Theme (Full).mp3-fc4036ca8d6ab47f1a86faf302a90770.mp3str"
+
+[deps]
+
+source_file="res://Audio/Originals/Music/GMTK 2025 - Main Theme (Full).mp3"
+dest_files=["res://.godot/imported/GMTK 2025 - Main Theme (Full).mp3-fc4036ca8d6ab47f1a86faf302a90770.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
