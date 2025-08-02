@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2pq2ubw7xpoh"
-path="res://.godot/imported/House_2_v2.png-9f9ccc662f9dc331460925d669e4df38.ctex"
+uid="uid://ovy4nomtmeaa"
+path="res://.godot/imported/Inn_Awning_5.png-55d17e18fe5885891ba9629dc5fd582a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/building/house_2/House_2_v2.png"
-dest_files=["res://.godot/imported/House_2_v2.png-9f9ccc662f9dc331460925d669e4df38.ctex"]
+source_file="res://scenes/building/building_7/Inn_Awning_5.png"
+dest_files=["res://.godot/imported/Inn_Awning_5.png-55d17e18fe5885891ba9629dc5fd582a.ctex"]
 
 [params]
 

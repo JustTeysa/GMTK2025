@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7oety6rotrmt"]
+
+[ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_t3hm1"]
+[ext_resource type="PackedScene" uid="uid://bghyeuq6ya5s6" path="res://scenes/building/building_3/building_3.tscn" id="2_52x6f"]
+
+[node name="Building_8" type="Area2D"]
+script = ExtResource("1_t3hm1")
+metadata/_custom_type_script = "uid://4pg5rir4l6sj"
+
+[node name="Building_3" parent="." instance=ExtResource("2_52x6f")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

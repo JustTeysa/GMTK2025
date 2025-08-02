@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chhy4h5rf01lf"
-path="res://.godot/imported/Bank_Full.png-6b061cce92bfa13f9e71087271054a15.ctex"
+uid="uid://bv1fbcfqr2kyh"
+path="res://.godot/imported/Inn_Awning_2.png-d83b72f62c371d516a388bae274d4693.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/building/bank/Bank_Full.png"
-dest_files=["res://.godot/imported/Bank_Full.png-6b061cce92bfa13f9e71087271054a15.ctex"]
+source_file="res://scenes/building/building_7/Inn_Awning_2.png"
+dest_files=["res://.godot/imported/Inn_Awning_2.png-d83b72f62c371d516a388bae274d4693.ctex"]
 
 [params]
 
