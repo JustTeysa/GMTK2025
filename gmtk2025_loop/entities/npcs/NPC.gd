@@ -6,6 +6,7 @@ extends Area2D
 @export var npcItemCompletedText: String;
 #@export var npcEndedText: String;
 @export var isMom: bool = false;
+@export var momStarterText: String;
 
 var ItemWant: String = "NO ITEM WANT DEFINED";
 var ItemHave: String = "NO ITEM WANT DEFINED";
@@ -18,18 +19,21 @@ var contactMade:bool = false;
 func _ready():
 	ItemWant.to_upper()
 	ItemHave.to_upper()
+	Name.to_upper()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body
-		ContactPlayer(player)
 		
-		if (CheckPlayerDialogueFlag(player)):
+		if (isMom && !contactMade):
+			UpdatedTextFields(momStarterText)
+		elif (CheckPlayerDialogueFlag(player)):
 			UpdatedTextFields(npcItemCompletedText)
 		else:
 			UpdatedTextFields(npcGreetingText)
 		
 		enableTextBox()
+		ContactPlayer(player)
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -62,7 +66,7 @@ func CheckPlayerDialogueFlag(player: CharacterBody2D) -> bool:
 	if (player.Item == "NONE"):
 		print("Item Result: FAILED")
 	
-	if (player.Item == "MOWER"):
+	if (player.Item == "FOUND"):
 		print("Item Result: SUCCESS")
 		itemFound = true;
 	
