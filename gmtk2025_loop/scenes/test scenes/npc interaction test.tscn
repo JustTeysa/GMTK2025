@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://p1pwpixtsfs4"]
+
+[ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_oagx2"]
+[ext_resource type="PackedScene" uid="uid://n5pxfrjgfsmt" path="res://scenes/building/test_building.tscn" id="2_ffn0j"]
+[ext_resource type="PackedScene" uid="uid://bei8udgxpulau" path="res://scenes/utility/teleport.tscn" id="3_mpx80"]
+[ext_resource type="AudioStream" uid="uid://df76g1jl64y0g" path="res://Audio/Originals/Test/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav" id="4_i0bpe"]
+[ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="5_62vdl"]
+[ext_resource type="PackedScene" uid="uid://cov1vu4kbfw65" path="res://entities/npcs/npc.tscn" id="6_ffn0j"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_oagx2")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="Environment"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor"]
+shape = SubResource("WorldBoundaryShape2D_6q06x")
+
+[node name="Buildings" type="Node2D" parent="Environment"]
+
+[node name="TestBuilding1" parent="Environment/Buildings" instance=ExtResource("2_ffn0j")]
+position = Vector2(-1000, 0)
+
+[node name="LeftTeleport_Trigger" parent="Environment/Buildings/TestBuilding1" node_paths=PackedStringArray("target") instance=ExtResource("3_mpx80")]
+position = Vector2(-280, 0)
+target = NodePath("../../TestBuilding4/LeftTeleport_Target")
+
+[node name="RightTeleport_Target" type="Marker2D" parent="Environment/Buildings/TestBuilding1"]
+position = Vector2(24, 1)
+
+[node name="TestBuilding4" parent="Environment/Buildings" instance=ExtResource("2_ffn0j")]
+position = Vector2(1000, 0)
+
+[node name="LeftTeleport_Target" type="Marker2D" parent="Environment/Buildings/TestBuilding4"]
+position = Vector2(-280, 0)
+
+[node name="RightTeleport_Trigger" parent="Environment/Buildings/TestBuilding4" node_paths=PackedStringArray("target") instance=ExtResource("3_mpx80")]
+position = Vector2(280, 0)
+target = NodePath("../../TestBuilding1/RightTeleport_Target")
+
+[node name="TestBuilding5" parent="Environment/Buildings" instance=ExtResource("2_ffn0j")]
+position = Vector2(3000, 0)
+
+[node name="Audio2DPlayerTest" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(82, 155)
+stream = ExtResource("4_i0bpe")
+bus = &"BGs"
+
+[node name="Player" parent="." instance=ExtResource("5_62vdl")]
+position = Vector2(-1, 0)
+
+[node name="StartPosition" type="Marker2D" parent="."]
+
+[node name="NPC" parent="." instance=ExtResource("6_ffn0j")]
+position = Vector2(556, -77)
+
+[connection signal="child_entered_tree" from="Environment/Buildings/TestBuilding1/LeftTeleport_Trigger" to="." method="_on_right_teleport_trigger_child_entered_tree"]
+[connection signal="child_entered_tree" from="Environment/Buildings/TestBuilding4/RightTeleport_Trigger" to="." method="_on_right_teleport_trigger_child_entered_tree"]

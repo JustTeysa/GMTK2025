@@ -72,7 +72,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
 size = Vector2(47, 85.5)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_symyc")
 Speed = 500.0
 JumpVelocity = -1200.0
