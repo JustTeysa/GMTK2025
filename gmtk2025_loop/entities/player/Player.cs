@@ -10,7 +10,7 @@ public partial class Player : CharacterBody2D
 	//public Vector2 Velocity;
 	
 	//[Export]
-	//public AnimatedSprite2D animatedSprite2d;
+	private AnimatedSprite2D animatedSprite2d;
 	
 	public const int MAX_VELOCITY = 5;
 	
@@ -23,7 +23,7 @@ public partial class Player : CharacterBody2D
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
-		//animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		//Position = new Vector2(ScreenSize.X / 2, ScreenSize.Y / 2);
 		
 	}
@@ -70,10 +70,28 @@ public partial class Player : CharacterBody2D
 		if (direction != Vector2.Zero)
 		{
 			velocity.X = direction.X * Speed;
+			
 		}
 		else
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+		}
+
+		if (velocity.X != 0)
+		{
+			animatedSprite2d.Play("walk");
+			if (velocity.X < 0)
+			{
+				animatedSprite2d.FlipH = true;
+			}
+			else if (velocity.X > 0)
+			{
+				animatedSprite2d.FlipH = false;
+			}
+		}
+		else
+		{
+			animatedSprite2d.Play("idle");
 		}
 
 		Velocity = velocity;
