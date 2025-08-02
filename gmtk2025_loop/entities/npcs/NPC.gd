@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speechBubble: SpeechBuble
+var speechBubble: SpeechBuble
 @export var Name: String;
 @export var npcGreetingText: String;
 @export var npcItemCompletedText: String;
@@ -16,6 +16,7 @@ var player: CharacterBody2D
 func _ready():
 	ItemWant.to_upper()
 	ItemHave.to_upper()
+	speechBubble = get_node("/root/Main/CanvasLayer/StoryTimeText")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

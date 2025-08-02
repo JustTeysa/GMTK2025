@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://dc5ub2feucfkv"]
+[gd_scene load_steps=18 format=3 uid="uid://dc5ub2feucfkv"]
 
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://dumy4tgy0qua5" path="res://scenes/background/background.tscn" id="2_ow5a4"]
+[ext_resource type="Script" uid="uid://dp3l4vnupso50" path="res://scenes/speech_bubble/speech_bubble.gd" id="2_raeie"]
 [ext_resource type="Script" uid="uid://xsird80rcrpq" path="res://scenes/building/building_loop.gd" id="3_6q06x"]
+[ext_resource type="FontFile" uid="uid://bmnxq4d1vwmax" path="res://scenes/speech_bubble/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="3_hxu8e"]
 [ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/building_1/building_1.tscn" id="4_ow5a4"]
 [ext_resource type="PackedScene" uid="uid://b8mmi6dxcnio3" path="res://scenes/building/building_5/building_5.tscn" id="4_th5th"]
 [ext_resource type="PackedScene" uid="uid://x64qpfdessdf" path="res://scenes/building/building_6/building_6.tscn" id="5_7smn1"]
@@ -19,6 +21,38 @@
 
 [node name="Main" type="Node"]
 script = ExtResource("1_hyk8p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StoryTimeText" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("2_raeie")
+label = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/StoryTimeText"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 422.0
+offset_top = 200.0
+offset_right = -423.0
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_hxu8e")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "SOME COOL STUFF"
+fit_content = true
+scroll_active = false
 
 [node name="Background" parent="." instance=ExtResource("2_ow5a4")]
 position = Vector2(-1097, -1086)
