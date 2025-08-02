@@ -11,6 +11,8 @@ size = Vector2(156, 152)
 script = ExtResource("1_vjsj4")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Larry"
+npcGreetingText = "..."
+npcItemCompletedText = "Ok... cut my grass I guess..."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -41)

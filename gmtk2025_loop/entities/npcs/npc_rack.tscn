@@ -11,6 +11,8 @@ size = Vector2(156, 152)
 script = ExtResource("1_wm0du")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Rack"
+npcGreetingText = ":>"
+npcItemCompletedText = ":<"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_b6roh")
