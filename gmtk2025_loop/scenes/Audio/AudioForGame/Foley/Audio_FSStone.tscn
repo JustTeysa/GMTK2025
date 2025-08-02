@@ -1,0 +1,37 @@
+[gd_scene load_steps=14 format=3 uid="uid://day7wk4h02fcw"]
+
+[ext_resource type="AudioStream" uid="uid://clfx5ly5byavk" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_01.wav" id="1_jr0xh"]
+[ext_resource type="AudioStream" uid="uid://br53dqxjypf23" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_02.wav" id="2_kud7s"]
+[ext_resource type="AudioStream" uid="uid://drccqlkermt66" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_11.wav" id="3_cy8pf"]
+[ext_resource type="AudioStream" uid="uid://d3fhv1iw3ud6q" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_12.wav" id="4_06ktx"]
+[ext_resource type="AudioStream" uid="uid://cqobvl5fx1l8n" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_03.wav" id="5_xl0jg"]
+[ext_resource type="AudioStream" uid="uid://b5lh5tma6sscf" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_04.wav" id="6_0gnbw"]
+[ext_resource type="AudioStream" uid="uid://b37fknjrgn8mf" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_05.wav" id="7_xxt1t"]
+[ext_resource type="AudioStream" uid="uid://dfyfe2opy56m8" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_06.wav" id="8_e7ush"]
+[ext_resource type="AudioStream" uid="uid://dyu8hel6y3tcr" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_07.wav" id="9_71w6l"]
+[ext_resource type="AudioStream" uid="uid://4r3do4iq5jai" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_08.wav" id="10_c6yef"]
+[ext_resource type="AudioStream" uid="uid://olferlkeu5ru" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_09.wav" id="11_y4y1q"]
+[ext_resource type="AudioStream" uid="uid://bxs8afkkyop71" path="res://Audio/Originals/Foley/GMTK2025_FSStone_1ch_10.wav" id="12_h380j"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5l8kx"]
+streams_count = 12
+stream_0/stream = ExtResource("1_jr0xh")
+stream_1/stream = ExtResource("2_kud7s")
+stream_2/stream = ExtResource("5_xl0jg")
+stream_3/stream = ExtResource("6_0gnbw")
+stream_4/stream = ExtResource("7_xxt1t")
+stream_5/stream = ExtResource("8_e7ush")
+stream_6/stream = ExtResource("9_71w6l")
+stream_7/stream = ExtResource("10_c6yef")
+stream_8/stream = ExtResource("11_y4y1q")
+stream_9/stream = ExtResource("12_h380j")
+stream_10/stream = ExtResource("3_cy8pf")
+stream_11/stream = ExtResource("4_06ktx")
+
+[node name="AudioFoley" type="Node"]
+
+[node name="Char_Foley_Feet" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_5l8kx")
+volume_db = -6.0
+attenuation = 0.203063
+bus = &"Foley"

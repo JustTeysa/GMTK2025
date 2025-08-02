@@ -1,0 +1,33 @@
+[gd_scene load_steps=12 format=3 uid="uid://cy38uemomfwoc"]
+
+[ext_resource type="AudioStream" uid="uid://82m06g0sgxev" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_01.wav" id="1_7cqy3"]
+[ext_resource type="AudioStream" uid="uid://crangd4pinsqj" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_02.wav" id="2_jy0fe"]
+[ext_resource type="AudioStream" uid="uid://bi7snerh7jgnl" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_03.wav" id="3_u8obl"]
+[ext_resource type="AudioStream" uid="uid://bis18rf112pwi" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_04.wav" id="4_jih0q"]
+[ext_resource type="AudioStream" uid="uid://ndmgbpkirbs7" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_05.wav" id="5_xjdog"]
+[ext_resource type="AudioStream" uid="uid://cfm07rudqipb8" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_06.wav" id="6_nkypj"]
+[ext_resource type="AudioStream" uid="uid://bb77ocr1p80xc" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_07.wav" id="7_dhwet"]
+[ext_resource type="AudioStream" uid="uid://dt7vjui2c5t8u" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_08.wav" id="8_6tquq"]
+[ext_resource type="AudioStream" uid="uid://b22tkrhiakklj" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_09.wav" id="9_meho3"]
+[ext_resource type="AudioStream" uid="uid://dkkj6alki5xqq" path="res://Audio/Originals/Foley/GMTK2025_FSGrass_1ch_10.wav" id="10_wvfol"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5l8kx"]
+streams_count = 10
+stream_0/stream = ExtResource("1_7cqy3")
+stream_1/stream = ExtResource("2_jy0fe")
+stream_2/stream = ExtResource("3_u8obl")
+stream_3/stream = ExtResource("4_jih0q")
+stream_4/stream = ExtResource("5_xjdog")
+stream_5/stream = ExtResource("6_nkypj")
+stream_6/stream = ExtResource("7_dhwet")
+stream_7/stream = ExtResource("8_6tquq")
+stream_8/stream = ExtResource("9_meho3")
+stream_9/stream = ExtResource("10_wvfol")
+
+[node name="AudioFoley" type="Node"]
+
+[node name="Char_Foley_Feet" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_5l8kx")
+volume_db = -6.0
+attenuation = 0.203063
+bus = &"Foley"
