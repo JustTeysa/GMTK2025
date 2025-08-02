@@ -14,9 +14,11 @@ Name = "Lupin"
 npcGreetingText = "Hey Lil' Dude! Long time no see.... Your mom's Mower huh?... Sorry, I let Kirk borrow it the other day. They're just next door though, the walk'll do ya good."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -65)
 texture = ExtResource("2_xtfkv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -76)
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]

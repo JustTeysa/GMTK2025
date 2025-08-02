@@ -14,9 +14,11 @@ Name = "Spinel"
 npcGreetingText = "Good Morning Friend. Wonderful day to enjoy short grass isn't it? I did it myself you know. Enchanted Lawn Care is all the rage these days afterall. Why I was just showing my neighbour Coilette it's new riding functions.... She still hasn't come back with it."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -67.94)
 texture = ExtResource("2_lsyq2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -76)
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]

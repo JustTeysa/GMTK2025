@@ -14,9 +14,11 @@ Name = "Eggbert"
 npcGreetingText = "Huh? No That was Wizbert. Mad Lads run half the town with it didn't ya?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -64)
 texture = ExtResource("2_mhn71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -76)
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]
