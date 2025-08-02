@@ -34,8 +34,10 @@ public partial class Player : CharacterBody2D
 	private float defaultXScale = 12.0f;
 	private float squashPower = 0.0001f;
 	private float maxSquashMagnitude = 0.4f;
-	private float squashSpeed = 4.0f;
+	private float squashSpeed = 0.9f;
 	private float unsquashSpeed = 0.8f;
+	private float bigSquashSpeed = 3f;
+	private float bigUnsquashSpeed = 2.0f;
 	private float squashYTarget = 0.0f;
 	private float squashXTarget = 0.0f;
 	
@@ -108,6 +110,7 @@ public partial class Player : CharacterBody2D
 		MoveAndSlide();
 	}
 
+	private bool bigSquash = false;
 	private void CheckImpact()
 	{
 		if (airTime > 0.2f && !squashing && IsOnFloor())
@@ -115,16 +118,25 @@ public partial class Player : CharacterBody2D
 			squashing = true;
 			squashYTarget = Mathf.Clamp(airTime * squashPower * animatedSprite2d.Scale.Y, maxSquashMagnitude, defaultYScale);
 
-			squashYTarget = (airTime < 1.0f) ? 0.9f * animatedSprite2d.Scale.Y : 0.2f * animatedSprite2d.Scale.Y;
-			squashXTarget = (airTime < 1.0f) ? 1.1f * animatedSprite2d.Scale.Y : 1.8f * animatedSprite2d.Scale.Y;
+			squashYTarget = (airTime < 1.0f) ? 0.75f * animatedSprite2d.Scale.Y : 0.2f * animatedSprite2d.Scale.Y;
+			squashXTarget = (airTime < 1.0f) ? 1.2f * animatedSprite2d.Scale.X : 1.8f * animatedSprite2d.Scale.X;
 
+			bigSquash = (airTime > 1.0f);
+			
 			airTime = 0.0f;
 		}
 
+		float sqSpd = 1.0f;
 		if (squashing)
 		{
+			if (bigSquash)
+				sqSpd = bigSquashSpeed;
+			else
+				sqSpd = squashSpeed;
+				
+			
 			//animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, squashYTarget, squashSpeed));
-			animatedSprite2d.Scale = new Vector2(Mathf.MoveToward(animatedSprite2d.Scale.X, squashXTarget, squashSpeed), Mathf.MoveToward(animatedSprite2d.Scale.Y, squashYTarget, squashSpeed));
+			animatedSprite2d.Scale = new Vector2(Mathf.MoveToward(animatedSprite2d.Scale.X, squashXTarget, sqSpd), Mathf.MoveToward(animatedSprite2d.Scale.Y, squashYTarget, sqSpd));
 			if (animatedSprite2d.Scale.Y == squashYTarget)
 			{
 				squashing = false;
@@ -132,8 +144,12 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
+			if (bigSquash)
+				sqSpd = bigUnsquashSpeed;
+			else
+				sqSpd = unsquashSpeed;
 			//animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, defaultYScale, unsquashSpeed));
-			animatedSprite2d.Scale = new Vector2(Mathf.MoveToward(animatedSprite2d.Scale.X, defaultXScale, unsquashSpeed), Mathf.MoveToward(animatedSprite2d.Scale.Y, defaultYScale, unsquashSpeed));
+			animatedSprite2d.Scale = new Vector2(Mathf.MoveToward(animatedSprite2d.Scale.X, defaultXScale, sqSpd), Mathf.MoveToward(animatedSprite2d.Scale.Y, defaultYScale, sqSpd));
 		}
 	}
 	
