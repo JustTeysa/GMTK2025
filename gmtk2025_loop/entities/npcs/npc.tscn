@@ -10,6 +10,7 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_ii8d2")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
+npcGreetingText = "farts!"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_aqmvp")
@@ -18,10 +19,14 @@ texture = ExtResource("1_aqmvp")
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]
-position = Vector2(0, -136)
+position = Vector2(400, 0)
 
 [node name="SpeechBubble" parent="SpeechBubbleRoot" instance=ExtResource("2_bw2bh")]
 visible = false
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

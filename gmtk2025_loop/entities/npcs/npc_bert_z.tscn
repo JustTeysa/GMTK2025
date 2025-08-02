@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://jyu3m81r4pln"]
+[gd_scene load_steps=5 format=3 uid="uid://bf8vshp33o1k0"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_ctlxd"]
 [ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_qe8yf"]
@@ -18,7 +18,7 @@ texture = ExtResource("2_qe8yf")
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]
-position = Vector2(0, -136)
+position = Vector2(400, 0)
 
 [node name="SpeechBubble" parent="SpeechBubbleRoot" instance=ExtResource("3_ciqjv")]
 visible = false
