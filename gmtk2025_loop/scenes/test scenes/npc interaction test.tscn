@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://p1pwpixtsfs4"]
 
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_oagx2"]
-[ext_resource type="PackedScene" path="res://scenes/building/test_building.tscn" id="2_ffn0j"]
+[ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/building_1/building_1.tscn" id="2_ffn0j"]
 [ext_resource type="PackedScene" uid="uid://bei8udgxpulau" path="res://scenes/utility/teleport.tscn" id="3_mpx80"]
 [ext_resource type="AudioStream" uid="uid://df76g1jl64y0g" path="res://Audio/Originals/Test/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav" id="4_i0bpe"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="5_62vdl"]
