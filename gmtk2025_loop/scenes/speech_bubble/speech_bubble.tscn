@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bunmq0qrc116h"]
+
+[ext_resource type="Script" uid="uid://dp3l4vnupso50" path="res://scenes/speech_bubble/speech_bubble.gd" id="1_u1dx8"]
+
+[node name="SpeechBubble" type="Node2D"]
+script = ExtResource("1_u1dx8")
