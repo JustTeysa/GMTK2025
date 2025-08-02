@@ -13,7 +13,6 @@ var swapped: bool = false;
 var player: CharacterBody2D
 
 func _ready():
-	print("wassup bitches i'm mario")
 	ItemWant.to_upper()
 	ItemHave.to_upper()
 
