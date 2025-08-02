@@ -25,7 +25,7 @@ size = Vector2(782.5, 32.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxdhq"]
 size = Vector2(280, 6)
 
-[node name="Building1" type="Area2D" node_paths=PackedStringArray("collider")]
+[node name="Building_5" type="Area2D" node_paths=PackedStringArray("collider")]
 script = ExtResource("1_p720q")
 collider = NodePath("AreaTrigger")
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"

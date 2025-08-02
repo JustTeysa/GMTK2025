@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bpkkeem1oxws8" path="res://scenes/building/building_7/Inn_Awning_3.png" id="5_etxmq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
-size = Vector2(1094, 5000)
+size = Vector2(1363.5, 5000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjklf"]
 size = Vector2(76, 55)
@@ -24,7 +24,7 @@ size = Vector2(177.5, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6u282"]
 size = Vector2(92, 13)
 
-[node name="Building1" type="Area2D" node_paths=PackedStringArray("collider")]
+[node name="Building_7" type="Area2D" node_paths=PackedStringArray("collider")]
 script = ExtResource("1_fvj6y")
 collider = NodePath("AreaTrigger")
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"

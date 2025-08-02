@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://h1o06clo8sb5"]
+[gd_scene load_steps=4 format=3 uid="uid://h1o06clo8sb5"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_t5uxg"]
 [ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/building_1/building_1.tscn" id="2_v03f1"]
 
-[node name="Building_4" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v03f1"]
+size = Vector2(525, 5012)
+
+[node name="Building_4" type="Area2D" node_paths=PackedStringArray("collider")]
 script = ExtResource("1_t5uxg")
+collider = NodePath("CollisionShape2D")
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -2496)
+shape = SubResource("RectangleShape2D_v03f1")
 
 [node name="Building_1" parent="." instance=ExtResource("2_v03f1")]
 
