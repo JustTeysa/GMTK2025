@@ -9,7 +9,7 @@
 size = Vector2(942, 5000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3xtn"]
-size = Vector2(602, 23)
+size = Vector2(73, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yxsm"]
 size = Vector2(318, 20)
@@ -52,7 +52,7 @@ texture = ExtResource("4_5uic8")
 [node name="StaticBody2D" type="StaticBody2D" parent="Collisions"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
-position = Vector2(9, -438)
+position = Vector2(273.5, -438)
 shape = SubResource("RectangleShape2D_r3xtn")
 one_way_collision = true
 
