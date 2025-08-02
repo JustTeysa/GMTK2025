@@ -19,6 +19,8 @@ public partial class Player : CharacterBody2D
 	private const string interact = "interact";
 	private const string jump = "jump";
 	
+	private bool grounded = false;
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -51,17 +53,20 @@ public partial class Player : CharacterBody2D
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
+		grounded = true;
 
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
 			velocity += GetGravity() * (float)delta;
+			grounded = false;
 		}
 
 		// Handle Jump.
 		if (Input.IsActionJustPressed(jump) && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
+			grounded = false;
 		}
 
 		// Get the input direction and handle the movement/deceleration.
@@ -70,32 +75,52 @@ public partial class Player : CharacterBody2D
 		if (direction != Vector2.Zero)
 		{
 			velocity.X = direction.X * Speed;
-			
 		}
 		else
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		}
 
-		if (velocity.X != 0)
+		Velocity = velocity;
+		MoveAndSlide();
+		
+		SetAnimation();
+	}
+
+	private void SetAnimation()
+	{
+		if (IsOnFloor())
 		{
-			animatedSprite2d.Play("walk");
-			if (velocity.X < 0)
+			if (Velocity.X != 0)
 			{
-				animatedSprite2d.FlipH = true;
+				animatedSprite2d.Play("walk");
+				if (Velocity.X < 0)
+				{
+					animatedSprite2d.FlipH = true;
+				}
+				else if (Velocity.X > 0)
+				{
+					animatedSprite2d.FlipH = false;
+				}
 			}
-			else if (velocity.X > 0)
+			else
 			{
-				animatedSprite2d.FlipH = false;
+				animatedSprite2d.Play("idle");
 			}
 		}
 		else
 		{
-			animatedSprite2d.Play("idle");
+			animatedSprite2d.Play("jump");
+			
+			if (Velocity.X < 0)
+				{
+					animatedSprite2d.FlipH = true;
+				}
+				else if (Velocity.X > 0)
+				{
+					animatedSprite2d.FlipH = false;
+				}
 		}
-
-		Velocity = velocity;
-		MoveAndSlide();
 	}
 	
 	//IM DED
