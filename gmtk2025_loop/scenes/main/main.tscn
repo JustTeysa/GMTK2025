@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dr7ixkvujrogy" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_Loop_Global.tscn" id="8_yyfjg"]
 [ext_resource type="PackedScene" uid="uid://bghyeuq6ya5s6" path="res://scenes/building/building_8/building_8.tscn" id="10_7smn1"]
 [ext_resource type="PackedScene" uid="uid://h1o06clo8sb5" path="res://scenes/building/building_4/building_4.tscn" id="11_hxu8e"]
-[ext_resource type="PackedScene" path="res://scenes/Audio/Music.tscn" id="14_7smn1"]
+[ext_resource type="PackedScene" uid="uid://wjrr3qcq0jt8" path="res://scenes/Audio/Music.tscn" id="14_7smn1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
 
