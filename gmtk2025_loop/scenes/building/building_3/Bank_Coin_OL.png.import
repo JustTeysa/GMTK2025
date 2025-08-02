@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jx0xem0dqg2b"
-path="res://.godot/imported/House_1.png-4a40955aa1bcde208a105651d8e2382e.ctex"
+uid="uid://b6i8u3i28m2tn"
+path="res://.godot/imported/Bank_Coin_OL.png-b30473a6f2b2c01fafb35a6c9344a794.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/building/House_1.png"
-dest_files=["res://.godot/imported/House_1.png-4a40955aa1bcde208a105651d8e2382e.ctex"]
+source_file="res://scenes/building/building_3/Bank_Coin_OL.png"
+dest_files=["res://.godot/imported/Bank_Coin_OL.png-b30473a6f2b2c01fafb35a6c9344a794.ctex"]
 
 [params]
 

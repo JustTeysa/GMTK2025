@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://iwqo14cnf26l"]
+[gd_scene load_steps=2 format=3 uid="uid://7c8l5jdh7st6"]
 
-[ext_resource type="Texture2D" uid="uid://bgtaou4v67j3c" path="res://scenes/building/House_2.png" id="1_c4nlc"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fqma0"]
+load_path = "res://.godot/imported/House_2.png-21be40027a9553841d1433c0533b61a3.ctex"
 
 [node name="House2Basic" type="Sprite2D"]
-texture = ExtResource("1_c4nlc")
+texture = SubResource("CompressedTexture2D_fqma0")

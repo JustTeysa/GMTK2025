@@ -1,4 +1,4 @@
-class_name SpeechBuble extends Node2D
+class_name SpeechBuble extends CanvasItem
 
 @export var label : RichTextLabel
 
