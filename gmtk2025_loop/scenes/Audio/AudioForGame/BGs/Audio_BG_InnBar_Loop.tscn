@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://lkv2binl0jlr"]
+
+[ext_resource type="AudioStream" uid="uid://bo1x1w3kb5q6j" path="res://Audio/Originals/BGs/GMTK2025_InnBarAmb_1ch_Lp_02.wav" id="1_bv4nk"]
+
+[node name="AudioBGs" type="Node2D"]
+
+[node name="BG_Bed_Positional_Looping" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_bv4nk")
+volume_db = -6.0
+autoplay = true
+max_distance = 1400.0
+attenuation = 1.4
+panning_strength = 1.6
+bus = &"BGs"

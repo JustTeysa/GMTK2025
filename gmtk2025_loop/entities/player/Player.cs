@@ -204,18 +204,38 @@ public partial class Player : CharacterBody2D
 		}
 	}
 
-	private Godot.Collections.Dictionary<string, bool> NpcContacts;
+	public Godot.Collections.Dictionary<string, bool> NpcContacts;
+	
+	[Export]
+	public string[] requiredNpcs = {"Base"};
+	public bool allContacts = false;
+	
 	public void AddContact(string npcName)
 	{
-		bool added = NpcContacts.TryAdd(npcName, true);
+		bool added = NpcContacts.TryAdd(npcName.ToUpper(), true);
 
 		if (added)
 		{
 			GD.Print(npcName + ": Contact Success");
+			GD.Print("Total Contacts Made: " + NpcContacts.Count);
 		}
 		else
 		{
 			GD.Print(npcName + ": Contact FAILED");
 		}
+
+		
+		for (int i = 0; i < requiredNpcs.Length; i++)
+		{
+			if (!NpcContacts.ContainsKey(requiredNpcs[i].ToUpper()))
+			{
+				allContacts = false;
+				GD.Print(requiredNpcs[i] + ": MISSING CONTACT");
+				break;
+			}
+		}
+
+		//
+		//Item = "FOUND";
 	}
 }

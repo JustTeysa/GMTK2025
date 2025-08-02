@@ -13,6 +13,7 @@ Speed = 500.0
 JumpVelocity = -1200.0
 GravityMod = 3.1
 TotalJumps = 2
+requiredNpcs = PackedStringArray("Albert", "Arc", "Coilette", "Eggbert", "Holly", "Kirk", "Lupin", "Spinel", "Wizbert")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -49)
