@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class Player : CharacterBody2D
 {
@@ -50,6 +51,8 @@ public partial class Player : CharacterBody2D
 		defaultYScale = animatedSprite2d.Scale.Y;
 		defaultXScale = animatedSprite2d.Scale.X;
 		maxSquashMagnitude = defaultYScale * maxSquashMagnitude;
+
+		NpcContacts = new Godot.Collections.Dictionary<string, bool>();
 	}
 	
 	public void Start(Vector2 spawnPosition)
@@ -198,6 +201,21 @@ public partial class Player : CharacterBody2D
 			{
 				animatedSprite2d.FlipH = true;
 			}
+		}
+	}
+
+	private Godot.Collections.Dictionary<string, bool> NpcContacts;
+	public void AddContact(string npcName)
+	{
+		bool added = NpcContacts.TryAdd(npcName, true);
+
+		if (added)
+		{
+			GD.Print(npcName + ": Contact Success");
+		}
+		else
+		{
+			GD.Print(npcName + ": Contact FAILED");
 		}
 	}
 }
