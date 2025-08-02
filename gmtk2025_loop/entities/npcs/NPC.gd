@@ -1,22 +1,23 @@
 extends Area2D
 
-
+@export var speechBubble: SpeechBuble
+@export var npcGreetingText: String;
 
 var player_in_range:bool = false
 
 func _ready():
 	print("wassup bitches i'm mario")
+	speechBubble.set_text(npcGreetingText);
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = true
-		print("Player entered NPC range.")
-
+		speechBubble.visible = true
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
-		print("Player left NPC range.")
+		speechBubble.visible = false
 
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):

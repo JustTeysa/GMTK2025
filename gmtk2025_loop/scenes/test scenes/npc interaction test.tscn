@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://p1pwpixtsfs4"]
 
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_oagx2"]
-[ext_resource type="PackedScene" uid="uid://n5pxfrjgfsmt" path="res://scenes/building/test_building.tscn" id="2_ffn0j"]
+[ext_resource type="PackedScene" path="res://scenes/building/test_building.tscn" id="2_ffn0j"]
 [ext_resource type="PackedScene" uid="uid://bei8udgxpulau" path="res://scenes/utility/teleport.tscn" id="3_mpx80"]
 [ext_resource type="AudioStream" uid="uid://df76g1jl64y0g" path="res://Audio/Originals/Test/AMBBird_Songbirds spotted towhee american dipper pine sisken near the seaside distant waves washing on shore Bowen Island_GCS_GCSO.wav" id="4_i0bpe"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="5_62vdl"]
@@ -51,11 +51,13 @@ bus = &"BGs"
 
 [node name="Player" parent="." instance=ExtResource("5_62vdl")]
 position = Vector2(-1, 0)
+Speed = 550.0
+JumpVelocity = -1300.0
 
 [node name="StartPosition" type="Marker2D" parent="."]
 
 [node name="NPC" parent="." instance=ExtResource("6_ffn0j")]
-position = Vector2(556, -77)
+position = Vector2(595, -88)
 
 [connection signal="child_entered_tree" from="Environment/Buildings/TestBuilding1/LeftTeleport_Trigger" to="." method="_on_right_teleport_trigger_child_entered_tree"]
 [connection signal="child_entered_tree" from="Environment/Buildings/TestBuilding4/RightTeleport_Trigger" to="." method="_on_right_teleport_trigger_child_entered_tree"]
