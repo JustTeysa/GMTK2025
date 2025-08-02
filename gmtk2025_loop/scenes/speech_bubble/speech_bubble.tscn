@@ -16,10 +16,10 @@ label = NodePath("Panel/RichTextLabel")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1919.0
-offset_bottom = 1077.0
+offset_right = 1108.0
+offset_bottom = 331.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1108.0
+offset_bottom = 330.0
