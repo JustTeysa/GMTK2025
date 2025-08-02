@@ -10,6 +10,7 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_lxlvh")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
+Name = "Mom2"
 npcGreetingText = "Back already? Where's our mower? What do you mean this is ours? ours wasn't this blue! and didn't have nearly as many subwoofers..... Fine Fine, well while your out could you at least give Holly Back the one she lent me?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
