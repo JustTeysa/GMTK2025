@@ -14,6 +14,7 @@ config/name="GMTK2025_Loop"
 run/main_scene="uid://dc5ub2feucfkv"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+run/canvas_textures/default_texture_filter=1
 
 [display]
 
@@ -28,6 +29,10 @@ project/assembly_name="GMTK2025_Loop"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/parallax2d_preview/plugin.cfg")
 
 [input]
 
