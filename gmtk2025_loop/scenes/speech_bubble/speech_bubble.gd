@@ -1,4 +1,4 @@
-class_name SpeechBuble extends CanvasLayer
+class_name SpeechBuble extends Control
 
 @export var label : RichTextLabel
 
