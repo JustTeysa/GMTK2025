@@ -1,0 +1,70 @@
+[gd_scene load_steps=16 format=3 uid="uid://dv0lfk6fil2f6"]
+
+[ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="1_t4ad3"]
+[ext_resource type="PackedScene" uid="uid://ckka7af74fti8" path="res://entities/npcs/npc_albert.tscn" id="2_levci"]
+[ext_resource type="PackedScene" uid="uid://camf6ddm74215" path="res://entities/npcs/npc_arc.tscn" id="3_f1wi1"]
+[ext_resource type="PackedScene" uid="uid://wl3nwf83fedh" path="res://entities/npcs/npc_coilette.tscn" id="4_dadpm"]
+[ext_resource type="PackedScene" uid="uid://ba3fw80fjannw" path="res://entities/npcs/npc_egbert.tscn" id="5_755be"]
+[ext_resource type="PackedScene" uid="uid://q7tqenjvhqrq" path="res://entities/npcs/npc_holly.tscn" id="6_hni17"]
+[ext_resource type="PackedScene" uid="uid://deg8amqvntudx" path="res://entities/npcs/npc_kirk.tscn" id="7_2uqcq"]
+[ext_resource type="PackedScene" uid="uid://b75o4ax81fqqy" path="res://entities/npcs/npc_larry.tscn" id="8_4bj14"]
+[ext_resource type="PackedScene" uid="uid://bn3brfmy3blc0" path="res://entities/npcs/npc_lupin.tscn" id="9_oioxx"]
+[ext_resource type="PackedScene" uid="uid://cex2v7b73vnkr" path="res://entities/npcs/npc_mom2.tscn" id="10_k04ce"]
+[ext_resource type="PackedScene" uid="uid://c4gka71fw53ym" path="res://entities/npcs/npc_mom.tscn" id="11_r2w5d"]
+[ext_resource type="PackedScene" uid="uid://cnutxabd11ay3" path="res://entities/npcs/npc_rack.tscn" id="12_pvv55"]
+[ext_resource type="PackedScene" uid="uid://b1oxkn4euoya1" path="res://entities/npcs/npc_spinel.tscn" id="13_hdcdl"]
+[ext_resource type="PackedScene" uid="uid://bf8vshp33o1k0" path="res://entities/npcs/npc_wizbert.tscn" id="14_iohgh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxr6w"]
+size = Vector2(10372, 20)
+
+[node name="Npctest" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_t4ad3")]
+position = Vector2(-477, -10)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_cxr6w")
+
+[node name="ALBERT" parent="." instance=ExtResource("2_levci")]
+position = Vector2(279, -92)
+
+[node name="ARC" parent="." instance=ExtResource("3_f1wi1")]
+position = Vector2(477, -94)
+
+[node name="COILETTE" parent="." instance=ExtResource("4_dadpm")]
+position = Vector2(671, -92)
+
+[node name="EGGBERT" parent="." instance=ExtResource("5_755be")]
+position = Vector2(864, -94)
+
+[node name="HOLLY" parent="." instance=ExtResource("6_hni17")]
+position = Vector2(1048, -91)
+
+[node name="KIRK" parent="." instance=ExtResource("7_2uqcq")]
+position = Vector2(1246, -94)
+
+[node name="LARRY" parent="." instance=ExtResource("8_4bj14")]
+position = Vector2(1435, -94)
+
+[node name="LUPIN" parent="." instance=ExtResource("9_oioxx")]
+position = Vector2(1633, -94)
+
+[node name="MOM2" parent="." instance=ExtResource("10_k04ce")]
+position = Vector2(1828, -92)
+
+[node name="MOM" parent="." instance=ExtResource("11_r2w5d")]
+position = Vector2(2011, -94)
+
+[node name="RACK" parent="." instance=ExtResource("12_pvv55")]
+position = Vector2(2199, -91)
+
+[node name="SPINEL" parent="." instance=ExtResource("13_hdcdl")]
+position = Vector2(2382, -95)
+
+[node name="WIZBERT" parent="." instance=ExtResource("14_iohgh")]
+position = Vector2(2564, -98)

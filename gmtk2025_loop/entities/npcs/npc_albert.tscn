@@ -10,6 +10,7 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_mqk5w")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
+Name = "Albert"
 npcGreetingText = "Oi! Heard about our sweet new ride huh? Egbert was just taking it for a spin, weren't ya bro?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

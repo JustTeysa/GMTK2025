@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamInteractive" load_steps=2 format=3 uid="uid://bdxswtewklu0x"]
+
+[ext_resource type="AudioStream" uid="uid://dvrf8kb353mpq" path="res://Audio/Originals/Music/GMTK 2025 - Main Theme (Full).mp3" id="1_lhepy"]
+
+[resource]
+clip_count = 1
+clip_0/name = &"Gmtk 2025 - Main Theme (full)"
+clip_0/stream = ExtResource("1_lhepy")
+clip_0/auto_advance = 1
+clip_0/next_clip = 0

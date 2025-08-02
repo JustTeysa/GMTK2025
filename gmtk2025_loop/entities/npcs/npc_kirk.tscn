@@ -10,6 +10,7 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_1r7gy")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
+Name = "Kirk"
 npcGreetingText = "Eh? Lupin's Lawn Mower? That thing wasn't worth the rats powering the motor. I gave it Arc next door for a tune up."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

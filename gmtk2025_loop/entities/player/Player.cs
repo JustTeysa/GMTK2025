@@ -78,7 +78,7 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
-            grounded = true;
+			grounded = true;
 			jumpCount = 0;
 		}
 
@@ -90,9 +90,9 @@ public partial class Player : CharacterBody2D
 				jumpCount++;
 				velocity.Y = JumpVelocity;
 				grounded = false;
-                animatedSprite2d.Play("jump");
-            }
-        }
+				animatedSprite2d.Play("jump");
+			}
+		}
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
@@ -115,7 +115,7 @@ public partial class Player : CharacterBody2D
 	{
 		if (airTime > 0.2f && !squashing && IsOnFloor())
 		{
-            squashing = true;
+			squashing = true;
 			squashYTarget = Mathf.Clamp(airTime * squashPower * animatedSprite2d.Scale.Y, maxSquashMagnitude, defaultYScale);
 
 			squashYTarget = (airTime < 1.0f) ? 0.70f * animatedSprite2d.Scale.Y : 0.3f * animatedSprite2d.Scale.Y;
