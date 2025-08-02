@@ -84,6 +84,14 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gx6sm")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx6sm")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yqrof")
@@ -92,7 +100,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3wlsy")
 }],
 "loop": false,
-"name": &"jump",
+"name": &"land",
 "speed": 10.0
 }, {
 "frames": [{
@@ -140,9 +148,8 @@ TotalJumps = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -51)
 sprite_frames = SubResource("SpriteFrames_symyc")
-animation = &"walk"
+animation = &"land"
 autoplay = "idle"
-frame_progress = 0.13497
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

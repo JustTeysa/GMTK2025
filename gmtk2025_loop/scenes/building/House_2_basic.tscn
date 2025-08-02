@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7c8l5jdh7st6"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fqma0"]
-load_path = "res://.godot/imported/House_2.png-21be40027a9553841d1433c0533b61a3.ctex"
 
 [node name="House2Basic" type="Sprite2D"]
 texture = SubResource("CompressedTexture2D_fqma0")
