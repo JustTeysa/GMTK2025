@@ -2,18 +2,25 @@
 
 [ext_resource type="Script" uid="uid://dp3l4vnupso50" path="res://scenes/speech_bubble/speech_bubble.gd" id="1_u1dx8"]
 
-[node name="SpeechBubble" type="Panel"]
+[node name="SpeechBubble" type="CanvasLayer" node_paths=PackedStringArray("label")]
+script = ExtResource("1_u1dx8")
+label = NodePath("SpeechBubble/RichTextLabel")
+
+[node name="SpeechBubble" type="Panel" parent="."]
 anchors_preset = -1
 anchor_left = -0.125
 anchor_top = -0.25
 anchor_right = 0.125
+offset_left = 240.0
+offset_top = 270.0
+offset_right = 240.0
+offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_u1dx8")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="SpeechBubble"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
@@ -22,4 +29,5 @@ anchor_right = 0.95
 anchor_bottom = 0.95
 grow_horizontal = 2
 grow_vertical = 2
+text = "asdasdasdasdasdadasdasd"
 fit_content = true
