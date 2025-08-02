@@ -8,12 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://b8mmi6dxcnio3" path="res://scenes/building/building_5/building_5.tscn" id="4_th5th"]
 [ext_resource type="PackedScene" uid="uid://x64qpfdessdf" path="res://scenes/building/building_6/building_6.tscn" id="5_7smn1"]
 [ext_resource type="PackedScene" uid="uid://c1u4pr7mm1hfe" path="res://scenes/building/building_2/building_2.tscn" id="5_ow5a4"]
-[ext_resource type="PackedScene" uid="uid://bghyeuq6ya5s6" path="res://scenes/building/building_3/building_3.tscn" id="7_b1x3f"]
-[ext_resource type="PackedScene" uid="uid://c7oety6rotrmt" path="res://scenes/building/building_8/building_8.tscn" id="7_raeie"]
+[ext_resource type="PackedScene" path="res://scenes/building/building_3/building_3.tscn" id="7_b1x3f"]
 [ext_resource type="PackedScene" uid="uid://cl5te2w3te4i" path="res://scenes/building/building_7/building_7.tscn" id="8_a8run"]
 [ext_resource type="PackedScene" uid="uid://dr7ixkvujrogy" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_Loop_Global.tscn" id="8_yyfjg"]
+[ext_resource type="PackedScene" uid="uid://bghyeuq6ya5s6" path="res://scenes/building/building_8/building_8.tscn" id="10_7smn1"]
 [ext_resource type="PackedScene" uid="uid://h1o06clo8sb5" path="res://scenes/building/building_4/building_4.tscn" id="11_hxu8e"]
-[ext_resource type="PackedScene" uid="uid://wjrr3qcq0jt8" path="res://scenes/Audio/Music.tscn" id="14_7smn1"]
+[ext_resource type="PackedScene" path="res://scenes/Audio/Music.tscn" id="14_7smn1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
 
@@ -32,7 +32,7 @@ shape = SubResource("WorldBoundaryShape2D_6q06x")
 
 [node name="Buildings" type="Node2D" parent="Environment"]
 script = ExtResource("3_6q06x")
-building_scenes = Array[PackedScene]([ExtResource("4_th5th"), ExtResource("5_7smn1"), ExtResource("8_a8run"), ExtResource("7_raeie"), ExtResource("4_ow5a4"), ExtResource("5_ow5a4"), ExtResource("7_b1x3f"), ExtResource("11_hxu8e")])
+building_scenes = Array[PackedScene]([ExtResource("4_th5th"), ExtResource("5_7smn1"), ExtResource("8_a8run"), ExtResource("10_7smn1"), ExtResource("4_ow5a4"), ExtResource("5_ow5a4"), ExtResource("7_b1x3f"), ExtResource("11_hxu8e")])
 
 [node name="StartPosition" type="Marker2D" parent="."]
 
