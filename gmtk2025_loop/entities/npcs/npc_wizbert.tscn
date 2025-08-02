@@ -12,6 +12,7 @@ script = ExtResource("1_ctlxd")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Wizbert"
 npcGreetingText = "Well... I did have it... But.. Holly said she needed it for a quick second..."
+npcItemCompletedText = "*Hic* ugh... to many Beans..."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -55)

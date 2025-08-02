@@ -11,6 +11,7 @@ size = Vector2(156, 152)
 script = ExtResource("1_1r7gy")
 Name = "Kirk"
 npcGreetingText = "Eh? Lupin's Lawn Mower? That thing wasn't worth the rats powering the motor. I gave it Arc next door for a tune up."
+npcItemCompletedText = "Is that that junk rat mower? That silly robot went way too far again... Oh well, I doubt Lupin will even notice. Be a dear and take it back for me would you?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -48)

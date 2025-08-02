@@ -11,7 +11,8 @@ size = Vector2(156, 152)
 script = ExtResource("1_lsyq2")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Spinel"
-npcGreetingText = "Good Morning Friend. Wonderful day to enjoy short grass isn't it? I did it myself you know. Enchanted Lawn Care is all the rage these days afterall. Why I was just showing my neighbour Coilette it's new riding functions.... She still hasn't come back with it."
+npcGreetingText = "Good morning Friend. Wonderful day to enjoy short grass isn't it? I did it myself you know. Enchanted Lawn Care is all the rage these days afterall. Why I was just showing my neighbour Coilette it's new riding functions.... She still hasn't come back with it."
+npcItemCompletedText = "Ah, my Magnificent Mower! Finally I can return it for that refund. My lawn is perfect now, why would I ever need the mower again?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -67.94)
