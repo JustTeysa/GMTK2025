@@ -12,6 +12,9 @@ public partial class Player : CharacterBody2D
 	[Export] 
 	public int TotalJumps = 1;
 	
+	[Export] 
+	public string Item = "NONE";
+	
 	private AnimatedSprite2D animatedSprite2d;
 	
 	public const int MAX_VELOCITY = 5;
@@ -183,5 +186,10 @@ public partial class Player : CharacterBody2D
 				animatedSprite2d.FlipH = true;
 			}
 		}
+	}
+
+	public string GetItem()
+	{
+		return Item;
 	}
 }
