@@ -58,6 +58,7 @@ JumpVelocity = -1300.0
 
 [node name="NPC" parent="." instance=ExtResource("6_ffn0j")]
 position = Vector2(595, -88)
+npcGreetingText = "[wave]Bacon ipsum[/wave] dolor amet boudin pork mollit tongue beef ribs porchetta leberkas brisket tempor deserunt veniam. Dolor dolore boudin, mollit adipisicing velit pariatur burgdoggen laboris. Adipisicing consequat swine turkey, shank pork chop venison id turducken ut doner sed culpa. Meatball consectetur ipsum est, occaecat hamburger exercitation et irure. Duis buffalo pig, biltong ut ground round fugiat velit eiusmod shank cupim tail sausage pastrami nisi. Laboris corned beef tongue veniam prosciutto shankle jowl."
 
 [connection signal="child_entered_tree" from="Environment/Buildings/TestBuilding1/LeftTeleport_Trigger" to="." method="_on_right_teleport_trigger_child_entered_tree"]
 [connection signal="child_entered_tree" from="Environment/Buildings/TestBuilding4/RightTeleport_Trigger" to="." method="_on_right_teleport_trigger_child_entered_tree"]
