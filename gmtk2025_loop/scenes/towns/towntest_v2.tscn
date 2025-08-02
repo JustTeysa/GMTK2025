@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmbhtr5x347a2"]
+[gd_scene load_steps=5 format=3 uid="uid://bmbhtr5x347a2"]
 
 [ext_resource type="Texture2D" uid="uid://ct20lwigv8s3u" path="res://scenes/towns/v2 House.png" id="1_4xg7y"]
-[ext_resource type="Texture2D" uid="uid://jx0xem0dqg2b" path="res://scenes/building/House_1.png" id="2_5tu23"]
-[ext_resource type="Texture2D" uid="uid://bgtaou4v67j3c" path="res://scenes/building/House_2.png" id="3_i3ej4"]
+[ext_resource type="PackedScene" uid="uid://c78thqlr2w47n" path="res://scenes/building/House_1_basic.tscn" id="2_5tu23"]
+[ext_resource type="PackedScene" uid="uid://iwqo14cnf26l" path="res://scenes/building/House_2_basic.tscn" id="3_i3ej4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tu23"]
+size = Vector2(2414, 20)
 
 [node name="TowntestV2" type="Sprite2D"]
-position = Vector2(-14, -464)
+position = Vector2(-2, -493)
 texture = ExtResource("1_4xg7y")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(759, 71)
-texture = ExtResource("2_5tu23")
+[node name="House1Basic" parent="." instance=ExtResource("2_5tu23")]
+position = Vector2(653, 72)
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-907, 71)
-texture = ExtResource("3_i3ej4")
+[node name="House2Basic" parent="." instance=ExtResource("3_i3ej4")]
+position = Vector2(-778, 71)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-10, 503)
+shape = SubResource("RectangleShape2D_5tu23")
