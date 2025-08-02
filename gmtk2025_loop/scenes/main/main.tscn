@@ -23,8 +23,6 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_hyk8p")
 
-[node name="Menu" parent="." instance=ExtResource("2_nvumn")]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="StoryTimeText" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("label")]
@@ -56,6 +54,9 @@ bbcode_enabled = true
 text = "SOME COOL STUFF"
 fit_content = true
 scroll_active = false
+
+[node name="Menu" parent="." instance=ExtResource("2_nvumn")]
+layer = 2
 
 [node name="Background" parent="." instance=ExtResource("2_ow5a4")]
 position = Vector2(-1097, -1086)
