@@ -31,11 +31,13 @@ public partial class Player : CharacterBody2D
 	
 	bool squashing = false;
 	private float defaultYScale = 12.0f;
+	private float defaultXScale = 12.0f;
 	private float squashPower = 0.0001f;
 	private float maxSquashMagnitude = 0.4f;
-	private float squashSpeed = 5.0f;
-	private float unsquashSpeed = 2.0f;
-	private float squashTarget = 0.0f;
+	private float squashSpeed = 4.0f;
+	private float unsquashSpeed = 0.8f;
+	private float squashYTarget = 0.0f;
+	private float squashXTarget = 0.0f;
 	
 	
 	
@@ -111,21 +113,27 @@ public partial class Player : CharacterBody2D
 		if (airTime > 0.2f && !squashing && IsOnFloor())
 		{
 			squashing = true;
-			squashTarget = Mathf.Clamp(airTime * squashPower * animatedSprite2d.Scale.Y, maxSquashMagnitude, defaultYScale);
+			squashYTarget = Mathf.Clamp(airTime * squashPower * animatedSprite2d.Scale.Y, maxSquashMagnitude, defaultYScale);
+
+			squashYTarget = (airTime < 1.0f) ? 0.9f * animatedSprite2d.Scale.Y : 0.2f * animatedSprite2d.Scale.Y;
+			squashXTarget = (airTime < 1.0f) ? 1.1f * animatedSprite2d.Scale.Y : 1.8f * animatedSprite2d.Scale.Y;
+
 			airTime = 0.0f;
 		}
 
 		if (squashing)
 		{
-			animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, squashTarget, squashSpeed));
-			if (animatedSprite2d.Scale.Y == squashTarget)
+			//animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, squashYTarget, squashSpeed));
+			animatedSprite2d.Scale = new Vector2(Mathf.MoveToward(animatedSprite2d.Scale.X, squashXTarget, squashSpeed), Mathf.MoveToward(animatedSprite2d.Scale.Y, squashYTarget, squashSpeed));
+			if (animatedSprite2d.Scale.Y == squashYTarget)
 			{
 				squashing = false;
 			}
 		}
 		else
 		{
-			animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, defaultYScale, unsquashSpeed));
+			//animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, defaultYScale, unsquashSpeed));
+			animatedSprite2d.Scale = new Vector2(Mathf.MoveToward(animatedSprite2d.Scale.X, defaultXScale, unsquashSpeed), Mathf.MoveToward(animatedSprite2d.Scale.Y, defaultYScale, unsquashSpeed));
 		}
 	}
 	
