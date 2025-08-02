@@ -188,20 +188,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
-size = Vector2(220, 257)
+size = Vector2(146, 141)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_symyc")
+Speed = 550.0
+JumpVelocity = -1300.0
+GravityMod = 3.1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(16, 16)
+scale = Vector2(12, 12)
 sprite_frames = SubResource("SpriteFrames_symyc")
 animation = &"idle"
 autoplay = "idle"
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -128.5)
+position = Vector2(0, -70.5)
 shape = SubResource("RectangleShape2D_abrql")
 
 [node name="Camera2D" type="Camera2D" parent="."]
