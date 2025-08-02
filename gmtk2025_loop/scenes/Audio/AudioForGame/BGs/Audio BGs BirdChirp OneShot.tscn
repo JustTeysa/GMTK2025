@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bi2dnkk2wbi65"]
+[gd_scene load_steps=11 format=3 uid="uid://bi2dnkk2wbi65"]
 
+[ext_resource type="Script" uid="uid://lf6dt3pr2jjn" path="res://scenes/Audio/AudioForGame/BGs/audio_b_gs_bird_chirp_one_shot.gd" id="1_k4anv"]
 [ext_resource type="AudioStream" uid="uid://ba1i05gfcapch" path="res://Audio/Originals/BGs/One Shots/GMTK2025_AmbBirdChirp_OS_01.wav" id="1_lvcsu"]
 [ext_resource type="AudioStream" uid="uid://cxliprr81f07m" path="res://Audio/Originals/BGs/One Shots/GMTK2025_AmbBirdChirp_OS_02.wav" id="2_k4anv"]
 [ext_resource type="AudioStream" uid="uid://duvo8afx061vo" path="res://Audio/Originals/BGs/One Shots/GMTK2025_AmbBirdChirp_OS_03.wav" id="3_s8c07"]
@@ -22,7 +23,12 @@ stream_5/stream = ExtResource("6_1dudv")
 stream_6/stream = ExtResource("7_8qrao")
 stream_7/stream = ExtResource("8_838cv")
 
-[node name="AudioBGs" type="Node2D"]
+[node name="AudioBGs" type="Node2D" node_paths=PackedStringArray("timer", "audioPlayer")]
+script = ExtResource("1_k4anv")
+timer = NodePath("Timer")
+minimumTimerInterval = 1.0
+maximumTimerInterval = 4.0
+audioPlayer = NodePath("Timer/BG_OneShot_Looping")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
