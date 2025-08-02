@@ -158,11 +158,11 @@ public partial class Player : CharacterBody2D
 				animatedSprite2d.Play("walk");
 				if (Velocity.X < 0)
 				{
-					animatedSprite2d.FlipH = true;
+					animatedSprite2d.FlipH = false;
 				}
 				else if (Velocity.X > 0)
 				{
-					animatedSprite2d.FlipH = false;
+					animatedSprite2d.FlipH = true;
 				}
 			}
 			else
@@ -176,11 +176,11 @@ public partial class Player : CharacterBody2D
 			
 			if (Velocity.X < 0)
 			{
-				animatedSprite2d.FlipH = true;
+				animatedSprite2d.FlipH = false;
 			}
 			else if (Velocity.X > 0)
 			{
-				animatedSprite2d.FlipH = false;
+				animatedSprite2d.FlipH = true;
 			}
 		}
 	}
