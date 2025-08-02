@@ -188,9 +188,4 @@ public partial class Player : CharacterBody2D
 			}
 		}
 	}
-
-	public string GetItem()
-	{
-		return Item;
-	}
 }
