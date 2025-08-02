@@ -195,6 +195,7 @@ script = ExtResource("1_symyc")
 Speed = 550.0
 JumpVelocity = -1300.0
 GravityMod = 3.1
+TotalJumps = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(12, 12)

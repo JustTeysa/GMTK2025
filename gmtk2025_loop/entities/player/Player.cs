@@ -10,6 +10,9 @@ public partial class Player : CharacterBody2D
 	
 	[Export]
 	public float GravityMod = 1.0f;
+
+	[Export] 
+	public int TotalJumps = 1;
 	
 	private AnimatedSprite2D animatedSprite2d;
 	
@@ -21,11 +24,27 @@ public partial class Player : CharacterBody2D
 	private const string jump = "jump";
 	
 	private bool grounded = false;
+	private int jumpCount = 0;
+
+	private float airTime = 0.0f;
+	private float jumpXScale = 0.9f;
+	
+	bool squashing = false;
+	private float defaultYScale = 12.0f;
+	private float squashPower = 0.0001f;
+	private float maxSquashMagnitude = 0.4f;
+	private float squashSpeed = 5.0f;
+	private float unsquashSpeed = 2.0f;
+	private float squashTarget = 0.0f;
+	
+	
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		defaultYScale = animatedSprite2d.Scale.Y;
+		maxSquashMagnitude = defaultYScale * maxSquashMagnitude;
 	}
 	
 	public void Start(Vector2 spawnPosition)
@@ -38,25 +57,37 @@ public partial class Player : CharacterBody2D
 	{
 		Movement(delta);
 		SetAnimation();
+		CheckImpact();
+		//animatedSprite2d.
+		
 	}
 
 	private void Movement(double delta)
 	{
 		Vector2 velocity = Velocity;
-		grounded = true;
 
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
 			velocity += GetGravity() * (float)delta * GravityMod;
 			grounded = false;
+			airTime += (float)delta;
+		}
+		else
+		{
+			grounded = true;
+			jumpCount = 0;
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed(jump) && IsOnFloor())
+		if (Input.IsActionJustPressed(jump))
 		{
-			velocity.Y = JumpVelocity;
-			grounded = false;
+			if (jumpCount < TotalJumps)
+			{
+				jumpCount++;
+				velocity.Y = JumpVelocity;
+				grounded = false;
+			}
 		}
 
 		// Get the input direction and handle the movement/deceleration.
@@ -74,6 +105,30 @@ public partial class Player : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+	private void CheckImpact()
+	{
+		if (airTime > 0.2f && !squashing && IsOnFloor())
+		{
+			squashing = true;
+			squashTarget = Mathf.Clamp(airTime * squashPower * animatedSprite2d.Scale.Y, maxSquashMagnitude, defaultYScale);
+			airTime = 0.0f;
+		}
+
+		if (squashing)
+		{
+			animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, squashTarget, squashSpeed));
+			if (animatedSprite2d.Scale.Y == squashTarget)
+			{
+				squashing = false;
+			}
+		}
+		else
+		{
+			animatedSprite2d.Scale = new Vector2(animatedSprite2d.Scale.X, Mathf.MoveToward(animatedSprite2d.Scale.Y, defaultYScale, unsquashSpeed));
+		}
+	}
+	
 
 	private void SetAnimation()
 	{
