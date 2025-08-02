@@ -31,28 +31,28 @@ position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_cxr6w")
 
 [node name="ALBERT" parent="." instance=ExtResource("2_levci")]
-position = Vector2(279, -92)
+position = Vector2(279, -17)
 
 [node name="ARC" parent="." instance=ExtResource("3_f1wi1")]
-position = Vector2(477, -94)
+position = Vector2(477, -19)
 
 [node name="COILETTE" parent="." instance=ExtResource("4_dadpm")]
-position = Vector2(671, -92)
+position = Vector2(671, -17)
 
 [node name="EGGBERT" parent="." instance=ExtResource("5_755be")]
-position = Vector2(864, -94)
+position = Vector2(864, -19)
 
 [node name="HOLLY" parent="." instance=ExtResource("6_hni17")]
-position = Vector2(1048, -91)
+position = Vector2(1048, -16)
 
 [node name="KIRK" parent="." instance=ExtResource("7_2uqcq")]
-position = Vector2(1246, -94)
+position = Vector2(1246, -19)
 
 [node name="LARRY" parent="." instance=ExtResource("8_4bj14")]
 position = Vector2(1435, -94)
 
 [node name="LUPIN" parent="." instance=ExtResource("9_oioxx")]
-position = Vector2(1633, -94)
+position = Vector2(1633, -25)
 
 [node name="MOM2" parent="." instance=ExtResource("10_k04ce")]
 position = Vector2(1828, -92)
@@ -64,7 +64,7 @@ position = Vector2(2011, -94)
 position = Vector2(2199, -91)
 
 [node name="SPINEL" parent="." instance=ExtResource("13_hdcdl")]
-position = Vector2(2382, -95)
+position = Vector2(2382, -14)
 
 [node name="WIZBERT" parent="." instance=ExtResource("14_iohgh")]
-position = Vector2(2564, -98)
+position = Vector2(2564, -17)
