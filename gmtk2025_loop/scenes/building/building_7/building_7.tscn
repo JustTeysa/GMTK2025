@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cl5te2w3te4i"]
+[gd_scene load_steps=15 format=3 uid="uid://cl5te2w3te4i"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_fvj6y"]
 [ext_resource type="Texture2D" uid="uid://cmb4t4svijse7" path="res://scenes/building/building_7/Inn_Full.png" id="2_f3ean"]
-[ext_resource type="PackedScene" uid="uid://bdofwtqnkgcgt" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_InnBar_Loop.tscn" id="3_5lwsb"]
 [ext_resource type="Texture2D" uid="uid://ovy4nomtmeaa" path="res://scenes/building/building_7/Inn_Awning_5.png" id="3_xjbc4"]
 [ext_resource type="Texture2D" uid="uid://bv1fbcfqr2kyh" path="res://scenes/building/building_7/Inn_Awning_2.png" id="4_yo3bq"]
 [ext_resource type="Texture2D" uid="uid://bpkkeem1oxws8" path="res://scenes/building/building_7/Inn_Awning_3.png" id="5_etxmq"]
@@ -42,9 +41,6 @@ position = Vector2(0, -250)
 
 [node name="House2V2" type="Sprite2D" parent="Background"]
 texture = ExtResource("2_f3ean")
-
-[node name="AudioBGs" parent="Background" instance=ExtResource("3_5lwsb")]
-position = Vector2(-425, 80)
 
 [node name="Foreground" type="Node2D" parent="."]
 z_index = 100

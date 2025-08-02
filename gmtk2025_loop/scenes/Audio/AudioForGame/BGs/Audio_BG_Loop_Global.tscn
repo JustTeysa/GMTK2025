@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://dr7ixkvujrogy"]
 
-[ext_resource type="AudioStream" uid="uid://dvneonovkl314" path="res://Audio/Originals/BGs/Loops/GMTK2025_GlobalWind_2ch_Lp_01.wav" id="1_08jkq"]
+[ext_resource type="AudioStream" uid="uid://dvneonovkl314" path="res://Audio/Originals/BGs/GMTK2025_GlobalWind_2ch_Lp_01.wav" id="1_08jkq"]
 
 [node name="AudioBGs" type="Node2D"]
 
 [node name="BG_Bed_Global_Looping" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_08jkq")
-volume_db = -6.0
+volume_db = -2.0
 autoplay = true
 bus = &"BGs"

@@ -16,14 +16,11 @@ metadata/_custom_type_script = "uid://4pg5rir4l6sj"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -2496)
-scale = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_v03f1")
 
 [node name="Building_1" parent="." instance=ExtResource("2_v03f1")]
-scale = Vector2(-1, 1)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -722)
-scale = Vector2(-1, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

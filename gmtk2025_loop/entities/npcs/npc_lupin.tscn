@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(156, 152)
 
-[node name="NPC2" type="Area2D" node_paths=PackedStringArray("speechBubble")]
+[node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_87stq")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Lupin"
