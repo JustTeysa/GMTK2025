@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bf8vshp33o1k0"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_ctlxd"]
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_qe8yf"]
+[ext_resource type="Texture2D" uid="uid://cv3s8fcxklb7w" path="res://entities/npcs/character_art/Ch-WIZBERT-V001.png" id="2_cmrad"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_ciqjv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
@@ -14,8 +14,8 @@ Name = "Wizbert"
 npcGreetingText = "Well... I did have it... But.. Holly said she needed it for a quick second..."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -65)
-texture = ExtResource("2_qe8yf")
+position = Vector2(0, -55)
+texture = ExtResource("2_cmrad")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

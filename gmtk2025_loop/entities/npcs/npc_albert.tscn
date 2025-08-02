@@ -1,21 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckka7af74fti8"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_mqk5w"]
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_a3g8y"]
+[ext_resource type="Texture2D" uid="uid://bkn0ppg8sdojk" path="res://entities/npcs/character_art/Ch-ALBERT-V001.png" id="2_lcq5p"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_yo6og"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(156, 152)
 
-[node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
+[node name="NPC" type="Area2D"]
 script = ExtResource("1_mqk5w")
-speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Albert"
 npcGreetingText = "Oi! Heard about our sweet new ride huh? Egbert was just taking it for a spin, weren't ya bro?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -65)
-texture = ExtResource("2_a3g8y")
+position = Vector2(0, -68)
+texture = ExtResource("2_lcq5p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

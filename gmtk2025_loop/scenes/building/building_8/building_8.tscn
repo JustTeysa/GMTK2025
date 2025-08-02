@@ -126,7 +126,7 @@ shape = SubResource("RectangleShape2D_maqlu")
 one_way_collision = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Collisions/Chimney/StaticBody2D6"]
-position = Vector2(258, -777)
+position = Vector2(259, -776)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_20fq0")
 one_way_collision = true

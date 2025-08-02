@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://deg8amqvntudx"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_1r7gy"]
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_p5a58"]
+[ext_resource type="Texture2D" uid="uid://cyris1paoaha3" path="res://entities/npcs/character_art/Ch-KIRK-V001.png" id="2_1r7gy"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_r4tgf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
@@ -13,8 +13,8 @@ Name = "Kirk"
 npcGreetingText = "Eh? Lupin's Lawn Mower? That thing wasn't worth the rats powering the motor. I gave it Arc next door for a tune up."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -65)
-texture = ExtResource("2_p5a58")
+position = Vector2(0, -48)
+texture = ExtResource("2_1r7gy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

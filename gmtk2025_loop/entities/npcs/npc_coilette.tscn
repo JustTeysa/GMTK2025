@@ -1,21 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://wl3nwf83fedh"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_bc3or"]
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_hdbjm"]
+[ext_resource type="Texture2D" uid="uid://bmfcohwfiej3d" path="res://entities/npcs/character_art/Ch-COILETTE-V001.png" id="2_bc3or"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_mdg7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(156, 152)
 
-[node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
+[node name="NPC" type="Area2D"]
 script = ExtResource("1_bc3or")
-speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Coilette"
 npcGreetingText = "Sorry, can't talk kid. Those Bert brothers took Spinel's fancy Mower in a poker game.... I didn't even know you could win a hand with that many jokers..."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -65)
-texture = ExtResource("2_hdbjm")
+position = Vector2(0, -39)
+texture = ExtResource("2_bc3or")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

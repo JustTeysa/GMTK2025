@@ -1,21 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://ba3fw80fjannw"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_ubivp"]
-[ext_resource type="Texture2D" uid="uid://cg0o1bjuc5alo" path="res://icon.svg" id="2_mhn71"]
+[ext_resource type="Texture2D" uid="uid://c5jllqc10dcm8" path="res://entities/npcs/character_art/Ch-EGBERT-V001.png" id="2_ix8d8"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_u2q61"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(156, 152)
 
-[node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
+[node name="NPC" type="Area2D"]
 script = ExtResource("1_ubivp")
-speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Eggbert"
 npcGreetingText = "Huh? No That was Wizbert. Mad Lads run half the town with it didn't ya?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
-texture = ExtResource("2_mhn71")
+position = Vector2(0, -66)
+texture = ExtResource("2_ix8d8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)
