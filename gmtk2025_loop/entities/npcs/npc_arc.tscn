@@ -13,9 +13,11 @@ speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 npcGreetingText = "Ah another customer! What can I interest you in? Lightning Broomstick? HighSpeed Orb Surfing? Perhaps a pixie grill? ... What's that? A lawn mower? Hmmm... Sold one of those to Kirk a while back, you could ask them about it."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -64)
 texture = ExtResource("2_un6wf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -76)
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]

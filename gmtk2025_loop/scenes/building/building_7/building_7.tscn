@@ -1,10 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://cl5te2w3te4i"]
+[gd_scene load_steps=15 format=3 uid="uid://cl5te2w3te4i"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_fvj6y"]
 [ext_resource type="Texture2D" uid="uid://cmb4t4svijse7" path="res://scenes/building/building_7/Inn_Full.png" id="2_f3ean"]
 [ext_resource type="Texture2D" uid="uid://ovy4nomtmeaa" path="res://scenes/building/building_7/Inn_Awning_5.png" id="3_xjbc4"]
 [ext_resource type="Texture2D" uid="uid://bv1fbcfqr2kyh" path="res://scenes/building/building_7/Inn_Awning_2.png" id="4_yo3bq"]
 [ext_resource type="Texture2D" uid="uid://bpkkeem1oxws8" path="res://scenes/building/building_7/Inn_Awning_3.png" id="5_etxmq"]
+[ext_resource type="PackedScene" uid="uid://ckka7af74fti8" path="res://entities/npcs/npc_albert.tscn" id="6_tannh"]
+[ext_resource type="PackedScene" uid="uid://ba3fw80fjannw" path="res://entities/npcs/npc_egbert.tscn" id="7_5lwsb"]
+[ext_resource type="PackedScene" uid="uid://bf8vshp33o1k0" path="res://entities/npcs/npc_wizbert.tscn" id="8_spvd3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(1363.5, 5000)
@@ -117,5 +120,15 @@ one_way_collision = true
 position = Vector2(363.5, -700)
 polygon = PackedVector2Array(-938.5, 395, 264.5, 397, 233.5, 348, 132.5, 279, 94.5, 267, 28.5, 272, 3.5, 283, -142.5, 244, -194.5, 242, -254.5, 207, -426.5, 207, -511.5, 225, -549.5, 243, -673.5, 277, -792.5, 277, -869.5, 304, -912.5, 344)
 one_way_collision = true
+
+[node name="NPC-al" parent="." instance=ExtResource("6_tannh")]
+position = Vector2(614, 0)
+monitoring = false
+
+[node name="NPC-egg" parent="." instance=ExtResource("7_5lwsb")]
+position = Vector2(154, 1)
+
+[node name="NPC-wizrd" parent="." instance=ExtResource("8_spvd3")]
+position = Vector2(-449, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

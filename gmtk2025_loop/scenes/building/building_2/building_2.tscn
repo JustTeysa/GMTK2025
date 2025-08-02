@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1u4pr7mm1hfe"]
+[gd_scene load_steps=11 format=3 uid="uid://c1u4pr7mm1hfe"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_q8yq7"]
 [ext_resource type="Texture2D" uid="uid://b2pq2ubw7xpoh" path="res://scenes/building/building_2/House_2_v2.png" id="2_ue4ul"]
 [ext_resource type="Texture2D" uid="uid://bf86cdp3ils8s" path="res://scenes/building/building_2/Garden_OL.png" id="4_5uic8"]
+[ext_resource type="PackedScene" uid="uid://bn3brfmy3blc0" path="res://entities/npcs/npc_lupin.tscn" id="4_eaj6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(942, 5000)
@@ -22,9 +23,11 @@ size = Vector2(20, 70)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uic8"]
 size = Vector2(513, 19)
 
-[node name="Building_2" type="Area2D" node_paths=PackedStringArray("collider")]
+[node name="Building_2" type="Area2D" node_paths=PackedStringArray("collider", "npc_roots")]
 script = ExtResource("1_q8yq7")
 collider = NodePath("AreaTrigger")
+npc_scenes = Array[PackedScene]([ExtResource("4_eaj6u")])
+npc_roots = [NodePath("NPC_Root")]
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
 
 [node name="AreaTrigger" type="CollisionShape2D" parent="."]
@@ -79,5 +82,8 @@ shape = SubResource("RectangleShape2D_eaj6u")
 position = Vector2(-20.5, -458.5)
 shape = SubResource("RectangleShape2D_5uic8")
 one_way_collision = true
+
+[node name="NPC_Root" type="Marker2D" parent="."]
+position = Vector2(35, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
