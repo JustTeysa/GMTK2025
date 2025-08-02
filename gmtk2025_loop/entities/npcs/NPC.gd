@@ -3,11 +3,11 @@ extends Area2D
 @export var speechBubble: SpeechBuble
 @export var Name: String;
 @export var npcGreetingText: String;
-@export var npcSwapText: String;
-@export var npcEndedText: String;
+@export var npcItemCompletedText: String;
+#@export var npcEndedText: String;
 
-@export var ItemWant: String = "NO ITEM WANT DEFINED";
-@export var ItemHave: String = "NO ITEM WANT DEFINED";
+var ItemWant: String = "NO ITEM WANT DEFINED";
+var ItemHave: String = "NO ITEM WANT DEFINED";
 
 var swapped: bool = false;
 
@@ -31,9 +31,9 @@ func _on_body_exited(body: Node2D) -> void:
 		speechBubble.set_text("")
 		speechBubble.visible = false
 
-func _process(delta):
-	if player != null and Input.is_action_just_pressed("interact"):
-		AttemptItemSwap(player)
+#func _process(delta):
+	#if player != null and Input.is_action_just_pressed("interact"):
+		#AttemptItemSwap(player)
 
 func AttemptItemSwap(player: CharacterBody2D) -> bool:
 	print("Attempting to swap " + player.Item + " for " + ItemHave)
@@ -46,7 +46,7 @@ func AttemptItemSwap(player: CharacterBody2D) -> bool:
 	player.Item = ItemHave
 	swapped = true;
 	
-	UpdatedTextFields(npcEndedText)
+	#UpdatedTextFields(npcEndedText)
 	print("Result: SUCCESS")
 	return true
 	
