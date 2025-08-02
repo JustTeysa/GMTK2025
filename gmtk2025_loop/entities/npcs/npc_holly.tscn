@@ -10,7 +10,8 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D"]
 script = ExtResource("1_gq01h")
 Name = "Holly"
-npcGreetingText = "Well... I did have it... But.. Holly said she needed it for a quick second..."
+npcGreetingText = "Howdy Neighbour! What brings you out on such a fine day? Oh hunting down a lawn mower huh? That's odd, I let your mom borrow the one I had the other day..."
+npcItemCompletedText = "Back again are ya Hun? Oh the Mower! Actually I borrowed it from those cute Bert Brothers. Would ya be a dear and bring it back to them for me?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -49)

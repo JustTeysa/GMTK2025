@@ -10,7 +10,8 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D"]
 script = ExtResource("1_ubivp")
 Name = "Eggbert"
-npcGreetingText = "Huh? No That was Wizbert. Mad Lads run half the town with it didn't ya?"
+npcGreetingText = "Huh? No, that was Wizbert. Mad Lad's run half the town with it didn't ya?"
+npcItemCompletedText = "Ayo! You brought back that sweet mower! Think Albert was just talking to Coliette about that."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -66)
