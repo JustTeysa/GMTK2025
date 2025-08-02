@@ -1,13 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://dc5ub2feucfkv"]
+[gd_scene load_steps=15 format=3 uid="uid://dc5ub2feucfkv"]
 
 [ext_resource type="Script" uid="uid://hn5tnquseryr" path="res://scenes/main/Main.cs" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://bk38quxm6hjr" path="res://entities/player/player.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://dumy4tgy0qua5" path="res://scenes/background/background.tscn" id="2_ow5a4"]
 [ext_resource type="Script" uid="uid://xsird80rcrpq" path="res://scenes/building/building_loop.gd" id="3_6q06x"]
 [ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/building_1/building_1.tscn" id="4_ow5a4"]
+[ext_resource type="PackedScene" uid="uid://b8mmi6dxcnio3" path="res://scenes/building/building_5/building_5.tscn" id="4_th5th"]
+[ext_resource type="PackedScene" uid="uid://x64qpfdessdf" path="res://scenes/building/building_6/building_6.tscn" id="5_7smn1"]
 [ext_resource type="PackedScene" uid="uid://c1u4pr7mm1hfe" path="res://scenes/building/building_2/building_2.tscn" id="5_ow5a4"]
-[ext_resource type="PackedScene" uid="uid://b8mmi6dxcnio3" path="res://scenes/building/building_3/building_3.tscn" id="6_hujxm"]
+[ext_resource type="PackedScene" uid="uid://bghyeuq6ya5s6" path="res://scenes/building/building_3/building_3.tscn" id="7_b1x3f"]
+[ext_resource type="PackedScene" uid="uid://c7oety6rotrmt" path="res://scenes/building/building_8/building_8.tscn" id="7_raeie"]
+[ext_resource type="PackedScene" uid="uid://cl5te2w3te4i" path="res://scenes/building/building_7/building_7.tscn" id="8_a8run"]
 [ext_resource type="PackedScene" uid="uid://dr7ixkvujrogy" path="res://scenes/Audio/AudioForGame/Audio_BG_Loop_Global.tscn" id="8_yyfjg"]
+[ext_resource type="PackedScene" uid="uid://h1o06clo8sb5" path="res://scenes/building/building_4/building_4.tscn" id="11_hxu8e"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
 
@@ -26,7 +31,7 @@ shape = SubResource("WorldBoundaryShape2D_6q06x")
 
 [node name="Buildings" type="Node2D" parent="Environment"]
 script = ExtResource("3_6q06x")
-building_scenes = Array[PackedScene]([ExtResource("4_ow5a4"), ExtResource("5_ow5a4"), ExtResource("4_ow5a4"), ExtResource("6_hujxm"), ExtResource("4_ow5a4")])
+building_scenes = Array[PackedScene]([ExtResource("4_th5th"), ExtResource("5_7smn1"), ExtResource("8_a8run"), ExtResource("7_raeie"), ExtResource("4_ow5a4"), ExtResource("5_ow5a4"), ExtResource("7_b1x3f"), ExtResource("11_hxu8e")])
 
 [node name="StartPosition" type="Marker2D" parent="."]
 

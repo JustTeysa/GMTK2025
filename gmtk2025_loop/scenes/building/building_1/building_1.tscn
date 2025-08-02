@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cov1vu4kbfw65" path="res://entities/npcs/npc.tscn" id="3_r3xtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
-size = Vector2(656, 5000)
+size = Vector2(548, 5000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muwtn"]
 size = Vector2(500.5, 38)
@@ -13,7 +13,7 @@ size = Vector2(500.5, 38)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3xtn"]
 size = Vector2(430, 20)
 
-[node name="Building1" type="Area2D" node_paths=PackedStringArray("collider")]
+[node name="Building_1" type="Area2D" node_paths=PackedStringArray("collider")]
 script = ExtResource("1_ous72")
 collider = NodePath("CollisionShape2D")
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
