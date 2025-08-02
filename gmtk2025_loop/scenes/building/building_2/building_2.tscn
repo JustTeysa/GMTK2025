@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1u4pr7mm1hfe"]
+
+[ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_q8yq7"]
+[ext_resource type="Texture2D" uid="uid://b2pq2ubw7xpoh" path="res://scenes/building/building_2/House_2_v2.png" id="2_ue4ul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
+size = Vector2(1094, 5000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muwtn"]
+size = Vector2(316.25, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3xtn"]
+size = Vector2(602, 23)
+
+[node name="Building1" type="Area2D" node_paths=PackedStringArray("collider")]
+script = ExtResource("1_q8yq7")
+collider = NodePath("CollisionShape2D")
+metadata/_custom_type_script = "uid://4pg5rir4l6sj"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2500)
+shape = SubResource("RectangleShape2D_ous72")
+
+[node name="House2V2" type="Sprite2D" parent="."]
+position = Vector2(0, -234)
+texture = ExtResource("2_ue4ul")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(349.125, -60)
+shape = SubResource("RectangleShape2D_muwtn")
+one_way_collision = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(9, -438)
+shape = SubResource("RectangleShape2D_r3xtn")
+one_way_collision = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

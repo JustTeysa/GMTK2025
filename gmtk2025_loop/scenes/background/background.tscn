@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://dumy4tgy0qua5"]
+
+[ext_resource type="Texture2D" uid="uid://bm5ovhjiifyr8" path="res://scenes/background/clouds.png" id="1_iheb5"]
+[ext_resource type="Texture2D" uid="uid://ckwu2wc3v1au2" path="res://scenes/background/mountains.png" id="2_pesyb"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Sky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(1080, 960)
+repeat_times = 5
+
+[node name="ColorRect" type="ColorRect" parent="Sky"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0.607843, 1, 1)
+
+[node name="Clouds" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(1750, 0)
+repeat_times = 5
+
+[node name="Clouds" type="Sprite2D" parent="Clouds"]
+texture_repeat = 2
+position = Vector2(960, 0)
+texture = ExtResource("1_iheb5")
+region_enabled = true
+region_rect = Rect2(0, 0, 1750, 960)
+
+[node name="Hills" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(1920, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Hills"]
+position = Vector2(960, 800)
+scale = Vector2(2.08519, 2.08519)
+texture = ExtResource("2_pesyb")
+
+[node name="Forest" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+repeat_times = 5
+
+[node name="Trees" type="Parallax2D" parent="."]
+scroll_offset = Vector2(167, -155)
+repeat_times = 5
+
+[node name="Floor" type="Parallax2D" parent="."]
+repeat_size = Vector2(1920, 0)
+repeat_times = 4
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_top = 1080.0
+offset_right = 1920.0
+offset_bottom = 2160.0
+color = Color(0.410331, 0.294861, 0.25116, 1)
