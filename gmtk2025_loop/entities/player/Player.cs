@@ -208,6 +208,7 @@ public partial class Player : CharacterBody2D
 	
 	[Export]
 	public string[] requiredNpcs = {"Base"};
+	public bool allContacts = false;
 	
 	public void AddContact(string npcName)
 	{
@@ -223,10 +224,10 @@ public partial class Player : CharacterBody2D
 			GD.Print(npcName + ": Contact FAILED");
 		}
 
-		bool allContacts = false;
+		
 		for (int i = 0; i < requiredNpcs.Length; i++)
 		{
-			if (!NpcContacts.ContainsKey(requiredNpcs[i]))
+			if (!NpcContacts.ContainsKey(requiredNpcs[i].ToUpper()))
 			{
 				allContacts = false;
 				GD.Print(requiredNpcs[i] + ": MISSING CONTACT");
