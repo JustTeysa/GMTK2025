@@ -7,9 +7,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(156, 152)
 
-[node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
+[node name="NPC" type="Area2D"]
 script = ExtResource("1_1r7gy")
-speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Kirk"
 npcGreetingText = "Eh? Lupin's Lawn Mower? That thing wasn't worth the rats powering the motor. I gave it Arc next door for a tune up."
 
