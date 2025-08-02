@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccs604eib2yxk"]
+[gd_scene load_steps=5 format=3 uid="uid://b1oxkn4euoya1"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_lsyq2"]
 [ext_resource type="Texture2D" uid="uid://corwlgprkkpvu" path="res://entities/player/GJ_25_Ch_SPINEL_v002.png" id="2_lsyq2"]
@@ -18,11 +18,10 @@ texture = ExtResource("2_lsyq2")
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]
-position = Vector2(0, -136)
+position = Vector2(400, 0)
 
-[node name="SpeechBubble" parent="SpeechBubbleRoot" node_paths=PackedStringArray("label") instance=ExtResource("3_rm4em")]
+[node name="SpeechBubble" parent="SpeechBubbleRoot" instance=ExtResource("3_rm4em")]
 visible = false
-label = NodePath("SpeechBubble/RichTextLabel")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
