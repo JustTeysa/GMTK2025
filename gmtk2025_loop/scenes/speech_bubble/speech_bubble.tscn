@@ -21,5 +21,9 @@ offset_bottom = 331.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_right = 1108.0
-offset_bottom = 330.0
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 1091.0
+offset_bottom = 318.0
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
