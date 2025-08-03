@@ -23,7 +23,11 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_hyk8p")
 
+[node name="Menu" parent="." instance=ExtResource("2_nvumn")]
+layer = 2
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
 
 [node name="StoryTimeText" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("label")]
 layout_mode = 3
@@ -51,12 +55,8 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/normal_font = ExtResource("3_hxu8e")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
-text = "SOME COOL STUFF"
 fit_content = true
 scroll_active = false
-
-[node name="Menu" parent="." instance=ExtResource("2_nvumn")]
-layer = 2
 
 [node name="Background" parent="." instance=ExtResource("2_ow5a4")]
 position = Vector2(-1097, -1086)
@@ -76,6 +76,7 @@ building_scenes = Array[PackedScene]([ExtResource("4_th5th"), ExtResource("5_7sm
 
 [node name="Player" parent="." instance=ExtResource("2_iuonh")]
 position = Vector2(100, 0)
+collision_layer = 0
 
 [node name="AudioBGs" parent="." instance=ExtResource("8_yyfjg")]
 

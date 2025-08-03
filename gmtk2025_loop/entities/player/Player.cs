@@ -16,10 +16,10 @@ public partial class Player : CharacterBody2D
 	[Export] 
 	public string Item = "NONE";
 
-    [Export]
-    public AudioStreamPlayer2D LandAudioStreamPlayer;
+	[Export]
+	public AudioStreamPlayer2D LandAudioStreamPlayer;
 
-    private AnimatedSprite2D animatedSprite2d;
+	private AnimatedSprite2D animatedSprite2d;
 	
 	public const int MAX_VELOCITY = 5;
 	
@@ -50,7 +50,9 @@ public partial class Player : CharacterBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		itemCompleted = false;
+		allContacts = false;
+        animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		defaultYScale = animatedSprite2d.Scale.Y;
 		defaultXScale = animatedSprite2d.Scale.X;
 		maxSquashMagnitude = defaultYScale * maxSquashMagnitude;
@@ -142,8 +144,8 @@ public partial class Player : CharacterBody2D
 			bigSquash = (airTime > 1.0f);
 			
 			airTime = 0.0f;
-            LandAudioStreamPlayer.Play();
-        }
+			LandAudioStreamPlayer.Play();
+		}
 
 		float sqSpd = 1.0f;
 		if (squashing)
@@ -195,7 +197,8 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
-			//if (animatedSprite2d.Animation != "jump")
+			if (animatedSprite2d.Animation != "jump")
+				animatedSprite2d.Play("jump");
 			
 			if (Velocity.X < 0)
 			{

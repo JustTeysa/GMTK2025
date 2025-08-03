@@ -64,6 +64,8 @@ GravityMod = 3.1
 TotalJumps = 2
 LandAudioStreamPlayer = NodePath("FootstepsLand")
 requiredNpcs = PackedStringArray("Albert", "Arc", "Coilette", "Eggbert", "Holly", "Kirk", "Lupin", "Spinel", "Wizbert")
+allContacts = true
+itemCompleted = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -49)
