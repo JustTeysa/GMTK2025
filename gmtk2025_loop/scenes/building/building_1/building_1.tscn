@@ -1,54 +1,41 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmtkcva1swcic"]
+[gd_scene load_steps=6 format=3 uid="uid://bbi3l4o3qf5w4"]
 
-[ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_ous72"]
-[ext_resource type="Texture2D" uid="uid://drltr48ffna63" path="res://scenes/building/building_1/House_1_v2.png" id="2_muwtn"]
+[ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_t5uxg"]
 [ext_resource type="PackedScene" uid="uid://c4gka71fw53ym" path="res://entities/npcs/npc_mom.tscn" id="2_r3xtn"]
-[ext_resource type="PackedScene" uid="uid://bi2dnkk2wbi65" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="4_jcx1k"]
+[ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/house_1/house_1.tscn" id="3_g1llj"]
+[ext_resource type="Texture2D" uid="uid://ds4gu7toep37a" path="res://scenes/building/house_1/Prop-banner-v001 (1).png" id="4_jcx1k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
-size = Vector2(548, 5000)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_muwtn"]
-size = Vector2(500.5, 38)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3xtn"]
-size = Vector2(430, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v03f1"]
+size = Vector2(711, 5012)
 
 [node name="Building_1" type="Area2D" node_paths=PackedStringArray("collider", "npc_roots")]
-script = ExtResource("1_ous72")
+script = ExtResource("1_t5uxg")
 collider = NodePath("CollisionShape2D")
 npc_scenes = Array[PackedScene]([ExtResource("2_r3xtn")])
 npc_roots = [NodePath("Marker2D")]
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2500)
-shape = SubResource("RectangleShape2D_ous72")
+position = Vector2(95.5, -2496)
+rotation = 3.14159
+scale = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_v03f1")
 
-[node name="House1" type="Sprite2D" parent="."]
-texture = ExtResource("2_muwtn")
-offset = Vector2(0, -361)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(10.75, -306)
-shape = SubResource("RectangleShape2D_muwtn")
-one_way_collision = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-7, -695)
-shape = SubResource("RectangleShape2D_r3xtn")
-one_way_collision = true
+[node name="House_1" parent="." node_paths=PackedStringArray("npc_roots") instance=ExtResource("3_g1llj")]
+npc_scenes = Array[PackedScene]([])
+npc_roots = Array[PackedScene]([])
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(144, -1)
+position = Vector2(161, -1)
+scale = Vector2(-1, 1)
 
-[node name="AudioBGs" parent="." instance=ExtResource("4_jcx1k")]
-position = Vector2(200, -385)
-minimumTimerInterval = 6.0
-maximumTimerInterval = 12.0
+[node name="Prop-banner-v001(1)" type="Sprite2D" parent="."]
+position = Vector2(156, -259)
+texture = ExtResource("4_jcx1k")
+
+[node name="Prop-banner-v001(1)" type="Sprite2D" parent="Prop-banner-v001(1)"]
+position = Vector2(-271, -2)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_jcx1k")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
