@@ -2,6 +2,7 @@ class_name SpeechBuble extends Control
 
 @export var label : RichTextLabel
 
+
 # --- SIGNALS ---
 # Emitted when the text animation finishes.
 signal typing_finished()
@@ -34,7 +35,7 @@ func _ready():
 func _input(event):
 	# Check if the "ui_accept" action is pressed (configured in Project Settings -> Input Map).
 	# This is typically the Enter, Space, or Z key.
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("interact") && label == get_node("/root/Main/ShortSpeech/StoryTimeText/RichTextLabel"):
 		# If the text is still typing out, we skip the animation.
 		if label.visible_characters < label.get_total_character_count():
 			skip_typing()

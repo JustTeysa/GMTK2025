@@ -6,9 +6,9 @@
 
 [node name="BG_Bed_Positional_Looping" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_s4dth")
-volume_db = -23.0
+volume_db = -16.0
 autoplay = true
-max_distance = 800.0
-attenuation = 2.0
+max_distance = 1000.0
+attenuation = 1.8
 panning_strength = 1.6
 bus = &"BGs"
