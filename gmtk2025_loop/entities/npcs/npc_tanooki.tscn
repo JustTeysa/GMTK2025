@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ebv2hqeee4ep"]
+[gd_scene load_steps=6 format=3 uid="uid://ebv2hqeee4ep"]
 
 [ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_by3bh"]
 [ext_resource type="Texture2D" uid="uid://dj2nwebk1xxkj" path="res://entities/npcs/character_art/Ch-TANOOKI-V002.png" id="2_by3bh"]
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_muovb"]
+[ext_resource type="PackedScene" uid="uid://bw1ynqa55d5a8" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs TanookiHiss OneShot.tscn" id="4_475qp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(83, 82)
@@ -26,6 +27,10 @@ position = Vector2(400, 0)
 
 [node name="SpeechBubble" parent="SpeechBubbleRoot" instance=ExtResource("3_muovb")]
 visible = false
+
+[node name="AudioBGs" parent="." instance=ExtResource("4_475qp")]
+minimumTimerInterval = 3.0
+maximumTimerInterval = 9.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
