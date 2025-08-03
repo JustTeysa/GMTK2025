@@ -13,11 +13,11 @@ script = ExtResource("1_by3bh")
 Name = "Tanooki"
 npcGreetingText = "..."
 npcItemCompletedText = "     [rainbow freq=0.2 sat=0.9][tornado radius=10 freq=5]* h i s s s s *[/tornado][/rainbow]"
-ShouldNeverFlip = true
+ShouldAnimate = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -54)
 texture = ExtResource("2_by3bh")
+offset = Vector2(0, -53)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -41)

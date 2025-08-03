@@ -14,8 +14,8 @@ npcGreetingText = "Howdy Neighbour! What brings you out on such a fine day? Oh h
 npcItemCompletedText = "Back again are ya Hun? Oh the Mower! Actually I borrowed it from those cute Bert Brothers. Would ya be a dear and bring it back to them for me?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -49)
 texture = ExtResource("2_gq01h")
+offset = Vector2(0, -49)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

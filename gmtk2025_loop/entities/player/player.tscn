@@ -76,11 +76,10 @@ LandAudioStreamPlayer = NodePath("FootstepsLand")
 requiredNpcs = PackedStringArray("Albert", "Arc", "Coilette", "Eggbert", "Holly", "Kirk", "Lupin", "Spinel", "Wizbert")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -49)
 sprite_frames = ExtResource("2_abrql")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
-offset = Vector2(0, -8)
+offset = Vector2(0, -56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, -43.25)

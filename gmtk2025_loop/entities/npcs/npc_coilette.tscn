@@ -14,8 +14,8 @@ npcGreetingText = "Sorry, can't talk kid. Those Bert brothers took Spinel's fanc
 npcItemCompletedText = "HAHAHA Lucky Dice never fail me! Quick can you get it back to Spinel for me? I'm gonna try and win that Jar of Beans off of Wizbert."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -39)
 texture = ExtResource("2_bc3or")
+offset = Vector2(0, -38)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

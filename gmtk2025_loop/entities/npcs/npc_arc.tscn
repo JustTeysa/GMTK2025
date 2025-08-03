@@ -14,8 +14,8 @@ npcGreetingText = "Ah another customer! What can I interest you in? Lightning Br
 npcItemCompletedText = "Sorry. We don't offer refunds on used goods. But perhaps Kirk would enjoy a properly powered mower. They never did come to collect it after it was modified."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
 texture = ExtResource("2_stc4c")
+offset = Vector2(0, -64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

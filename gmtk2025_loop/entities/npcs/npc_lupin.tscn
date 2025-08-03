@@ -7,16 +7,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
 size = Vector2(156, 184)
 
-[node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
+[node name="NPC" type="Area2D"]
 script = ExtResource("1_87stq")
-speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Lupin"
 npcGreetingText = "Hey Lil' Dude! Long time no see.... Your mom's Mower huh?... Sorry, I let Kirk borrow it the other day. They're just next door though, the walk'll do ya good."
 npcItemCompletedText = "Dude! You got your mom's mower back from Kirk? Nice! It's looking rad if I do say so myself, better get it home before your mom loses her mind."
+squishTalkSpeedRange = Vector2(2.5, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -75)
 texture = ExtResource("2_87stq")
+offset = Vector2(0, -76)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -92)

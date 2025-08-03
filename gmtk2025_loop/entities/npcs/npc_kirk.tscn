@@ -14,8 +14,8 @@ npcGreetingText = "Eh? Lupin's Lawn Mower? That thing wasn't worth the rats powe
 npcItemCompletedText = "Is that that junk rat mower? That silly robot went way too far again... Oh well, I doubt Lupin will even notice. Be a dear and take it back for me would you?"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -48)
 texture = ExtResource("2_1r7gy")
+offset = Vector2(0, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

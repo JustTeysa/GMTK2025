@@ -14,8 +14,8 @@ npcGreetingText = "Oi! Heard about our sweet new ride huh? Egbert was just takin
 npcItemCompletedText = "Oi that Golden Joker was a fake! I didn't win anything with it... Uh could you um... Bring that mower back to Coilette? She won fair and square this time."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -68)
 texture = ExtResource("2_lcq5p")
+offset = Vector2(0, -68)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

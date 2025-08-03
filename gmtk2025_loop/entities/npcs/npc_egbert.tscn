@@ -14,8 +14,8 @@ npcGreetingText = "Huh? No, that was Wizbert. Mad Lad's run half the town with i
 npcItemCompletedText = "Ayo! You brought back that sweet mower! Think Albert was just talking to Coliette about that."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -66)
 texture = ExtResource("2_ix8d8")
+offset = Vector2(0, -66)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -76)

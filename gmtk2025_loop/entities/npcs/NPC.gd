@@ -9,7 +9,7 @@ var longSpeechBubble: SpeechBuble
 #@export var npcEndedText: String;
 @export var isMom: bool = false;
 @export var momStarterText: String;
-@export var ShouldNeverFlip = false
+@export var ShouldAnimate = true
 
 var ItemWant: String = "NO ITEM WANT DEFINED";
 var ItemHave: String = "NO ITEM WANT DEFINED";
@@ -25,6 +25,14 @@ var currentTime: float
 var minFlipTime: float = 1
 var maxFlipTime: float = 5
 
+var squishTalkTimer: float
+var squishTalkTimerLimit: float
+var squishTalkDown: bool
+@export var squishDownMax = 0.9
+@export var squishTalkTimeRange = Vector2(0.8, 1.2)
+var squishTalkSpeed = 1
+@export var squishTalkSpeedRange = Vector2(1, 2)
+
 func _ready():
 	ItemWant.to_upper()
 	ItemHave.to_upper()
@@ -36,15 +44,16 @@ func _ready():
 	timeLimit = 3
 	
 func _process(delta: float) -> void:
+	if !ShouldAnimate:
+		return
+	
 	currentTime += delta
 	
 	if (player != null):
 		AimAtPlayer()
-	elif (currentTime >= timeLimit && !ShouldNeverFlip):
+		SquishTalk(delta)
+	elif (currentTime >= timeLimit):
 		UpdateFlipTimer()
-		
-	if (ShouldNeverFlip):
-		return
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -160,3 +169,16 @@ func AimAtPlayer():
 		sprite2d.flip_h = false
 	if player.global_position > global_position:
 		sprite2d.flip_h = true
+		
+func SquishTalk(deltaTime: float):
+	squishTalkTimer += (deltaTime * squishTalkSpeed)
+
+	if (squishTalkTimer > squishTalkTimerLimit):
+		squishTalkDown = !squishTalkDown
+		squishTalkTimer = 0
+		squishTalkTimerLimit = randf_range(squishTalkTimeRange.x, squishTalkTimeRange.y)
+		squishTalkSpeed = randf_range(squishTalkSpeedRange.x, squishTalkSpeedRange.y)
+	elif (squishTalkDown):
+		sprite2d.scale.y = remap(squishTalkTimer, 0, squishTalkTimerLimit, 1, squishDownMax)
+	else:
+		sprite2d.scale.y = remap(squishTalkTimer, 0, squishTalkTimerLimit, squishDownMax, 1)
