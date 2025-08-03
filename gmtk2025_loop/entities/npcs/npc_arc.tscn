@@ -10,7 +10,7 @@ size = Vector2(156, 152)
 [node name="NPC" type="Area2D"]
 script = ExtResource("1_stc4c")
 Name = "Arc"
-npcGreetingText = "Ah another customer! What can I interest you in? Lightning Broomstick? HighSpeed Orb Surfing? Perhaps a Pixie Grill? ... What's that? A lawn mower? Hmmm...Sold one of those to Kirk a while back, You could ask them about it."
+npcGreetingText = "Ah another customer! What can I interest you in? Lightning Broomstick? HighSpeed Orb Surfing? Perhaps a Pixie Grill? ... What's that? A lawn mower? Hmmm...Sold one of those to Spinel a while back, You could ask them about it."
 npcItemCompletedText = "Sorry. We don't offer refunds on used goods. But perhaps Kirk would enjoy a properly powered mower. They never did come to collect it after it was modified."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
