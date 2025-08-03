@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bghyeuq6ya5s6"]
+[gd_scene load_steps=10 format=3 uid="uid://bghyeuq6ya5s6"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_3jywt"]
 [ext_resource type="Texture2D" uid="uid://k4at38guxmgr" path="res://scenes/building/building_3/Camp_Full.png" id="3_yd3j0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://deg8amqvntudx" path="res://entities/npcs/npc_kirk.tscn" id="5_7q6j6"]
 [ext_resource type="Texture2D" uid="uid://bp468prc43ums" path="res://scenes/building/building_3/Camp_Awning_5.png" id="5_cn8q0"]
 [ext_resource type="PackedScene" uid="uid://bi2dnkk2wbi65" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="6_238r5"]
+[ext_resource type="PackedScene" uid="uid://b064m3hrpxfyr" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs Crow OneShot.tscn" id="7_cn8q0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(804, 5000)
@@ -60,6 +61,11 @@ position = Vector2(-223, 0)
 [node name="AudioBGs" parent="." instance=ExtResource("6_238r5")]
 position = Vector2(-150, -300)
 minimumTimerInterval = 3.0
+maximumTimerInterval = 8.0
+
+[node name="AudioBGs2" parent="." instance=ExtResource("7_cn8q0")]
+position = Vector2(-100, -400)
+minimumTimerInterval = 6.0
 maximumTimerInterval = 8.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
