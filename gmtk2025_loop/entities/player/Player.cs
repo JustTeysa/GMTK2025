@@ -210,6 +210,8 @@ public partial class Player : CharacterBody2D
 	public string[] requiredNpcs = {"Base"};
 	[Export]
 	public bool allContacts = false;
+	[Export] 
+	public bool itemCompleted = false;
 	
 	public void AddContact(string npcName)
 	{
@@ -237,8 +239,23 @@ public partial class Player : CharacterBody2D
 			}
 		}
 		
-		;
+		
 		//
 		//Item = "FOUND";
+	}
+
+	public void UpdateItem()
+	{
+		if (!Item.Contains("FOUND"))
+		{
+			NpcContacts.Clear();
+			allContacts = false;
+			Item = "FOUND";
+		}
+		else if (Item.Contains("FOUND"))
+		{
+			Item = "FOUND";
+			itemCompleted = true;
+		}
 	}
 }

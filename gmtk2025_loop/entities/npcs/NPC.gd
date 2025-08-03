@@ -26,12 +26,23 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body
 		
-		if (isMom && !contactMade):
-			UpdatedTextFields(momStarterText)
-		elif (CheckPlayerDialogueFlag(player)):
-			UpdatedTextFields(npcItemCompletedText)
+		
+		## is mom, no contacts, no item
+		if (isMom):
+			#momBase Text
+			if (!CheckPlayerDialogueFlag(player)):
+				UpdatedTextFields(momStarterText)
+			elif (CheckPlayerDialogueFlag(player) && !player.itemCompleted):
+				#all contacts made but no item
+				UpdatedTextFields(npcGreetingText)
+			elif (CheckPlayerDialogueFlag(player) && player.itemCompleted):
+				#all contacts made + item
+				UpdatedTextFields(npcItemCompletedText)
 		else:
-			UpdatedTextFields(npcGreetingText)
+			if (CheckPlayerDialogueFlag(player)):
+				UpdatedTextFields(npcItemCompletedText)
+			else:
+				UpdatedTextFields(npcGreetingText)
 		
 		enableTextBox()
 		ContactPlayer(player)
@@ -65,7 +76,8 @@ func CheckPlayerDialogueFlag(player: CharacterBody2D) -> bool:
 		return false;
 		
 	if (isMom && player.allContacts):
-		player.Item = "FOUND"
+		#player.Item = "FOUND"
+		player.UpdateItem();
 		
 	if (player.Item == "NONE"):
 		print("Item Result: FAILED")
