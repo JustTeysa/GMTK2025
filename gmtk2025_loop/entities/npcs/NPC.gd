@@ -31,7 +31,7 @@ var squishTalkDown: bool
 @export var squishDownMax = 0.9
 @export var squishTalkTimeRange = Vector2(0.8, 1.2)
 var squishTalkSpeed = 1
-@export var squishTalkSpeedRange = Vector2(1, 2)
+@export var squishTalkSpeedRange = Vector2(2.5, 4.0)
 
 func _ready():
 	ItemWant.to_upper()
