@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dr7ixkvujrogy"]
 
-[ext_resource type="AudioStream" uid="uid://dvneonovkl314" path="res://Audio/Originals/BGs/GMTK2025_GlobalWind_2ch_Lp_01.wav" id="1_08jkq"]
+[ext_resource type="AudioStream" uid="uid://dvneonovkl314" path="res://Audio/Originals/BGs/Loop/GMTK2025_GlobalWind_2ch_Lp_01.wav" id="1_08jkq"]
 
 [node name="AudioBGs" type="Node2D"]
 

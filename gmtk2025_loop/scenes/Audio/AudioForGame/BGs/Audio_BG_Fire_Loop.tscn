@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://blbttkq0ao5p4"]
 
-[ext_resource type="AudioStream" uid="uid://bowgapbxj8aui" path="res://Audio/Originals/BGs/GMTK2025_AmbFire_1ch_Lp_01.wav" id="1_8cakj"]
+[ext_resource type="AudioStream" uid="uid://bowgapbxj8aui" path="res://Audio/Originals/BGs/Loop/GMTK2025_AmbFire_1ch_Lp_01.wav" id="1_8cakj"]
 
 [node name="AudioBGs" type="Node2D"]
 
