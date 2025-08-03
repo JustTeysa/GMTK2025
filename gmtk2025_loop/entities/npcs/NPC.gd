@@ -64,7 +64,7 @@ func CheckPlayerDialogueFlag(player: CharacterBody2D) -> bool:
 	if (player == null):
 		return false;
 		
-	if (isMom):
+	if (isMom && player.allContacts):
 		player.Item = "FOUND"
 		
 	if (player.Item == "NONE"):

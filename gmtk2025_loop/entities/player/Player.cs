@@ -208,6 +208,7 @@ public partial class Player : CharacterBody2D
 	
 	[Export]
 	public string[] requiredNpcs = {"Base"};
+	[Export]
 	public bool allContacts = false;
 	
 	public void AddContact(string npcName)
@@ -227,6 +228,7 @@ public partial class Player : CharacterBody2D
 		
 		for (int i = 0; i < requiredNpcs.Length; i++)
 		{
+			allContacts = true;
 			if (!NpcContacts.ContainsKey(requiredNpcs[i].ToUpper()))
 			{
 				allContacts = false;
@@ -234,7 +236,8 @@ public partial class Player : CharacterBody2D
 				break;
 			}
 		}
-
+		
+		;
 		//
 		//Item = "FOUND";
 	}

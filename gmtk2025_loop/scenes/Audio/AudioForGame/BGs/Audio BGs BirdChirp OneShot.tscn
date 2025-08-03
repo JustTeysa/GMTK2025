@@ -36,5 +36,9 @@ autostart = true
 
 [node name="BG_OneShot_Looping" type="AudioStreamPlayer2D" parent="Timer"]
 stream = SubResource("AudioStreamRandomizer_w2jtn")
-autoplay = true
+volume_db = -18.0
+max_distance = 1200.0
+attenuation = 2.0
+max_polyphony = 2
+panning_strength = 1.5
 bus = &"BGs"
