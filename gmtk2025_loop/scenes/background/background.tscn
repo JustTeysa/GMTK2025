@@ -16,6 +16,7 @@
 [node name="Background" type="Node2D"]
 
 [node name="Sky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
 repeat_size = Vector2(5500, 0)
 repeat_times = 4
 
@@ -25,7 +26,7 @@ scale = Vector2(1.87116, 1.87116)
 texture = ExtResource("1_rsf5d")
 
 [node name="BG Mountains" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 1)
+scroll_scale = Vector2(0.2, 1)
 repeat_size = Vector2(3000, 0)
 repeat_times = 5
 
@@ -40,7 +41,7 @@ scale = Vector2(0.766368, 0.766368)
 texture = ExtResource("3_tp5tj")
 
 [node name="BG Clouds" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.2, 1)
+scroll_scale = Vector2(0.4, 1)
 repeat_size = Vector2(4000, 0)
 repeat_times = 5
 
@@ -50,22 +51,22 @@ scale = Vector2(0.749769, 0.749769)
 texture = ExtResource("4_yvnxx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="BG Clouds"]
-position = Vector2(483.797, 467.677)
+position = Vector2(-218, -397)
 scale = Vector2(0.612903, 0.612903)
 texture = ExtResource("5_tp5tj")
 
 [node name="Mid Clouds" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.2, 1)
+scroll_scale = Vector2(0.5, 1)
 repeat_size = Vector2(3000, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Mid Clouds"]
-position = Vector2(583, 450)
+position = Vector2(583, 116)
 scale = Vector2(0.612903, 0.612903)
 texture = ExtResource("6_yvnxx")
 
 [node name="FG Mountains" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 1)
+scroll_scale = Vector2(0.6, 1)
 repeat_size = Vector2(3000, 0)
 repeat_times = 5
 
@@ -80,7 +81,7 @@ scale = Vector2(0.828966, 0.828966)
 texture = ExtResource("4_ewwm8")
 
 [node name="FG Clouds" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.9, 4.5)
+scroll_scale = Vector2(0.8, 1)
 repeat_size = Vector2(3000, 0)
 repeat_times = 5
 
