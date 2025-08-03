@@ -49,11 +49,14 @@ func _process(delta: float) -> void:
 	
 	currentTime += delta
 	
+	
 	if (player != null):
 		AimAtPlayer()
 		SquishTalk(delta)
-	elif (currentTime >= timeLimit):
-		UpdateFlipTimer()
+	else:
+		sprite2d.scale.y = 1
+		if (currentTime >= timeLimit):
+			UpdateFlipTimer()
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dumy4tgy0qua5"]
+[gd_scene load_steps=16 format=3 uid="uid://dumy4tgy0qua5"]
 
 [ext_resource type="Texture2D" uid="uid://bvabydrbf34lb" path="res://scenes/background/Gj-25-sky-v001.png" id="1_rsf5d"]
 [ext_resource type="Texture2D" uid="uid://wd6mva5rqg6x" path="res://scenes/background/BG Assets/Bg-1-v002.png" id="2_03sym"]
@@ -15,12 +15,20 @@
 [ext_resource type="Texture2D" uid="uid://dey2nctm5tt3x" path="res://scenes/background/Props/Prop-tree3-v001.png" id="12_aga1r"]
 [ext_resource type="Texture2D" uid="uid://caj4mqav8a8ys" path="res://scenes/background/Props/Prop-tree1-v001.png" id="13_aga1r"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_3mmpu"]
+
 [node name="Background" type="Node2D"]
 
 [node name="Sky" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.1, 1)
 repeat_size = Vector2(5500, 0)
 repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Sky"]
+modulate = Color(0.415686, 0.670588, 0.878431, 1)
+position = Vector2(967.25, -3000)
+scale = Vector2(8000, 4619.29)
+texture = SubResource("CanvasTexture_3mmpu")
 
 [node name="Sky" type="Sprite2D" parent="Sky"]
 position = Vector2(1244.92, 50.1221)
@@ -129,14 +137,13 @@ z_index = 110
 repeat_size = Vector2(2504.82, 0)
 repeat_times = 4
 
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+modulate = Color(0.47451, 0.372549, 0.235294, 1)
+position = Vector2(967.25, 3521.35)
+scale = Vector2(2529.36, 4619.29)
+texture = SubResource("CanvasTexture_3mmpu")
+
 [node name="Floor" type="Sprite2D" parent="Floor"]
 position = Vector2(0, 889.96)
 scale = Vector2(0.652303, 0.652303)
 texture = ExtResource("11_o0ti4")
-
-[node name="ColorRect" type="ColorRect" parent="Floor"]
-visible = false
-offset_left = 172.0
-offset_top = 1080.0
-offset_right = 1539.0
-offset_bottom = 1194.0

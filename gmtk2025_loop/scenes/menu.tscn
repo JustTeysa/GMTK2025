@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkyasldmvencx"]
+[gd_scene load_steps=8 format=3 uid="uid://dkyasldmvencx"]
 
 [ext_resource type="Script" uid="uid://o7epkn0ej8r3" path="res://scenes/menu.gd" id="1_4ytvr"]
-[ext_resource type="Texture2D" uid="uid://blu54ofgl4fj0" path="res://scenes/background/Gj-25-sky-guide.png" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://de1vywralyqtx" path="res://scenes/background/Background.png" id="2_g3eks"]
 [ext_resource type="Texture2D" uid="uid://c3ldc33dw5vhr" path="res://scenes/background/Floor/Ground_1.png" id="2_mhnvy"]
 [ext_resource type="FontFile" uid="uid://u57eqjbjlgwh" path="res://scenes/speech_bubble/static/PixelifySans-Regular.ttf" id="3_4ytvr"]
 [ext_resource type="SpriteFrames" uid="uid://d1kyaaqsw3qdn" path="res://entities/player/player_spriteframes.tres" id="4_mhnvy"]
 [ext_resource type="FontFile" uid="uid://qaig5cgtldpr" path="res://scenes/utility/Candia Script Font (ttf).ttf" id="5_g3eks"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_v86rl"]
 
 [node name="Menu" type="CanvasLayer" node_paths=PackedStringArray("BlackScreen", "MenuScreen")]
 script = ExtResource("1_4ytvr")
@@ -20,33 +22,52 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+modulate = Color(0.321569, 0.678431, 0.898039, 1)
+layout_mode = 0
+offset_left = -3845.0
+offset_top = -1755.0
+offset_right = 5454.0
+offset_bottom = 92.0
+texture = SubResource("CanvasTexture_v86rl")
+
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -638.0
-offset_top = -119.0
-offset_right = 896.0
-offset_bottom = 228.0
+offset_left = -3839.0
+offset_top = 11.0
+offset_right = 3533.0
+offset_bottom = 358.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0.5, 0.5)
-texture = ExtResource("1_con2f")
+texture = ExtResource("2_g3eks")
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Control"]
+modulate = Color(0.47451, 0.372549, 0.235294, 1)
+offset_left = -3849.0
+offset_top = 1235.0
+offset_right = 5456.0
+offset_bottom = 3082.0
+texture = SubResource("CanvasTexture_v86rl")
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -554.0
-offset_top = 24.0
-offset_right = 602.0
-offset_bottom = 215.0
+offset_left = -3843.0
+offset_top = 179.0
+offset_right = 3532.0
+offset_bottom = 370.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(0.5, 0.5)
 texture = ExtResource("2_mhnvy")
+stretch_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 unique_name_in_owner = true
