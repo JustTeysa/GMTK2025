@@ -2,7 +2,8 @@ extends AudioStreamPlayer2D
 
 @export var label: RichTextLabel
 
-var charCount: int = 0
+var shortCharCount: int = 0
+var longCharCount: int = 0
 
 var shortLabel: RichTextLabel
 var longLabel: RichTextLabel
@@ -12,12 +13,17 @@ func _ready() -> void:
 	longLabel = get_node("/root/Main/LongSpeech/StoryTimeText/RichTextLabel")
 
 func _process(deltaTime: float):
-	_processSound(shortLabel)
-	#_processSound(longLabel)
+	_processSound_Short(shortLabel)
+	_processSound_Long(longLabel)
 
-func _processSound(label: RichTextLabel):
-	if charCount != label.visible_characters:
-		charCount = label.visible_characters
-		if charCount > 1 && charCount < label.get_total_character_count():
+func _processSound_Short(label: RichTextLabel):
+	if shortCharCount != label.visible_characters:
+		shortCharCount = label.visible_characters
+		if shortCharCount > 1 && shortCharCount < label.get_total_character_count():
 			play()
 	
+func _processSound_Long(label: RichTextLabel):
+	if longCharCount != label.visible_characters:
+		longCharCount = label.visible_characters
+		if longCharCount > 1 && longCharCount < label.get_total_character_count():
+			play()
