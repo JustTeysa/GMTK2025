@@ -50,7 +50,9 @@ public partial class Player : CharacterBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		itemCompleted = false;
+		allContacts = false;
+        animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		defaultYScale = animatedSprite2d.Scale.Y;
 		defaultXScale = animatedSprite2d.Scale.X;
 		maxSquashMagnitude = defaultYScale * maxSquashMagnitude;
