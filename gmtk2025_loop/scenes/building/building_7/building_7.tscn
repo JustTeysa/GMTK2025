@@ -5,13 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://ovy4nomtmeaa" path="res://scenes/building/building_7/Inn_Awning_5.png" id="3_xjbc4"]
 [ext_resource type="Texture2D" uid="uid://bv1fbcfqr2kyh" path="res://scenes/building/building_7/Inn_Awning_2.png" id="4_yo3bq"]
 [ext_resource type="Texture2D" uid="uid://bpkkeem1oxws8" path="res://scenes/building/building_7/Inn_Awning_3.png" id="5_etxmq"]
+[ext_resource type="Texture2D" uid="uid://ck3as0t2qmcwp" path="res://scenes/building/building_7/Prop-7inheavinn-v001.png" id="6_5lwsb"]
 [ext_resource type="PackedScene" uid="uid://ckka7af74fti8" path="res://entities/npcs/npc_albert.tscn" id="6_tannh"]
 [ext_resource type="PackedScene" uid="uid://ba3fw80fjannw" path="res://entities/npcs/npc_egbert.tscn" id="7_5lwsb"]
 [ext_resource type="PackedScene" uid="uid://bf8vshp33o1k0" path="res://entities/npcs/npc_wizbert.tscn" id="8_spvd3"]
 [ext_resource type="PackedScene" uid="uid://lkv2binl0jlr" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_InnBar_Loop.tscn" id="9_5lwsb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
-size = Vector2(1363.5, 5000)
+size = Vector2(1857.75, 5000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjklf"]
 size = Vector2(76, 55)
@@ -34,7 +35,7 @@ collider = NodePath("AreaTrigger")
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
 
 [node name="AreaTrigger" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2500)
+position = Vector2(-247.125, -2500)
 shape = SubResource("RectangleShape2D_ous72")
 
 [node name="Background" type="Node2D" parent="."]
@@ -56,7 +57,12 @@ texture = ExtResource("4_yo3bq")
 [node name="Sprite2D3" type="Sprite2D" parent="Foreground"]
 texture = ExtResource("5_etxmq")
 
+[node name="Prop-7Inheavinn-v001" type="Sprite2D" parent="Foreground"]
+position = Vector2(-774, 182)
+texture = ExtResource("6_5lwsb")
+
 [node name="Collisions" type="Node2D" parent="."]
+visible = false
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Collisions"]
 
@@ -123,11 +129,11 @@ polygon = PackedVector2Array(-938.5, 395, 264.5, 397, 233.5, 348, 132.5, 279, 94
 one_way_collision = true
 
 [node name="NPC-al" parent="." instance=ExtResource("6_tannh")]
-position = Vector2(614, 0)
-monitoring = false
+position = Vector2(657, 0)
 
 [node name="NPC-egg" parent="." instance=ExtResource("7_5lwsb")]
 position = Vector2(154, 1)
+scale = Vector2(-1, 1)
 
 [node name="NPC-wizrd" parent="." instance=ExtResource("8_spvd3")]
 position = Vector2(-449, 0)
