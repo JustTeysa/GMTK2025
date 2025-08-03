@@ -1,41 +1,99 @@
-[gd_scene load_steps=3 format=3 uid="uid://dumy4tgy0qua5"]
+[gd_scene load_steps=13 format=3 uid="uid://dumy4tgy0qua5"]
 
-[ext_resource type="Texture2D" uid="uid://bm5ovhjiifyr8" path="res://scenes/background/clouds.png" id="1_iheb5"]
-[ext_resource type="Texture2D" uid="uid://ckwu2wc3v1au2" path="res://scenes/background/mountains.png" id="2_pesyb"]
+[ext_resource type="Texture2D" uid="uid://bvabydrbf34lb" path="res://scenes/background/Gj-25-sky-v001.png" id="1_rsf5d"]
+[ext_resource type="Texture2D" uid="uid://wd6mva5rqg6x" path="res://scenes/background/BG Assets/Bg-1-v002.png" id="2_03sym"]
+[ext_resource type="Texture2D" uid="uid://d3u0njbml37hu" path="res://scenes/background/BG Assets/Bg-6-v002.png" id="3_rsf5d"]
+[ext_resource type="Texture2D" uid="uid://cg8efbpfd75wd" path="res://scenes/background/BG Assets/Bg-2-v002.png" id="3_tp5tj"]
+[ext_resource type="Texture2D" uid="uid://ulxy05frtcdt" path="res://scenes/background/BG Assets/Bg-7-v002.png" id="4_ewwm8"]
+[ext_resource type="Texture2D" uid="uid://6obisf337kpy" path="res://scenes/background/BG Assets/Bg-3-v002.png" id="4_yvnxx"]
+[ext_resource type="Texture2D" uid="uid://b1voks60l0vfl" path="res://scenes/background/BG Assets/Bg-4-v002.png" id="5_tp5tj"]
+[ext_resource type="Texture2D" uid="uid://cur1el4vrhnlh" path="res://scenes/background/BG Assets/Bg-5-v002.png" id="6_yvnxx"]
+[ext_resource type="Texture2D" uid="uid://j45m2kd7vmvw" path="res://scenes/background/BG Assets/Bg-8-v002.png" id="9_evef5"]
+[ext_resource type="Texture2D" uid="uid://d25qsdj332e34" path="res://scenes/background/BG Assets/Bg-9-v002.png" id="10_iptv4"]
+[ext_resource type="Texture2D" uid="uid://c3ldc33dw5vhr" path="res://scenes/background/Floor/Ground_1.png" id="11_o0ti4"]
+[ext_resource type="Texture2D" uid="uid://buu225k2hdnei" path="res://scenes/background/Floor/Ground_2.png" id="12_gco5v"]
 
 [node name="Background" type="Node2D"]
 
 [node name="Sky" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.1, 1)
-repeat_size = Vector2(1080, 960)
-repeat_times = 5
+repeat_size = Vector2(5500, 0)
+repeat_times = 4
 
-[node name="ColorRect" type="ColorRect" parent="Sky"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0.607843, 1, 1)
+[node name="Sky" type="Sprite2D" parent="Sky"]
+position = Vector2(1244.92, 78.1252)
+scale = Vector2(1.87116, 1.87116)
+texture = ExtResource("1_rsf5d")
 
-[node name="Clouds" type="Parallax2D" parent="."]
+[node name="BG Mountains" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.2, 1)
-repeat_size = Vector2(1750, 0)
+repeat_size = Vector2(3000, 0)
 repeat_times = 5
 
-[node name="Clouds" type="Sprite2D" parent="Clouds"]
-texture_repeat = 2
-position = Vector2(960, 0)
-texture = ExtResource("1_iheb5")
-region_enabled = true
-region_rect = Rect2(0, 0, 1750, 960)
+[node name="Sprite2D" type="Sprite2D" parent="BG Mountains"]
+position = Vector2(685, 950)
+scale = Vector2(0.938752, 0.938751)
+texture = ExtResource("2_03sym")
 
-[node name="Hills" type="Parallax2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="BG Mountains"]
+position = Vector2(-390.61, 924.854)
+scale = Vector2(0.766368, 0.766368)
+texture = ExtResource("3_tp5tj")
+
+[node name="BG Clouds" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(4000, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="BG Clouds"]
+position = Vector2(1813, 703)
+scale = Vector2(0.749769, 0.749769)
+texture = ExtResource("4_yvnxx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG Clouds"]
+position = Vector2(-218, -397)
+scale = Vector2(0.612903, 0.612903)
+texture = ExtResource("5_tp5tj")
+
+[node name="Mid Clouds" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 1)
-repeat_size = Vector2(1920, 0)
+repeat_size = Vector2(3000, 0)
 repeat_times = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="Hills"]
-position = Vector2(960, 800)
-scale = Vector2(2.08519, 2.08519)
-texture = ExtResource("2_pesyb")
+[node name="Sprite2D" type="Sprite2D" parent="Mid Clouds"]
+position = Vector2(583, 116)
+scale = Vector2(0.612903, 0.612903)
+texture = ExtResource("6_yvnxx")
+
+[node name="FG Mountains" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(3000, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="FG Mountains"]
+position = Vector2(1724, 778)
+scale = Vector2(0.938752, 0.938751)
+texture = ExtResource("3_rsf5d")
+
+[node name="Sprite2D2" type="Sprite2D" parent="FG Mountains"]
+position = Vector2(250, 824)
+scale = Vector2(0.828966, 0.828966)
+texture = ExtResource("4_ewwm8")
+
+[node name="FG Clouds" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(3000, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="FG Clouds"]
+position = Vector2(2045, 966)
+scale = Vector2(0.612903, 0.612903)
+texture = ExtResource("9_evef5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="FG Clouds"]
+position = Vector2(248, 1001)
+scale = Vector2(0.612903, 0.612903)
+texture = ExtResource("10_iptv4")
 
 [node name="Forest" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.7, 1)
@@ -46,11 +104,14 @@ scroll_offset = Vector2(167, -155)
 repeat_times = 5
 
 [node name="Floor" type="Parallax2D" parent="."]
-repeat_size = Vector2(1920, 0)
+z_index = 10
+repeat_size = Vector2(3839.96, 0)
 repeat_times = 4
 
-[node name="ColorRect" type="ColorRect" parent="Floor"]
-offset_top = 1080.0
-offset_right = 1920.0
-offset_bottom = 2160.0
-color = Color(0.410331, 0.294861, 0.25116, 1)
+[node name="ColorRect" type="Sprite2D" parent="Floor"]
+position = Vector2(-1637, 781)
+texture = ExtResource("11_o0ti4")
+
+[node name="ColorRect2" type="Sprite2D" parent="Floor"]
+position = Vector2(283, 781)
+texture = ExtResource("12_gco5v")
