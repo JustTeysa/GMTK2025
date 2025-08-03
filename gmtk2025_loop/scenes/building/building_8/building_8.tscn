@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7oety6rotrmt"]
+[gd_scene load_steps=25 format=3 uid="uid://c7oety6rotrmt"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_pu2o1"]
 [ext_resource type="PackedScene" uid="uid://q7tqenjvhqrq" path="res://entities/npcs/npc_holly.tscn" id="2_86rqe"]
@@ -9,11 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://cyje62yxeddat" path="res://scenes/building/building_8/House_3_Chimenea.png" id="6_fhxby"]
 [ext_resource type="PackedScene" uid="uid://b75o4ax81fqqy" path="res://entities/npcs/npc_larry.tscn" id="7_kecpp"]
 [ext_resource type="PackedScene" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_Fire_Loop.tscn" id="8_8qnfh"]
+[ext_resource type="FontFile" uid="uid://bxunnehl6nh6c" path="res://scenes/speech_bubble/Jersey10-Regular.ttf" id="8_bmdjy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(1094, 5000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhxby"]
+size = Vector2(75, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3xtn"]
 size = Vector2(104, 85.5625)
@@ -85,13 +87,55 @@ texture = ExtResource("4_7ho3i")
 [node name="Sprite2D3" type="Sprite2D" parent="Foreground"]
 texture = ExtResource("6_fhxby")
 
+[node name="RichTextLabel3" type="RichTextLabel" parent="Foreground"]
+offset_left = -377.0
+offset_top = 67.0
+offset_right = -342.0
+offset_bottom = 106.0
+theme_override_colors/default_color = Color(0.631373, 0.113725, 0.129412, 1)
+theme_override_fonts/normal_font = ExtResource("8_bmdjy")
+theme_override_font_sizes/normal_font_size = 30
+text = "8"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Foreground"]
+offset_left = -310.0
+offset_top = 66.0
+offset_right = -275.0
+offset_bottom = 105.0
+theme_override_colors/default_color = Color(0.631373, 0.113725, 0.129412, 1)
+theme_override_fonts/normal_font = ExtResource("8_bmdjy")
+theme_override_font_sizes/normal_font_size = 30
+text = "8"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Foreground"]
+offset_left = -344.0
+offset_top = 66.0
+offset_right = -309.0
+offset_bottom = 105.0
+theme_override_colors/default_color = Color(0.898039, 0.85098, 0.827451, 1)
+theme_override_fonts/normal_font = ExtResource("8_bmdjy")
+theme_override_font_sizes/normal_font_size = 30
+text = "8"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Collisions" type="Node2D" parent="."]
 position = Vector2(0, 6)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Collisions"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D2"]
-position = Vector2(5, -31.5625)
+position = Vector2(4.5, -33.5)
 shape = SubResource("RectangleShape2D_fhxby")
 one_way_collision = true
 
