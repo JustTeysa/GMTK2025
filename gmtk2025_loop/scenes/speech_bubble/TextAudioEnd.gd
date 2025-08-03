@@ -19,5 +19,8 @@ func _processSound(label: RichTextLabel):
 		return
 		
 	if label.visible_characters == label.get_total_character_count() && !has_played_audio:
-		has_played_audio = true
+		if label == get_node("/root/Main/ShortSpeech/StoryTimeText/RichTextLabel"):
+			has_played_audio = true
+		else:
+			return
 		play()
