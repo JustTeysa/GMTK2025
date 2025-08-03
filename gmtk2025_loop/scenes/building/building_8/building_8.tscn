@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c7oety6rotrmt"]
+[gd_scene load_steps=23 format=3 uid="uid://c7oety6rotrmt"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_pu2o1"]
 [ext_resource type="PackedScene" uid="uid://q7tqenjvhqrq" path="res://entities/npcs/npc_holly.tscn" id="2_86rqe"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cs3auwsef3ahw" path="res://scenes/building/building_8/House_3_Awning_4.png" id="4_7ho3i"]
 [ext_resource type="Texture2D" uid="uid://cyje62yxeddat" path="res://scenes/building/building_8/House_3_Chimenea.png" id="6_fhxby"]
 [ext_resource type="PackedScene" uid="uid://b75o4ax81fqqy" path="res://entities/npcs/npc_larry.tscn" id="7_kecpp"]
+[ext_resource type="PackedScene" uid="uid://blbttkq0ao5p4" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_Fire_Loop.tscn" id="8_8qnfh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(1094, 5000)
@@ -217,5 +218,8 @@ position = Vector2(127, 0)
 
 [node name="NPC" parent="." instance=ExtResource("7_kecpp")]
 position = Vector2(69, -721)
+
+[node name="AudioBGs" parent="." instance=ExtResource("8_8qnfh")]
+position = Vector2(225, -780)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
