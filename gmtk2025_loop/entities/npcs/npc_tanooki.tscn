@@ -8,11 +8,9 @@
 size = Vector2(83, 82)
 
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
-monitoring = false
-monitorable = false
 script = ExtResource("1_by3bh")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
-Name = "Nooki"
+Name = "Tanooki"
 npcGreetingText = "..."
 npcItemCompletedText = "..."
 

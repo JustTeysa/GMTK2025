@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_ous72"]
 [ext_resource type="Texture2D" uid="uid://drltr48ffna63" path="res://scenes/building/house_1/House_1_v2.png" id="2_muwtn"]
 [ext_resource type="PackedScene" uid="uid://c4gka71fw53ym" path="res://entities/npcs/npc_mom.tscn" id="2_r3xtn"]
-[ext_resource type="PackedScene" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="4_jcx1k"]
+[ext_resource type="PackedScene" uid="uid://bi2dnkk2wbi65" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="4_jcx1k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(548, 5000)
