@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://ei5atkohmpvt" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_09.wav" id="12_221hk"]
 [ext_resource type="AudioStream" uid="uid://5e2smccxohll" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_10.wav" id="13_ghoj8"]
 [ext_resource type="Script" path="res://entities/player/FootstepPlayerLand.gd" id="15_yqrof"]
-[ext_resource type="Script" path="res://entities/player/FootstepPlayerJump.gd" id="16_3wlsy"]
+[ext_resource type="Script" uid="uid://ble52du2gjhm2" path="res://entities/player/FootstepPlayerJump.gd" id="16_3wlsy"]
 [ext_resource type="AudioStream" uid="uid://ckpl58uhom3kt" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_01.wav" id="19_221hk"]
 [ext_resource type="AudioStream" uid="uid://dbi5jtthhifu7" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_02.wav" id="20_ghoj8"]
 [ext_resource type="AudioStream" uid="uid://qwhep8jx606r" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_03.wav" id="21_t1t22"]
@@ -68,7 +68,7 @@ requiredNpcs = PackedStringArray("Albert", "Arc", "Coilette", "Eggbert", "Holly"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -49)
 sprite_frames = ExtResource("2_abrql")
-animation = &"land"
+animation = &"jump"
 autoplay = "idle"
 offset = Vector2(0, -8)
 
