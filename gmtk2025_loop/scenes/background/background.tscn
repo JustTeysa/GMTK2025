@@ -23,7 +23,7 @@ repeat_size = Vector2(5500, 0)
 repeat_times = 4
 
 [node name="Sky" type="Sprite2D" parent="Sky"]
-position = Vector2(1244.92, 78.1252)
+position = Vector2(1244.92, 50.1221)
 scale = Vector2(1.87116, 1.87116)
 texture = ExtResource("1_rsf5d")
 
@@ -126,9 +126,17 @@ texture = ExtResource("13_aga1r")
 
 [node name="Floor" type="Parallax2D" parent="."]
 z_index = 110
-repeat_size = Vector2(3839.05, 0)
+repeat_size = Vector2(2504.82, 0)
 repeat_times = 4
 
 [node name="Floor" type="Sprite2D" parent="Floor"]
-position = Vector2(-1637, 781)
+position = Vector2(0, 889.96)
+scale = Vector2(0.652303, 0.652303)
 texture = ExtResource("11_o0ti4")
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+visible = false
+offset_left = 172.0
+offset_top = 1080.0
+offset_right = 1539.0
+offset_bottom = 1194.0
