@@ -64,6 +64,9 @@ func CheckPlayerDialogueFlag(player: CharacterBody2D) -> bool:
 	if (player == null):
 		return false;
 		
+	if (isMom):
+		player.Item = "FOUND"
+		
 	if (player.Item == "NONE"):
 		print("Item Result: FAILED")
 	

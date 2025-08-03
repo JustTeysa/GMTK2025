@@ -5,18 +5,23 @@
 [ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_el3i6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
-size = Vector2(156, 152)
+size = Vector2(625, 800)
 
 [node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
 script = ExtResource("1_5cvio")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Mom"
-npcGreetingText = "Child! You've been pondering your orb for 3 moons now! You haven't properly quested in ages, make yourself useful and get our lawn mower back from Lupin next door."
+npcGreetingText = "Back already? Where's our mower? What do you mean this is ours? ours wasn't this blue! and didn't have nearly as many subwoofers..... Fine fine, well, while you're out could you at least give Holly back the one she lent me? [ Get Super Mower ] "
+npcItemCompletedText = "Finally the proper mower! The perfect shade of blue, Extra cushy rider support and my special edition GMTK Ultra Max Sub system! See? That wasn’t so hard was it?I mean honestly, how could you ever think that Other Mower was mine? Simply unbelievable that my own child can’t take in the wider world around them and just accept the facts that are staring them in the face! Children these days are so engrossed in their bloody Orbs living out spectacular fantasies when there's real world quests to go on.By the God’s, Is this what children do all day long, day after day? When I was your age, my mother used to tell me, \"Deary, It's a big wide world out there. Go and see it all!” And she was right! I would adventure and galavant all across this world! I’d go to the Bank or spend a week up in Kirk's tree house. I would go out for days at a time! So at the very least, I expect you to spend more than 20 minutes galavanting around town before you come back here to that damn Orb!A true adventure begins at home you know. One day you’ll be miles away from home, seeing the grand sites. Maybe you’ll see Spinel’s magnificent garden, or even one day make it all the way to 7th Heaven Inn! Oh the adventures you could have. Such stories you will unravel.  Then then next thing you know. You'll be right back at my door, A heart full of courage and a story to tell….… ARE YOU EVEN LISTENING TO ME?Your poor mother stands here, pouring her heart out to her one and only child. The least you could do is pay attention! I am absolutely gobsmacked at the level of disrespect I have to endure. To think I was so engrossed in my memories of childhood that I-NO YOU MAY NOT COME IN!...…I DON’T CARE HOW MANY ORB JAM GAMES ARE LEFT! I AM MONOLOGUING"
+isMom = true
+momStarterText = "Child! You've been pondering your orb for 3 moons now! You haven't properly quested in ages, get out!  "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_wywmv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -399)
 shape = SubResource("RectangleShape2D_ii8d2")
 
 [node name="SpeechBubbleRoot" type="Node2D" parent="."]

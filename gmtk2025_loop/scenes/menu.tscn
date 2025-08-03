@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkyasldmvencx"]
+
+[ext_resource type="Script" uid="uid://o7epkn0ej8r3" path="res://scenes/menu.gd" id="1_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://blu54ofgl4fj0" path="res://scenes/background/Gj-25-sky-guide.png" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://de4s2ri2fi0p6" path="res://scenes/background/Ground_1 (1).png" id="2_mhnvy"]
+[ext_resource type="FontFile" uid="uid://u57eqjbjlgwh" path="res://scenes/speech_bubble/static/PixelifySans-Regular.ttf" id="3_4ytvr"]
+[ext_resource type="SpriteFrames" uid="uid://d1kyaaqsw3qdn" path="res://entities/player/player_spriteframes.tres" id="4_mhnvy"]
+
+[node name="Menu" type="CanvasLayer" node_paths=PackedStringArray("BlackScreen", "MenuScreen")]
+script = ExtResource("1_4ytvr")
+BlackScreen = NodePath("ColorRect")
+MenuScreen = [NodePath("Control"), NodePath("AnimatedSprite2D")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -93.0
+offset_right = 602.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0.5, 0.5)
+texture = ExtResource("1_con2f")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.0
+offset_top = -87.0
+offset_right = 602.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0.5, 0.5)
+texture = ExtResource("2_mhnvy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_4ytvr")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "press any key to continue"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -1.0
+offset_right = 8.0
+offset_bottom = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_4ytvr")
+theme_override_font_sizes/normal_font_size = 180
+bbcode_enabled = true
+text = "Could you do 
+me a favor?"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(967, 844)
+sprite_frames = ExtResource("4_mhnvy")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

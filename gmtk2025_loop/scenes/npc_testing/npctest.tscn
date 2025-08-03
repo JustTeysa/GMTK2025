@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://deg8amqvntudx" path="res://entities/npcs/npc_kirk.tscn" id="7_2uqcq"]
 [ext_resource type="PackedScene" uid="uid://b75o4ax81fqqy" path="res://entities/npcs/npc_larry.tscn" id="8_4bj14"]
 [ext_resource type="PackedScene" uid="uid://bn3brfmy3blc0" path="res://entities/npcs/npc_lupin.tscn" id="9_oioxx"]
-[ext_resource type="PackedScene" uid="uid://cex2v7b73vnkr" path="res://entities/npcs/npc_mom2.tscn" id="10_k04ce"]
+[ext_resource type="PackedScene" uid="uid://do0jvylq6l2po" path="res://entities/npcs/npc_mom2.tscn" id="10_k04ce"]
 [ext_resource type="PackedScene" uid="uid://c4gka71fw53ym" path="res://entities/npcs/npc_mom.tscn" id="11_r2w5d"]
 [ext_resource type="PackedScene" uid="uid://cnutxabd11ay3" path="res://entities/npcs/npc_rack.tscn" id="12_pvv55"]
 [ext_resource type="PackedScene" uid="uid://b1oxkn4euoya1" path="res://entities/npcs/npc_spinel.tscn" id="13_hdcdl"]
@@ -35,6 +35,8 @@ position = Vector2(279, -17)
 
 [node name="ARC" parent="." instance=ExtResource("3_f1wi1")]
 position = Vector2(477, -19)
+npcGreetingText = "Ah another customer! What can I interest you in? Lightning Broomstick? HighSpeed Orb Surfing? Perhaps a pixie grill? ... What's that? A lawn mower? Hmmm... Sold one of those to Kirk a while back, you could ask them about it."
+npcItemCompletedText = ""
 
 [node name="COILETTE" parent="." instance=ExtResource("4_dadpm")]
 position = Vector2(671, -17)
@@ -59,6 +61,10 @@ position = Vector2(1828, -92)
 
 [node name="MOM" parent="." instance=ExtResource("11_r2w5d")]
 position = Vector2(2011, -94)
+npcGreetingText = "Child! You've been pondering your orb for 3 moons now! You haven't properly quested in ages, make yourself useful and get our lawn mower back from Lupin next door."
+npcItemCompletedText = ""
+isMom = false
+momStarterText = ""
 
 [node name="RACK" parent="." instance=ExtResource("12_pvv55")]
 position = Vector2(2199, -91)

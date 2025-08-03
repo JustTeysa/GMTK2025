@@ -1,0 +1,29 @@
+[gd_scene load_steps=10 format=3 uid="uid://b86ctp3248c5h"]
+
+[ext_resource type="AudioStream" uid="uid://baw0lmw2e685a" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_01.wav" id="1_bb3o1"]
+[ext_resource type="AudioStream" uid="uid://kspwdj7fkh7w" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_03.wav" id="2_5e430"]
+[ext_resource type="AudioStream" uid="uid://cqxxva7rd7nap" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_04.wav" id="3_myrif"]
+[ext_resource type="AudioStream" uid="uid://bhbg11qdpc767" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_05.wav" id="4_6hdbq"]
+[ext_resource type="AudioStream" uid="uid://23he4kd7sohb" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_06.wav" id="5_p1m4d"]
+[ext_resource type="AudioStream" uid="uid://d2jhqupxsrrfd" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_07.wav" id="6_ll8p2"]
+[ext_resource type="AudioStream" uid="uid://clr6cu84h83qi" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_08.wav" id="7_uhufe"]
+[ext_resource type="AudioStream" uid="uid://b52lrdidrgxkd" path="res://Audio/Originals/Foley/GMTK2025_FSShingle_1ch_09.wav" id="8_gtlhi"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5l8kx"]
+streams_count = 8
+stream_0/stream = ExtResource("1_bb3o1")
+stream_1/stream = ExtResource("2_5e430")
+stream_2/stream = ExtResource("3_myrif")
+stream_3/stream = ExtResource("4_6hdbq")
+stream_4/stream = ExtResource("5_p1m4d")
+stream_5/stream = ExtResource("6_ll8p2")
+stream_6/stream = ExtResource("7_uhufe")
+stream_7/stream = ExtResource("8_gtlhi")
+
+[node name="AudioFoley" type="Node"]
+
+[node name="Char_Foley_Feet" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_5l8kx")
+volume_db = -8.0
+attenuation = 0.203063
+bus = &"Foley"
