@@ -220,6 +220,6 @@ position = Vector2(127, 0)
 position = Vector2(69, -721)
 
 [node name="AudioBGs" parent="." instance=ExtResource("8_8qnfh")]
-position = Vector2(225, -780)
+position = Vector2(225, -1200)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
