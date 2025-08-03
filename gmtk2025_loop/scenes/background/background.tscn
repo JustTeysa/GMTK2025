@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dumy4tgy0qua5"]
+[gd_scene load_steps=16 format=3 uid="uid://dumy4tgy0qua5"]
 
 [ext_resource type="Texture2D" uid="uid://bvabydrbf34lb" path="res://scenes/background/Gj-25-sky-v001.png" id="1_rsf5d"]
 [ext_resource type="Texture2D" uid="uid://wd6mva5rqg6x" path="res://scenes/background/BG Assets/Bg-1-v002.png" id="2_03sym"]
@@ -10,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://cur1el4vrhnlh" path="res://scenes/background/BG Assets/Bg-5-v002.png" id="6_yvnxx"]
 [ext_resource type="Texture2D" uid="uid://j45m2kd7vmvw" path="res://scenes/background/BG Assets/Bg-8-v002.png" id="9_evef5"]
 [ext_resource type="Texture2D" uid="uid://d25qsdj332e34" path="res://scenes/background/BG Assets/Bg-9-v002.png" id="10_iptv4"]
+[ext_resource type="Texture2D" uid="uid://ctko8kgpi4xgk" path="res://scenes/background/Props/Prop-tree2-v001.png" id="11_3mmpu"]
 [ext_resource type="Texture2D" uid="uid://c3ldc33dw5vhr" path="res://scenes/background/Floor/Ground_1.png" id="11_o0ti4"]
+[ext_resource type="Texture2D" uid="uid://dey2nctm5tt3x" path="res://scenes/background/Props/Prop-tree3-v001.png" id="12_aga1r"]
 [ext_resource type="Texture2D" uid="uid://buu225k2hdnei" path="res://scenes/background/Floor/Ground_2.png" id="12_gco5v"]
+[ext_resource type="Texture2D" uid="uid://caj4mqav8a8ys" path="res://scenes/background/Props/Prop-tree1-v001.png" id="13_aga1r"]
 
 [node name="Background" type="Node2D"]
 
@@ -57,7 +60,7 @@ texture = ExtResource("5_tp5tj")
 
 [node name="Mid Clouds" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 1)
-repeat_size = Vector2(3000, 0)
+repeat_size = Vector2(2200, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Mid Clouds"]
@@ -95,16 +98,36 @@ position = Vector2(248, 1001)
 scale = Vector2(0.612903, 0.612903)
 texture = ExtResource("10_iptv4")
 
-[node name="Forest" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.7, 1)
-repeat_times = 5
+[node name="BG Trees" type="Parallax2D" parent="."]
+z_index = 500
+scroll_scale = Vector2(1.4, 1)
+repeat_size = Vector2(12000, 0)
+repeat_times = 2
 
-[node name="Trees" type="Parallax2D" parent="."]
-scroll_offset = Vector2(167, -155)
-repeat_times = 5
+[node name="Sprite2D" type="Sprite2D" parent="BG Trees"]
+position = Vector2(5189.27, 168.123)
+scale = Vector2(4.52863, 4.52863)
+texture = ExtResource("11_3mmpu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG Trees"]
+position = Vector2(-387, -223.278)
+scale = Vector2(5.86982, 5.86982)
+texture = ExtResource("12_aga1r")
+
+[node name="FG Trees" type="Parallax2D" parent="."]
+z_index = 500
+scroll_scale = Vector2(1.6, 1)
+repeat_size = Vector2(15000, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="FG Trees"]
+position = Vector2(2553.25, -705.532)
+scale = Vector2(6.83079, 6.83078)
+texture = ExtResource("13_aga1r")
 
 [node name="Floor" type="Parallax2D" parent="."]
 z_index = 10
+scroll_scale = Vector2(1.05, 1)
 repeat_size = Vector2(3839.96, 0)
 repeat_times = 4
 
