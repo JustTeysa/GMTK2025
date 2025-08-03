@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bk38quxm6hjr"]
+[gd_scene load_steps=32 format=3 uid="uid://bk38quxm6hjr"]
 
 [ext_resource type="Script" uid="uid://bnec8i4jmlmjq" path="res://entities/player/Player.cs" id="1_symyc"]
 [ext_resource type="SpriteFrames" uid="uid://d1kyaaqsw3qdn" path="res://entities/player/player_spriteframes.tres" id="2_abrql"]
@@ -21,6 +21,12 @@
 [ext_resource type="AudioStream" uid="uid://ckpl58uhom3kt" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_01.wav" id="19_221hk"]
 [ext_resource type="AudioStream" uid="uid://dbi5jtthhifu7" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_02.wav" id="20_ghoj8"]
 [ext_resource type="AudioStream" uid="uid://qwhep8jx606r" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_03.wav" id="21_t1t22"]
+[ext_resource type="AudioStream" uid="uid://bmfm17cfci1c3" path="res://Audio/Originals/UI/GMTK2025_UI_TextStart_1ch_01.wav" id="22_qpopc"]
+[ext_resource type="Script" uid="uid://d2o2f4s1w31n0" path="res://scenes/speech_bubble/TextAudioStart.gd" id="23_wq0jh"]
+[ext_resource type="AudioStream" uid="uid://ckllhobmi1vig" path="res://Audio/Originals/UI/GMTK2025_UI_TextSustain_1ch_01.wav" id="24_gt4e4"]
+[ext_resource type="Script" uid="uid://cpmr6syyujkx3" path="res://scenes/speech_bubble/TextAudioLoop.gd" id="25_24ehl"]
+[ext_resource type="AudioStream" uid="uid://7y4j2u4n74w6" path="res://Audio/Originals/UI/GMTK2025_UI_TextEnd_1ch_01.wav" id="26_bwdx1"]
+[ext_resource type="Script" uid="uid://okefph7iebjj" path="res://scenes/speech_bubble/TextAudioEnd.gd" id="27_vewsg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
 size = Vector2(47, 85.5)
@@ -55,17 +61,10 @@ stream_0/stream = ExtResource("19_221hk")
 stream_1/stream = ExtResource("20_ghoj8")
 stream_2/stream = ExtResource("21_t1t22")
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("LandAudioStreamPlayer") groups=["player"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 floor_stop_on_slope = false
 script = ExtResource("1_symyc")
 Speed = 500.0
-JumpVelocity = -1200.0
-GravityMod = 3.1
-TotalJumps = 2
-LandAudioStreamPlayer = NodePath("FootstepsLand")
-requiredNpcs = PackedStringArray("Albert", "Arc", "Coilette", "Eggbert", "Holly", "Kirk", "Lupin", "Spinel", "Wizbert")
-allContacts = true
-itemCompleted = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -49)
@@ -98,3 +97,15 @@ AnimatedSprite = NodePath("../AnimatedSprite2D")
 [node name="FootstepsLand" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_50fht")
 volume_db = -25.0
+
+[node name="TextAudioStart" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_qpopc")
+script = ExtResource("23_wq0jh")
+
+[node name="TextAudioLoop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_gt4e4")
+script = ExtResource("25_24ehl")
+
+[node name="TextAudioEnd" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_bwdx1")
+script = ExtResource("27_vewsg")
