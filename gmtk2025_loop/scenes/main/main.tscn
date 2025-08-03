@@ -26,10 +26,10 @@ script = ExtResource("1_hyk8p")
 [node name="Menu" parent="." instance=ExtResource("2_nvumn")]
 layer = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="ShortSpeech" type="CanvasLayer" parent="."]
 layer = 4
 
-[node name="StoryTimeText" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("label")]
+[node name="StoryTimeText" type="Control" parent="ShortSpeech" node_paths=PackedStringArray("label")]
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
@@ -37,7 +37,7 @@ grow_horizontal = 2
 script = ExtResource("2_raeie")
 label = NodePath("RichTextLabel")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/StoryTimeText"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ShortSpeech/StoryTimeText"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 12
@@ -48,6 +48,36 @@ offset_left = 422.0
 offset_top = 200.0
 offset_right = -423.0
 offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("3_hxu8e")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="LongSpeech" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="StoryTimeText" type="Control" parent="LongSpeech" node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("2_raeie")
+label = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LongSpeech/StoryTimeText"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_right = -111.0
+offset_bottom = 755.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

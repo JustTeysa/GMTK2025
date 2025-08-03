@@ -25,14 +25,9 @@ window/size/viewport_height=1080
 
 project/assembly_name="GMTK2025_Loop"
 
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
-
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/parallax2d_preview/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

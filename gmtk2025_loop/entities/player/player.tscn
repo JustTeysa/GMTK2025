@@ -1,12 +1,14 @@
-[gd_scene load_steps=24 format=3 uid="uid://bk38quxm6hjr"]
+[gd_scene load_steps=26 format=3 uid="uid://bk38quxm6hjr"]
 
 [ext_resource type="Script" uid="uid://bnec8i4jmlmjq" path="res://entities/player/Player.cs" id="1_symyc"]
 [ext_resource type="SpriteFrames" uid="uid://d1kyaaqsw3qdn" path="res://entities/player/player_spriteframes.tres" id="2_abrql"]
+[ext_resource type="AudioStream" uid="uid://c5wtwdw8qehho" path="res://Audio/Originals/Foley/GMTK2025_Jump_2ch_01.wav" id="3_26q78"]
 [ext_resource type="AudioStream" uid="uid://ckq0pav0ar4ux" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_01.wav" id="3_sglur"]
 [ext_resource type="AudioStream" uid="uid://b2wavenpaqdnk" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_02.wav" id="4_afbqv"]
 [ext_resource type="AudioStream" uid="uid://c0h3kl1jaelis" path="res://Audio/Originals/Foley/GMTK2025_Jump_2ch_02.wav" id="4_bectd"]
 [ext_resource type="Script" uid="uid://c6gwlpkho0ysa" path="res://entities/player/FootstepPlayer.gd" id="4_bls4j"]
 [ext_resource type="AudioStream" uid="uid://ce82a5p7onx2k" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_11.wav" id="5_gx6sm"]
+[ext_resource type="AudioStream" uid="uid://dspacgjy8jucc" path="res://Audio/Originals/Foley/GMTK2025_Jump_2ch_03.wav" id="5_wvtmh"]
 [ext_resource type="AudioStream" uid="uid://ckgj7ivfvgfkc" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_03.wav" id="6_yqrof"]
 [ext_resource type="AudioStream" uid="uid://d4b47pgy6ypav" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_04.wav" id="7_3wlsy"]
 [ext_resource type="AudioStream" uid="uid://c67g35g5q10qe" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_05.wav" id="8_b2kln"]
@@ -40,10 +42,12 @@ stream_9/stream = ExtResource("13_ghoj8")
 stream_10/stream = ExtResource("5_gx6sm")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_b2kln"]
-random_pitch = 1.5
+random_pitch = 1.1
 random_volume_offset_db = 0.5
-streams_count = 1
-stream_0/stream = ExtResource("4_bectd")
+streams_count = 3
+stream_0/stream = ExtResource("3_26q78")
+stream_1/stream = ExtResource("4_bectd")
+stream_2/stream = ExtResource("5_wvtmh")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_50fht"]
 streams_count = 3
@@ -88,7 +92,6 @@ AnimatedSprite = NodePath("../AnimatedSprite2D")
 [node name="FootstepsJump" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
 stream = SubResource("AudioStreamRandomizer_b2kln")
 volume_db = -25.0
-bus = &"Foley"
 script = ExtResource("16_3wlsy")
 AnimatedSprite = NodePath("../AnimatedSprite2D")
 
