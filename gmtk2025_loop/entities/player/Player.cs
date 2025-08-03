@@ -198,7 +198,7 @@ public partial class Player : CharacterBody2D
 		else
 		{
 			if (animatedSprite2d.Animation != "jump")
-				animatedSprite2d.Play("jump");
+				//animatedSprite2d.Play("jump");
 			
 			if (Velocity.X < 0)
 			{
