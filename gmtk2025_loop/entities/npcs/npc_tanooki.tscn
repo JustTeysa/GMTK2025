@@ -11,7 +11,7 @@ size = Vector2(83, 82)
 script = ExtResource("1_by3bh")
 speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
 Name = "Tanooki"
-npcGreetingText = "..."
+npcGreetingText = "[wave]*hissss*[/wave]"
 npcItemCompletedText = "..."
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
