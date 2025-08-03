@@ -37,6 +37,14 @@ func _on_body_entered(body: Node2D) -> void:
 				UpdatedTextFields(npcGreetingText)
 			elif (CheckPlayerDialogueFlag(player) && player.itemCompleted):
 				#all contacts made + item
+				var menu = get_node("/root/Main/Menu")
+				menu.shouldFadeToBlack = true
+				menu.fadeStep = 0.0001
+				
+				var player = get_node("/root/Main/Player")
+				player.Speed = 0
+				player.JumpVelocity = 0
+
 				UpdatedTextFields(npcItemCompletedText)
 		else:
 			if (CheckPlayerDialogueFlag(player)):
@@ -89,7 +97,7 @@ func CheckPlayerDialogueFlag(player: CharacterBody2D) -> bool:
 	return itemFound;
 
 func UpdatedTextFields(newText: String):
-	speechBubble.set_text(Name + ": " + newText)
+	speechBubble.set_text(Name + ":[p]" + newText)
 	
 #func _process(delta):
 #	if player != null and Input.is_action_just_pressed("interact"):
