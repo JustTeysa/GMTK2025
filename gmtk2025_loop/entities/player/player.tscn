@@ -89,11 +89,12 @@ shape = SubResource("RectangleShape2D_abrql")
 position = Vector2(0, -300)
 zoom = Vector2(1.2, 1.2)
 
-[node name="FootstepsWalk" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
+[node name="FootstepsWalk" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("Player", "AnimatedSprite")]
 stream = SubResource("AudioStreamRandomizer_8fjmc")
 volume_db = -23.0
 bus = &"Foley"
 script = ExtResource("4_bls4j")
+Player = NodePath("..")
 AnimatedSprite = NodePath("../AnimatedSprite2D")
 
 [node name="FootstepsJump" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
