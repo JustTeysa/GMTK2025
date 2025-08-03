@@ -1,6 +1,8 @@
 extends Area2D
 
-@export var speechBubble: SpeechBuble
+var speechBubble: SpeechBuble
+var longSpeechBubble: SpeechBuble
+
 @export var Name: String;
 @export var npcGreetingText: String;
 @export var npcItemCompletedText: String;
@@ -20,8 +22,9 @@ func _ready():
 	ItemWant.to_upper()
 	ItemHave.to_upper()
 	Name.to_upper()
-	speechBubble = get_node("/root/Main/CanvasLayer/StoryTimeText")
-
+	speechBubble = get_node("/root/Main/ShortSpeech/StoryTimeText")
+	longSpeechBubble = get_node("/root/Main/LongSpeech/StoryTimeText")
+	
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body
@@ -45,7 +48,7 @@ func _on_body_entered(body: Node2D) -> void:
 				player.Speed = 0
 				player.JumpVelocity = 0
 
-				UpdatedTextFields(npcItemCompletedText)
+				UpdatedLongTextFields(npcItemCompletedText)
 		else:
 			if (CheckPlayerDialogueFlag(player)):
 				UpdatedTextFields(npcItemCompletedText)
@@ -98,6 +101,9 @@ func CheckPlayerDialogueFlag(player: CharacterBody2D) -> bool:
 
 func UpdatedTextFields(newText: String):
 	speechBubble.set_text(Name + ":[p]" + newText)
+	
+func UpdatedLongTextFields(newText: String):
+	longSpeechBubble.set_text(Name + ":[p]" + newText)
 	
 #func _process(delta):
 #	if player != null and Input.is_action_just_pressed("interact"):
