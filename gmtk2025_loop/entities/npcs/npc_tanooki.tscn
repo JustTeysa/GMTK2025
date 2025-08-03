@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://ebv2hqeee4ep"]
+
+[ext_resource type="Script" uid="uid://dmh6hhk7ww8bp" path="res://entities/npcs/NPC.gd" id="1_by3bh"]
+[ext_resource type="Texture2D" uid="uid://dj2nwebk1xxkj" path="res://entities/npcs/character_art/Ch-TANOOKI-V002.png" id="2_by3bh"]
+[ext_resource type="PackedScene" uid="uid://bunmq0qrc116h" path="res://scenes/speech_bubble/speech_bubble.tscn" id="3_muovb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ii8d2"]
+size = Vector2(83, 82)
+
+[node name="NPC" type="Area2D" node_paths=PackedStringArray("speechBubble")]
+monitoring = false
+monitorable = false
+script = ExtResource("1_by3bh")
+speechBubble = NodePath("SpeechBubbleRoot/SpeechBubble")
+Name = "Nooki"
+npcGreetingText = "..."
+npcItemCompletedText = "..."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -54)
+texture = ExtResource("2_by3bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -41)
+shape = SubResource("RectangleShape2D_ii8d2")
+
+[node name="SpeechBubbleRoot" type="Node2D" parent="."]
+position = Vector2(400, 0)
+
+[node name="SpeechBubble" parent="SpeechBubbleRoot" instance=ExtResource("3_muovb")]
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
