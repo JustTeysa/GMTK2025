@@ -41,7 +41,7 @@ offset_bottom = 330.0
 theme_override_font_sizes/normal_font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_j2lwm")
 bbcode_enabled = true
-text = "[wave amp=100.0]Bacon ipsum[/wave] dolor amet boudin pork mollit tongue beef ribs porchetta leberkas brisket tempor deserunt veniam. Dolor dolore boudin, mollit adipisicing velit pariatur burgdoggen laboris. Adipisicing consequat swine turkey, shank pork chop venison id turducken ut doner sed culpa. Meatball consectetur ipsum est, occaecat hamburger exercitation et irure. Duis buffalo pig, biltong ut ground round fugiat velit eiusmod shank cupim tail sausage pastrami nisi. Laboris corned beef tongue veniam prosciutto shankle jowl."
+text = "[rainbow freq=0.2 sat=0.9][wave amp=30.0]Bacon ipsum[/wave][/rainbow] dolor amet boudin pork mollit tongue beef ribs porchetta leberkas brisket tempor deserunt veniam. Dolor dolore boudin, mollit adipisicing velit pariatur burgdoggen laboris. Adipisicing consequat swine turkey, shank pork chop venison id turducken ut doner sed culpa. Meatball consectetur ipsum est, occaecat hamburger exercitation et irure. Duis buffalo pig, biltong ut ground round fugiat velit eiusmod shank cupim tail sausage pastrami nisi. Laboris corned beef tongue veniam prosciutto [shake rate=20 level=12]shankle jowl."
 vertical_alignment = 1
 
 [node name="TextAudioStart" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("label")]
