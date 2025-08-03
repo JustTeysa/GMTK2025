@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://o7epkn0ej8r3" path="res://scenes/menu.gd" id="1_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://blu54ofgl4fj0" path="res://scenes/background/Gj-25-sky-guide.png" id="1_con2f"]
-[ext_resource type="Texture2D" uid="uid://de4s2ri2fi0p6" path="res://scenes/background/Ground_1 (1).png" id="2_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://c3ldc33dw5vhr" path="res://scenes/background/Floor/Ground_1.png" id="2_mhnvy"]
 [ext_resource type="FontFile" uid="uid://u57eqjbjlgwh" path="res://scenes/speech_bubble/static/PixelifySans-Regular.ttf" id="3_4ytvr"]
 [ext_resource type="SpriteFrames" uid="uid://d1kyaaqsw3qdn" path="res://entities/player/player_spriteframes.tres" id="4_mhnvy"]
 [ext_resource type="FontFile" uid="uid://qaig5cgtldpr" path="res://scenes/utility/Candia Script Font (ttf).ttf" id="5_g3eks"]
