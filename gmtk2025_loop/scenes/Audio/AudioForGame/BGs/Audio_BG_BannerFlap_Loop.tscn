@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://benp6l67oj1h2"]
+
+[ext_resource type="AudioStream" uid="uid://uj0la3sqctio" path="res://Audio/Originals/BGs/Loop/GMTK2025_AmbBannerFlapping_Lp_1ch_01.wav" id="1_s4dth"]
+
+[node name="AudioBGs" type="Node2D"]
+
+[node name="BG_Bed_Positional_Looping" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_s4dth")
+volume_db = -23.0
+autoplay = true
+max_distance = 800.0
+attenuation = 2.0
+panning_strength = 1.6
+bus = &"BGs"

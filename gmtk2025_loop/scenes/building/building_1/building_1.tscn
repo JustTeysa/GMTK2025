@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbi3l4o3qf5w4"]
+[gd_scene load_steps=9 format=3 uid="uid://bbi3l4o3qf5w4"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_t5uxg"]
 [ext_resource type="PackedScene" uid="uid://c4gka71fw53ym" path="res://entities/npcs/npc_mom.tscn" id="2_r3xtn"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ds4gu7toep37a" path="res://scenes/building/house_1/Prop-banner-v001 (1).png" id="4_jcx1k"]
 [ext_resource type="PackedScene" uid="uid://bi2dnkk2wbi65" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="5_s0nj0"]
 [ext_resource type="PackedScene" uid="uid://b064m3hrpxfyr" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs Crow OneShot.tscn" id="6_4wkg1"]
+[ext_resource type="PackedScene" uid="uid://benp6l67oj1h2" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_BannerFlap_Loop.tscn" id="7_6jxgd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v03f1"]
 size = Vector2(711, 5012)
@@ -49,5 +50,8 @@ maximumTimerInterval = 9.0
 position = Vector2(-200, 0)
 minimumTimerInterval = 3.0
 maximumTimerInterval = 7.0
+
+[node name="AudioBGs3" parent="." instance=ExtResource("7_6jxgd")]
+position = Vector2(-125, -300)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
