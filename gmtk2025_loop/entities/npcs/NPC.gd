@@ -9,6 +9,7 @@ var longSpeechBubble: SpeechBuble
 #@export var npcEndedText: String;
 @export var isMom: bool = false;
 @export var momStarterText: String;
+@export var ShouldNeverFlip = false
 
 var ItemWant: String = "NO ITEM WANT DEFINED";
 var ItemHave: String = "NO ITEM WANT DEFINED";
@@ -37,8 +38,13 @@ func _ready():
 func _process(delta: float) -> void:
 	currentTime += delta
 	
-	if (currentTime >= timeLimit):
+	if (player != null):
+		AimAtPlayer()
+	elif (currentTime >= timeLimit && !ShouldNeverFlip):
 		UpdateFlipTimer()
+		
+	if (ShouldNeverFlip):
+		return
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -148,3 +154,9 @@ func UpdateFlipTimer():
 	
 	var rand = RandomNumberGenerator.new()
 	timeLimit = randf_range(minFlipTime, maxFlipTime)
+
+func AimAtPlayer():
+	if player.global_position < global_position:
+		sprite2d.flip_h = false
+	if player.global_position > global_position:
+		sprite2d.flip_h = true
