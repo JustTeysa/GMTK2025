@@ -1,11 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://bk38quxm6hjr"]
+[gd_scene load_steps=27 format=3 uid="uid://bk38quxm6hjr"]
 
 [ext_resource type="Script" uid="uid://bnec8i4jmlmjq" path="res://entities/player/Player.cs" id="1_symyc"]
 [ext_resource type="SpriteFrames" uid="uid://d1kyaaqsw3qdn" path="res://entities/player/player_spriteframes.tres" id="2_abrql"]
+[ext_resource type="AudioStream" uid="uid://c5wtwdw8qehho" path="res://Audio/Originals/Foley/GMTK2025_Jump_2ch_01.wav" id="3_26q78"]
 [ext_resource type="AudioStream" uid="uid://ckq0pav0ar4ux" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_01.wav" id="3_sglur"]
 [ext_resource type="AudioStream" uid="uid://b2wavenpaqdnk" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_02.wav" id="4_afbqv"]
+[ext_resource type="AudioStream" uid="uid://c0h3kl1jaelis" path="res://Audio/Originals/Foley/GMTK2025_Jump_2ch_02.wav" id="4_bectd"]
 [ext_resource type="Script" uid="uid://c6gwlpkho0ysa" path="res://entities/player/FootstepPlayer.gd" id="4_bls4j"]
 [ext_resource type="AudioStream" uid="uid://ce82a5p7onx2k" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_11.wav" id="5_gx6sm"]
+[ext_resource type="AudioStream" uid="uid://dspacgjy8jucc" path="res://Audio/Originals/Foley/GMTK2025_Jump_2ch_03.wav" id="5_wvtmh"]
 [ext_resource type="AudioStream" uid="uid://ckgj7ivfvgfkc" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_03.wav" id="6_yqrof"]
 [ext_resource type="AudioStream" uid="uid://d4b47pgy6ypav" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_04.wav" id="7_3wlsy"]
 [ext_resource type="AudioStream" uid="uid://c67g35g5q10qe" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_05.wav" id="8_b2kln"]
@@ -14,6 +17,11 @@
 [ext_resource type="AudioStream" uid="uid://df506281oj3j6" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_08.wav" id="11_eyb6c"]
 [ext_resource type="AudioStream" uid="uid://ei5atkohmpvt" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_09.wav" id="12_221hk"]
 [ext_resource type="AudioStream" uid="uid://5e2smccxohll" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_10.wav" id="13_ghoj8"]
+[ext_resource type="Script" path="res://entities/player/FootstepPlayerLand.gd" id="15_yqrof"]
+[ext_resource type="Script" path="res://entities/player/FootstepPlayerJump.gd" id="16_3wlsy"]
+[ext_resource type="AudioStream" uid="uid://ckpl58uhom3kt" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_01.wav" id="19_221hk"]
+[ext_resource type="AudioStream" uid="uid://dbi5jtthhifu7" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_02.wav" id="20_ghoj8"]
+[ext_resource type="AudioStream" uid="uid://qwhep8jx606r" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_03.wav" id="21_t1t22"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abrql"]
 size = Vector2(47, 85.5)
@@ -34,6 +42,20 @@ stream_8/stream = ExtResource("12_221hk")
 stream_9/stream = ExtResource("13_ghoj8")
 stream_10/stream = ExtResource("5_gx6sm")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_b2kln"]
+random_pitch = 1.1
+random_volume_offset_db = 0.5
+streams_count = 3
+stream_0/stream = ExtResource("3_26q78")
+stream_1/stream = ExtResource("4_bectd")
+stream_2/stream = ExtResource("5_wvtmh")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_50fht"]
+streams_count = 3
+stream_0/stream = ExtResource("19_221hk")
+stream_1/stream = ExtResource("20_ghoj8")
+stream_2/stream = ExtResource("21_t1t22")
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 floor_stop_on_slope = false
 script = ExtResource("1_symyc")
@@ -46,7 +68,7 @@ requiredNpcs = PackedStringArray("Albert", "Arc", "Coilette", "Eggbert", "Holly"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -49)
 sprite_frames = ExtResource("2_abrql")
-animation = &"walk"
+animation = &"land"
 autoplay = "idle"
 offset = Vector2(0, -8)
 
@@ -56,10 +78,23 @@ shape = SubResource("RectangleShape2D_abrql")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -300)
+zoom = Vector2(1.2, 1.2)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
+[node name="FootstepsWalk" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
 stream = SubResource("AudioStreamRandomizer_8fjmc")
 volume_db = -25.0
 bus = &"Foley"
 script = ExtResource("4_bls4j")
+AnimatedSprite = NodePath("../AnimatedSprite2D")
+
+[node name="FootstepsJump" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
+stream = SubResource("AudioStreamRandomizer_b2kln")
+volume_db = -25.0
+script = ExtResource("16_3wlsy")
+AnimatedSprite = NodePath("../AnimatedSprite2D")
+
+[node name="FootstepsLand" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
+stream = SubResource("AudioStreamRandomizer_50fht")
+volume_db = -25.0
+script = ExtResource("15_yqrof")
 AnimatedSprite = NodePath("../AnimatedSprite2D")

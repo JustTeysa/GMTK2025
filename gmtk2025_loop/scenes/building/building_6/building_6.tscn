@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://x64qpfdessdf"]
+[gd_scene load_steps=6 format=3 uid="uid://x64qpfdessdf"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_5t41o"]
 [ext_resource type="PackedScene" uid="uid://c1u4pr7mm1hfe" path="res://scenes/building/building_2/building_2.tscn" id="2_1fk5j"]
 [ext_resource type="PackedScene" uid="uid://wl3nwf83fedh" path="res://entities/npcs/npc_coilette.tscn" id="2_2oi5l"]
+[ext_resource type="FontFile" uid="uid://bxunnehl6nh6c" path="res://scenes/speech_bubble/Jersey10-Regular.ttf" id="4_2oi5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t41o"]
 size = Vector2(966, 5003)
@@ -11,7 +12,7 @@ size = Vector2(966, 5003)
 script = ExtResource("1_5t41o")
 collider = NodePath("CollisionShape2D")
 npc_scenes = Array[PackedScene]([ExtResource("2_2oi5l")])
-npc_roots = [NodePath("Marker2D")]
+npc_roots = [NodePath("CollietteRoot")]
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -21,7 +22,21 @@ shape = SubResource("RectangleShape2D_5t41o")
 [node name="Building_2" parent="." instance=ExtResource("2_1fk5j")]
 npc_scenes = Array[PackedScene]([])
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="CollietteRoot" type="Marker2D" parent="."]
 position = Vector2(-373, 0)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -299.0
+offset_top = -170.0
+offset_right = -254.0
+offset_bottom = -124.0
+theme_override_colors/default_color = Color(0.290196, 0.27451, 0.360784, 1)
+theme_override_fonts/normal_font = ExtResource("4_2oi5l")
+theme_override_font_sizes/normal_font_size = 30
+text = "6"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

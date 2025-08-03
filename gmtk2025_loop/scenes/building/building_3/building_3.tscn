@@ -56,11 +56,10 @@ one_way_collision = true
 
 [node name="NPC" parent="." instance=ExtResource("5_7q6j6")]
 position = Vector2(-223, 0)
-Name = ""
 
 [node name="AudioBGs" parent="." instance=ExtResource("6_238r5")]
 position = Vector2(-150, -300)
-minimumTimerInterval = 6.0
-maximumTimerInterval = 10.0
+minimumTimerInterval = 3.0
+maximumTimerInterval = 8.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

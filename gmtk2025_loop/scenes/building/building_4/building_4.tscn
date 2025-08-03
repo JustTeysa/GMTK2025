@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://h1o06clo8sb5"]
+[gd_scene load_steps=6 format=3 uid="uid://h1o06clo8sb5"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_t5uxg"]
-[ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/building_1/building_1.tscn" id="2_v03f1"]
+[ext_resource type="PackedScene" uid="uid://cmtkcva1swcic" path="res://scenes/building/house_1/house_1.tscn" id="2_v03f1"]
 [ext_resource type="PackedScene" uid="uid://camf6ddm74215" path="res://entities/npcs/npc_arc.tscn" id="3_0wq6n"]
+[ext_resource type="PackedScene" uid="uid://bi2dnkk2wbi65" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="4_maqlu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v03f1"]
 size = Vector2(525, 5012)
@@ -19,7 +20,7 @@ position = Vector2(2.5, -2496)
 scale = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_v03f1")
 
-[node name="Building_1" parent="." node_paths=PackedStringArray("npc_roots") instance=ExtResource("2_v03f1")]
+[node name="House_1" parent="." node_paths=PackedStringArray("npc_roots") instance=ExtResource("2_v03f1")]
 scale = Vector2(-1, 1)
 npc_scenes = Array[PackedScene]([])
 npc_roots = Array[PackedScene]([])
@@ -27,5 +28,10 @@ npc_roots = Array[PackedScene]([])
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-200, 0)
 scale = Vector2(-1, 1)
+
+[node name="AudioBGs" parent="." instance=ExtResource("4_maqlu")]
+position = Vector2(-150, -400)
+minimumTimerInterval = 4.0
+maximumTimerInterval = 7.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

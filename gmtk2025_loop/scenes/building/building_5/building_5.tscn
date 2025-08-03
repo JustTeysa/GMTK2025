@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8mmi6dxcnio3"]
+[gd_scene load_steps=15 format=3 uid="uid://b8mmi6dxcnio3"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_p720q"]
+[ext_resource type="PackedScene" uid="uid://ebv2hqeee4ep" path="res://entities/npcs/npc_tanooki.tscn" id="2_5cmp2"]
 [ext_resource type="Texture2D" uid="uid://chhy4h5rf01lf" path="res://scenes/building/building_5/Bank_Full.png" id="2_mxdhq"]
 [ext_resource type="Texture2D" uid="uid://b6i8u3i28m2tn" path="res://scenes/building/building_5/Bank_Coin_OL.png" id="3_yd3j0"]
 [ext_resource type="PackedScene" uid="uid://b1oxkn4euoya1" path="res://entities/npcs/npc_spinel.tscn" id="4_xjbc4"]
+[ext_resource type="FontFile" uid="uid://bxunnehl6nh6c" path="res://scenes/speech_bubble/Jersey10-Regular.ttf" id="5_yjklf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(1094, 5000)
@@ -26,10 +28,19 @@ size = Vector2(782.5, 32.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxdhq"]
 size = Vector2(280, 6)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cmp2"]
+size = Vector2(117, 80)
+
 [node name="Building_5" type="Area2D" node_paths=PackedStringArray("collider")]
 script = ExtResource("1_p720q")
 collider = NodePath("AreaTrigger")
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
+
+[node name="NPC2" parent="." instance=ExtResource("2_5cmp2")]
+position = Vector2(-344, -237)
+monitoring = true
+monitorable = true
+Name = "Nuki"
 
 [node name="AreaTrigger" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2500)
@@ -47,6 +58,19 @@ position = Vector2(0, -396)
 
 [node name="Sprite2D" type="Sprite2D" parent="Foreground"]
 texture = ExtResource("3_yd3j0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Foreground"]
+offset_left = -100.0
+offset_top = -349.0
+offset_right = 102.0
+offset_bottom = -160.0
+theme_override_colors/default_color = Color(0.780392, 0.658824, 0.054902, 1)
+theme_override_fonts/normal_font = ExtResource("5_yjklf")
+theme_override_font_sizes/normal_font_size = 191
+text = "$5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Collisions" type="Node2D" parent="."]
 
@@ -90,6 +114,13 @@ one_way_collision = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D6"]
 position = Vector2(5, -568)
 shape = SubResource("RectangleShape2D_mxdhq")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/StaticBody2D7"]
+position = Vector2(-391.5, -197)
+shape = SubResource("RectangleShape2D_5cmp2")
+one_way_collision = true
 
 [node name="NPC" parent="." instance=ExtResource("4_xjbc4")]
 position = Vector2(137, -121)
