@@ -16,10 +16,10 @@ public partial class Player : CharacterBody2D
 	[Export] 
 	public string Item = "NONE";
 
-    [Export]
-    public AudioStreamPlayer2D LandAudioStreamPlayer;
+	[Export]
+	public AudioStreamPlayer2D LandAudioStreamPlayer;
 
-    private AnimatedSprite2D animatedSprite2d;
+	private AnimatedSprite2D animatedSprite2d;
 	
 	public const int MAX_VELOCITY = 5;
 	
@@ -142,8 +142,8 @@ public partial class Player : CharacterBody2D
 			bigSquash = (airTime > 1.0f);
 			
 			airTime = 0.0f;
-            LandAudioStreamPlayer.Play();
-        }
+			LandAudioStreamPlayer.Play();
+		}
 
 		float sqSpd = 1.0f;
 		if (squashing)
@@ -195,7 +195,8 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
-			//if (animatedSprite2d.Animation != "jump")
+			if (animatedSprite2d.Animation != "jump")
+				animatedSprite2d.Play("jump");
 			
 			if (Velocity.X < 0)
 			{
