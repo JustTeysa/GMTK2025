@@ -11,7 +11,7 @@ size = Vector2(966, 5003)
 script = ExtResource("1_5t41o")
 collider = NodePath("CollisionShape2D")
 npc_scenes = Array[PackedScene]([ExtResource("2_2oi5l")])
-npc_roots = [NodePath("Marker2D")]
+npc_roots = [NodePath("CollietteRoot")]
 metadata/_custom_type_script = "uid://4pg5rir4l6sj"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -21,7 +21,7 @@ shape = SubResource("RectangleShape2D_5t41o")
 [node name="Building_2" parent="." instance=ExtResource("2_1fk5j")]
 npc_scenes = Array[PackedScene]([])
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="CollietteRoot" type="Marker2D" parent="."]
 position = Vector2(-373, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

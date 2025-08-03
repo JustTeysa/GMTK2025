@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cl5te2w3te4i"]
+[gd_scene load_steps=18 format=3 uid="uid://cl5te2w3te4i"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_fvj6y"]
 [ext_resource type="Texture2D" uid="uid://cmb4t4svijse7" path="res://scenes/building/building_7/Inn_Full.png" id="2_f3ean"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://ckka7af74fti8" path="res://entities/npcs/npc_albert.tscn" id="6_tannh"]
 [ext_resource type="PackedScene" uid="uid://ba3fw80fjannw" path="res://entities/npcs/npc_egbert.tscn" id="7_5lwsb"]
 [ext_resource type="PackedScene" uid="uid://bf8vshp33o1k0" path="res://entities/npcs/npc_wizbert.tscn" id="8_spvd3"]
+[ext_resource type="PackedScene" uid="uid://lkv2binl0jlr" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_InnBar_Loop.tscn" id="9_5lwsb"]
+[ext_resource type="PackedScene" uid="uid://ebv2hqeee4ep" path="res://entities/npcs/npc_tanooki.tscn" id="10_lkh2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(1857.75, 5000)
@@ -136,5 +138,11 @@ scale = Vector2(-1, 1)
 
 [node name="NPC-wizrd" parent="." instance=ExtResource("8_spvd3")]
 position = Vector2(-449, 0)
+
+[node name="NPC_tanooki" parent="." instance=ExtResource("10_lkh2q")]
+position = Vector2(453, -8)
+
+[node name="AudioBGs" parent="." instance=ExtResource("9_5lwsb")]
+position = Vector2(-425, -150)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
