@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://deg8amqvntudx" path="res://entities/npcs/npc_kirk.tscn" id="5_7q6j6"]
 [ext_resource type="Texture2D" uid="uid://bp468prc43ums" path="res://scenes/building/building_3/Camp_Awning_5.png" id="5_cn8q0"]
 [ext_resource type="PackedScene" uid="uid://bi2dnkk2wbi65" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="6_238r5"]
-[ext_resource type="PackedScene" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs Crow OneShot.tscn" id="7_cn8q0"]
+[ext_resource type="PackedScene" uid="uid://b064m3hrpxfyr" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs Crow OneShot.tscn" id="7_cn8q0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(804, 5000)
