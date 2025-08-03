@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://x64qpfdessdf"]
+[gd_scene load_steps=8 format=3 uid="uid://x64qpfdessdf"]
 
 [ext_resource type="Script" uid="uid://4pg5rir4l6sj" path="res://scenes/building/building.gd" id="1_5t41o"]
 [ext_resource type="PackedScene" uid="uid://c1u4pr7mm1hfe" path="res://scenes/building/building_2/building_2.tscn" id="2_1fk5j"]
 [ext_resource type="PackedScene" uid="uid://wl3nwf83fedh" path="res://entities/npcs/npc_coilette.tscn" id="2_2oi5l"]
 [ext_resource type="FontFile" uid="uid://bxunnehl6nh6c" path="res://scenes/speech_bubble/Jersey10-Regular.ttf" id="4_2oi5l"]
+[ext_resource type="PackedScene" uid="uid://bi2dnkk2wbi65" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs BirdChirp OneShot.tscn" id="5_qsxqt"]
+[ext_resource type="PackedScene" uid="uid://myby1mc6f5dj" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs Chicken OneShot.tscn" id="6_t0v3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t41o"]
 size = Vector2(966, 5003)
@@ -38,5 +40,13 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioBGs" parent="." instance=ExtResource("5_qsxqt")]
+position = Vector2(-400, -350)
+minimumTimerInterval = 4.0
+maximumTimerInterval = 9.0
+
+[node name="AudioBGs2" parent="." instance=ExtResource("6_t0v3c")]
+position = Vector2(400, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

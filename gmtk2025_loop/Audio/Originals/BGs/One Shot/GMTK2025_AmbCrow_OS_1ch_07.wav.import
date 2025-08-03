@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnc58dnob7ymx"
+path="res://.godot/imported/GMTK2025_AmbCrow_OS_1ch_07.wav-972de2b9de7400e93f0bd532288bcbfa.sample"
+
+[deps]
+
+source_file="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_07.wav"
+dest_files=["res://.godot/imported/GMTK2025_AmbCrow_OS_1ch_07.wav-972de2b9de7400e93f0bd532288bcbfa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

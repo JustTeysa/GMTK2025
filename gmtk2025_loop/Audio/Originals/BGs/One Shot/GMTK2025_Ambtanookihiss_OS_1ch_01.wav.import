@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b5j3ty376sy5v"
+path="res://.godot/imported/GMTK2025_Ambtanookihiss_OS_1ch_01.wav-b9e3f56cdb6676c32ac95140a01f4a02.sample"
+
+[deps]
+
+source_file="res://Audio/Originals/BGs/One Shot/GMTK2025_Ambtanookihiss_OS_1ch_01.wav"
+dest_files=["res://.godot/imported/GMTK2025_Ambtanookihiss_OS_1ch_01.wav-b9e3f56cdb6676c32ac95140a01f4a02.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

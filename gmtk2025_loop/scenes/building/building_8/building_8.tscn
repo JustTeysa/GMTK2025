@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cs3auwsef3ahw" path="res://scenes/building/building_8/House_3_Awning_4.png" id="4_7ho3i"]
 [ext_resource type="Texture2D" uid="uid://cyje62yxeddat" path="res://scenes/building/building_8/House_3_Chimenea.png" id="6_fhxby"]
 [ext_resource type="PackedScene" uid="uid://b75o4ax81fqqy" path="res://entities/npcs/npc_larry.tscn" id="7_kecpp"]
-[ext_resource type="PackedScene" path="res://scenes/Audio/AudioForGame/BGs/Audio_BG_Fire_Loop.tscn" id="8_8qnfh"]
 [ext_resource type="FontFile" uid="uid://bxunnehl6nh6c" path="res://scenes/speech_bubble/Jersey10-Regular.ttf" id="8_bmdjy"]
+[ext_resource type="PackedScene" uid="uid://b064m3hrpxfyr" path="res://scenes/Audio/AudioForGame/BGs/Audio BGs Crow OneShot.tscn" id="10_bmdjy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ous72"]
 size = Vector2(1094, 5000)
@@ -267,7 +267,9 @@ position = Vector2(253, 0)
 [node name="NPC_Larry" parent="." instance=ExtResource("7_kecpp")]
 position = Vector2(69, -721)
 
-[node name="AudioBGs" parent="." instance=ExtResource("8_8qnfh")]
-position = Vector2(225, -1200)
+[node name="AudioBGs" parent="." instance=ExtResource("10_bmdjy")]
+position = Vector2(200, -500)
+minimumTimerInterval = 4.0
+maximumTimerInterval = 7.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

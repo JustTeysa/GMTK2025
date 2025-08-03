@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw1ynqa55d5a8"]
+
+[ext_resource type="Script" uid="uid://lf6dt3pr2jjn" path="res://scenes/Audio/AudioForGame/BGs/audio_b_gs_bird_chirp_one_shot.gd" id="1_qwavm"]
+[ext_resource type="AudioStream" uid="uid://b5j3ty376sy5v" path="res://Audio/Originals/BGs/One Shot/GMTK2025_Ambtanookihiss_OS_1ch_01.wav" id="2_4likr"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w2jtn"]
+random_pitch = 1.5
+random_volume_offset_db = 1.0
+streams_count = 1
+stream_0/stream = ExtResource("2_4likr")
+
+[node name="AudioBGs" type="Node2D" node_paths=PackedStringArray("timer", "audioPlayer")]
+script = ExtResource("1_qwavm")
+timer = NodePath("BG_OneShot_Looping/Timer")
+minimumTimerInterval = 1.0
+maximumTimerInterval = 4.0
+audioPlayer = NodePath("BG_OneShot_Looping")
+
+[node name="BG_OneShot_Looping" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_w2jtn")
+volume_db = -14.0
+max_distance = 800.0
+attenuation = 2.0
+max_polyphony = 2
+panning_strength = 1.5
+bus = &"BGs"
+
+[node name="Timer" type="Timer" parent="BG_OneShot_Looping"]
+wait_time = 10.0
+autostart = true
