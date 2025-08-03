@@ -17,8 +17,8 @@
 [ext_resource type="AudioStream" uid="uid://df506281oj3j6" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_08.wav" id="11_eyb6c"]
 [ext_resource type="AudioStream" uid="uid://ei5atkohmpvt" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_09.wav" id="12_221hk"]
 [ext_resource type="AudioStream" uid="uid://5e2smccxohll" path="res://Audio/Originals/Foley/GMTK2025_FSDirt_1ch_10.wav" id="13_ghoj8"]
-[ext_resource type="Script" uid="uid://i78mkiwmsxv3" path="res://entities/player/FootstepPlayerLand.gd" id="15_yqrof"]
-[ext_resource type="Script" uid="uid://ble52du2gjhm2" path="res://entities/player/FootstepPlayerJump.gd" id="16_3wlsy"]
+[ext_resource type="Script" path="res://entities/player/FootstepPlayerLand.gd" id="15_yqrof"]
+[ext_resource type="Script" path="res://entities/player/FootstepPlayerJump.gd" id="16_3wlsy"]
 [ext_resource type="AudioStream" uid="uid://ckpl58uhom3kt" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_01.wav" id="19_221hk"]
 [ext_resource type="AudioStream" uid="uid://dbi5jtthhifu7" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_02.wav" id="20_ghoj8"]
 [ext_resource type="AudioStream" uid="uid://qwhep8jx606r" path="res://Audio/Originals/Foley/GMTK2025_FSWood_1ch_03.wav" id="21_t1t22"]
@@ -78,6 +78,7 @@ shape = SubResource("RectangleShape2D_abrql")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -300)
+zoom = Vector2(1.2, 1.2)
 
 [node name="FootstepsWalk" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("AnimatedSprite")]
 stream = SubResource("AudioStreamRandomizer_8fjmc")
