@@ -52,7 +52,7 @@ public partial class Player : CharacterBody2D
 	{
 		itemCompleted = false;
 		allContacts = false;
-        animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		animatedSprite2d = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		defaultYScale = animatedSprite2d.Scale.Y;
 		defaultXScale = animatedSprite2d.Scale.X;
 		maxSquashMagnitude = defaultYScale * maxSquashMagnitude;
