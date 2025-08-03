@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _process(deltaTime: float):
 	_processSound(shortLabel)
-	#_processSound(longLabel)
+	_processSound(longLabel)
 
 func _processSound(label: RichTextLabel):
 	if label.visible_characters == 0:

@@ -56,7 +56,7 @@ polygon = PackedVector2Array(-394, -320, -131, -320, -163, -385, -231, -421, -28
 one_way_collision = true
 
 [node name="NPC" parent="." instance=ExtResource("5_7q6j6")]
-position = Vector2(-223, 0)
+position = Vector2(-171, 0)
 
 [node name="AudioBGs" parent="." instance=ExtResource("6_238r5")]
 position = Vector2(-150, -300)
