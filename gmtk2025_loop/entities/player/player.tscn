@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bk38quxm6hjr"]
+[gd_scene load_steps=33 format=3 uid="uid://bk38quxm6hjr"]
 
 [ext_resource type="Script" uid="uid://bnec8i4jmlmjq" path="res://entities/player/Player.cs" id="1_symyc"]
 [ext_resource type="SpriteFrames" uid="uid://d1kyaaqsw3qdn" path="res://entities/player/player_spriteframes.tres" id="2_abrql"]
@@ -61,6 +61,12 @@ stream_0/stream = ExtResource("19_221hk")
 stream_1/stream = ExtResource("20_ghoj8")
 stream_2/stream = ExtResource("21_t1t22")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qpopc"]
+random_pitch = 1.1
+random_volume_offset_db = 0.5
+streams_count = 1
+stream_0/stream = ExtResource("24_gt4e4")
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 floor_stop_on_slope = false
 script = ExtResource("1_symyc")
@@ -100,12 +106,18 @@ volume_db = -25.0
 
 [node name="TextAudioStart" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("22_qpopc")
+volume_db = -20.0
+bus = &"UI"
 script = ExtResource("23_wq0jh")
 
 [node name="TextAudioLoop" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("24_gt4e4")
+stream = SubResource("AudioStreamRandomizer_qpopc")
+volume_db = -20.0
+bus = &"UI"
 script = ExtResource("25_24ehl")
 
 [node name="TextAudioEnd" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_bwdx1")
+volume_db = -20.0
+bus = &"UI"
 script = ExtResource("27_vewsg")

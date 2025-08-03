@@ -45,13 +45,16 @@ text = "[wave amp=100.0]Bacon ipsum[/wave] dolor amet boudin pork mollit tongue 
 vertical_alignment = 1
 
 [node name="TextAudioStart" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("label")]
+volume_db = -10.0
 script = ExtResource("2_j2lwm")
 label = NodePath("../Panel/RichTextLabel")
 
 [node name="TextAudioLoop" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("label")]
+volume_db = -10.0
 script = ExtResource("3_xbxgb")
 label = NodePath("../Panel/RichTextLabel")
 
-[node name="TextAudioEnd" type="AudioStreamPlayer2D" parent="." node_paths=PackedStringArray("label")]
+[node name="TextAudioEnd" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
+bus = &"UI"
 script = ExtResource("3_rybbg")
-label = NodePath("../Panel/RichTextLabel")
