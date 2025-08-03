@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dumy4tgy0qua5"]
+[gd_scene load_steps=15 format=3 uid="uid://dumy4tgy0qua5"]
 
 [ext_resource type="Texture2D" uid="uid://bvabydrbf34lb" path="res://scenes/background/Gj-25-sky-v001.png" id="1_rsf5d"]
 [ext_resource type="Texture2D" uid="uid://wd6mva5rqg6x" path="res://scenes/background/BG Assets/Bg-1-v002.png" id="2_03sym"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://ctko8kgpi4xgk" path="res://scenes/background/Props/Prop-tree2-v001.png" id="11_3mmpu"]
 [ext_resource type="Texture2D" uid="uid://c3ldc33dw5vhr" path="res://scenes/background/Floor/Ground_1.png" id="11_o0ti4"]
 [ext_resource type="Texture2D" uid="uid://dey2nctm5tt3x" path="res://scenes/background/Props/Prop-tree3-v001.png" id="12_aga1r"]
-[ext_resource type="Texture2D" uid="uid://buu225k2hdnei" path="res://scenes/background/Floor/Ground_2.png" id="12_gco5v"]
 [ext_resource type="Texture2D" uid="uid://caj4mqav8a8ys" path="res://scenes/background/Props/Prop-tree1-v001.png" id="13_aga1r"]
 
 [node name="Background" type="Node2D"]
@@ -110,7 +109,7 @@ scale = Vector2(4.52863, 4.52863)
 texture = ExtResource("11_3mmpu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="BG Trees"]
-position = Vector2(-387, -223.278)
+position = Vector2(-2087, -223.278)
 scale = Vector2(5.86982, 5.86982)
 texture = ExtResource("12_aga1r")
 
@@ -127,13 +126,9 @@ texture = ExtResource("13_aga1r")
 
 [node name="Floor" type="Parallax2D" parent="."]
 z_index = 110
-repeat_size = Vector2(3839.96, 0)
+repeat_size = Vector2(3839.05, 0)
 repeat_times = 4
 
-[node name="ColorRect" type="Sprite2D" parent="Floor"]
+[node name="Floor" type="Sprite2D" parent="Floor"]
 position = Vector2(-1637, 781)
 texture = ExtResource("11_o0ti4")
-
-[node name="ColorRect2" type="Sprite2D" parent="Floor"]
-position = Vector2(283, 781)
-texture = ExtResource("12_gco5v")
