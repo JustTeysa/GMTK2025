@@ -13,10 +13,16 @@ var longSpeechBubble: SpeechBuble
 var ItemWant: String = "NO ITEM WANT DEFINED";
 var ItemHave: String = "NO ITEM WANT DEFINED";
 
-var swapped: bool = false;
+var swapped: bool = false
 
 var player: CharacterBody2D
-var contactMade:bool = false;
+var contactMade:bool = false
+
+var sprite2d: Sprite2D
+var timeLimit: float
+var currentTime: float
+var minFlipTime: float = 1
+var maxFlipTime: float = 5
 
 func _ready():
 	ItemWant.to_upper()
@@ -24,11 +30,19 @@ func _ready():
 	Name.to_upper()
 	speechBubble = get_node("/root/Main/ShortSpeech/StoryTimeText")
 	longSpeechBubble = get_node("/root/Main/LongSpeech/StoryTimeText")
+	sprite2d = get_node("Sprite2D");
+	currentTime = 0
+	timeLimit = 3
+	
+func _process(delta: float) -> void:
+	currentTime += delta
+	
+	if (currentTime >= timeLimit):
+		UpdateFlipTimer()
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body
-		
 		
 		## is mom, no contacts, no item
 		if (isMom):
@@ -124,3 +138,13 @@ func AttemptItemSwap(player: CharacterBody2D) -> bool:
 	print("Result: SUCCESS")
 	print(itemName)
 	return true
+
+func UpdateFlipTimer():
+	currentTime = 0
+	if sprite2d.flip_h:
+		sprite2d.flip_h = false
+	else:
+		sprite2d.flip_h = true
+	
+	var rand = RandomNumberGenerator.new()
+	timeLimit = randf_range(minFlipTime, maxFlipTime)
