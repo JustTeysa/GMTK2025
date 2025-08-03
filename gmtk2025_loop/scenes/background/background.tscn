@@ -126,8 +126,7 @@ scale = Vector2(6.83079, 6.83078)
 texture = ExtResource("13_aga1r")
 
 [node name="Floor" type="Parallax2D" parent="."]
-z_index = 10
-scroll_scale = Vector2(1.05, 1)
+z_index = 110
 repeat_size = Vector2(3839.96, 0)
 repeat_times = 4
 
