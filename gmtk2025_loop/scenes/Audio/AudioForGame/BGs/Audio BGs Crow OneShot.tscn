@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://b064m3hrpxfyr"]
+
+[ext_resource type="Script" uid="uid://lf6dt3pr2jjn" path="res://scenes/Audio/AudioForGame/BGs/audio_b_gs_bird_chirp_one_shot.gd" id="1_f7fkb"]
+[ext_resource type="AudioStream" uid="uid://mnd6p2ytk8p8" path="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_01.wav" id="2_f7fkb"]
+[ext_resource type="AudioStream" uid="uid://cpkppjp0k8bef" path="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_02.wav" id="3_hijom"]
+[ext_resource type="AudioStream" uid="uid://43owyjn0oa5v" path="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_03.wav" id="4_f7fkb"]
+[ext_resource type="AudioStream" uid="uid://tbveldv80c8y" path="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_04.wav" id="5_cfm4k"]
+[ext_resource type="AudioStream" uid="uid://cp0ti5so64pmw" path="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_05.wav" id="6_gwhfn"]
+[ext_resource type="AudioStream" uid="uid://cyrn4xrjb57sk" path="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_06.wav" id="7_qfwsv"]
+[ext_resource type="AudioStream" uid="uid://dnc58dnob7ymx" path="res://Audio/Originals/BGs/One Shot/GMTK2025_AmbCrow_OS_1ch_07.wav" id="8_wypa8"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w2jtn"]
+random_pitch = 1.1
+random_volume_offset_db = 1.0
+streams_count = 7
+stream_0/stream = ExtResource("2_f7fkb")
+stream_1/stream = ExtResource("3_hijom")
+stream_2/stream = ExtResource("4_f7fkb")
+stream_3/stream = ExtResource("5_cfm4k")
+stream_4/stream = ExtResource("6_gwhfn")
+stream_5/stream = ExtResource("7_qfwsv")
+stream_6/stream = ExtResource("8_wypa8")
+
+[node name="AudioBGs" type="Node2D" node_paths=PackedStringArray("timer", "audioPlayer")]
+script = ExtResource("1_f7fkb")
+timer = NodePath("BG_OneShot_Looping/Timer")
+minimumTimerInterval = 1.0
+maximumTimerInterval = 4.0
+audioPlayer = NodePath("BG_OneShot_Looping")
+
+[node name="BG_OneShot_Looping" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_w2jtn")
+volume_db = -18.0
+max_distance = 1200.0
+attenuation = 2.0
+max_polyphony = 2
+panning_strength = 1.5
+bus = &"BGs"
+
+[node name="Timer" type="Timer" parent="BG_OneShot_Looping"]
+wait_time = 10.0
+autostart = true
