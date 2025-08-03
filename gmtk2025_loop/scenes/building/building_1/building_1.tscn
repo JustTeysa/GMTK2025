@@ -48,7 +48,7 @@ position = Vector2(144, -1)
 
 [node name="AudioBGs" parent="." instance=ExtResource("4_jcx1k")]
 position = Vector2(200, -385)
-minimumTimerInterval = 10.0
-maximumTimerInterval = 15.0
+minimumTimerInterval = 6.0
+maximumTimerInterval = 12.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
