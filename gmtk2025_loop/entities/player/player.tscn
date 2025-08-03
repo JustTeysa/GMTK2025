@@ -68,7 +68,7 @@ stream_0/stream = ExtResource("24_gt4e4")
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("LandAudioStreamPlayer") groups=["player"]]
 floor_stop_on_slope = false
 script = ExtResource("1_symyc")
-Speed = 375.0
+Speed = 350.0
 JumpVelocity = -1100.0
 GravityMod = 3.1
 TotalJumps = 2

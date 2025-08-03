@@ -37,6 +37,7 @@ one_way_collision = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-222, -705, -222, -678, 209, -680, 209, -705, 176, -705, 148, -721, -140, -721, -165, -705)
+one_way_collision = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(144, -1)
