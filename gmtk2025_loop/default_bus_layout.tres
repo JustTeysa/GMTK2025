@@ -1,4 +1,31 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://hlatuiqf8en1"]
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://hlatuiqf8en1"]
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_j3pel"]
+resource_name = "Compressor"
+threshold = -22.0
+attack_us = 2000.0
+release_ms = 900.0
+mix = 0.9
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
+resource_name = "Reverb"
+predelay_msec = 50.0
+predelay_feedback = 0.2
+room_size = 0.1
+damping = 0.6
+spread = 0.2
+hipass = 0.22
+wet = 0.2
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_g28q7"]
+resource_name = "Reverb"
+predelay_msec = 50.0
+predelay_feedback = 0.2
+room_size = 0.1
+damping = 0.6
+spread = 0.2
+hipass = 0.22
+wet = 0.2
 
 [resource]
 bus/1/name = &"Dialog"
@@ -13,6 +40,8 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 0.0
 bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectCompressor_j3pel")
+bus/2/effect/0/enabled = true
 bus/3/name = &"SFX"
 bus/3/solo = false
 bus/3/mute = false
@@ -23,20 +52,24 @@ bus/4/name = &"Foley"
 bus/4/solo = false
 bus/4/mute = false
 bus/4/bypass_fx = false
-bus/4/volume_db = 0.0
+bus/4/volume_db = 3.04474
 bus/4/send = &"SFX"
 bus/5/name = &"UI"
 bus/5/solo = false
 bus/5/mute = false
 bus/5/bypass_fx = false
-bus/5/volume_db = -10.5236
+bus/5/volume_db = 3.2425
 bus/5/send = &"SFX"
+bus/5/effect/0/effect = SubResource("AudioEffectReverb_j3pel")
+bus/5/effect/0/enabled = true
 bus/6/name = &"BGs"
 bus/6/solo = false
 bus/6/mute = false
 bus/6/bypass_fx = false
-bus/6/volume_db = 1.65377
+bus/6/volume_db = -0.130497
 bus/6/send = &"SFX"
+bus/6/effect/0/effect = SubResource("AudioEffectReverb_g28q7")
+bus/6/effect/0/enabled = true
 bus/7/name = &"Hard FX"
 bus/7/solo = false
 bus/7/mute = false

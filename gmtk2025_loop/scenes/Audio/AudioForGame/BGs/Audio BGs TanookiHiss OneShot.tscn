@@ -18,11 +18,11 @@ audioPlayer = NodePath("BG_OneShot_Looping")
 
 [node name="BG_OneShot_Looping" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_w2jtn")
-volume_db = -14.0
+volume_db = -19.0
 max_distance = 800.0
-attenuation = 2.0
+attenuation = 0.7
 max_polyphony = 2
-panning_strength = 1.5
+panning_strength = 2.0
 bus = &"BGs"
 
 [node name="Timer" type="Timer" parent="BG_OneShot_Looping"]

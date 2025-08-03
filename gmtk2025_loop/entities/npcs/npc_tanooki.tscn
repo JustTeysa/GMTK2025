@@ -29,8 +29,8 @@ position = Vector2(400, 0)
 visible = false
 
 [node name="AudioBGs" parent="." instance=ExtResource("4_475qp")]
-minimumTimerInterval = 3.0
-maximumTimerInterval = 9.0
+minimumTimerInterval = 7.0
+maximumTimerInterval = 13.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
