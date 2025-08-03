@@ -13,7 +13,7 @@ config_version=5
 config/name="GMTK2025_Loop"
 run/main_scene="uid://dc5ub2feucfkv"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://c3446u36aocxp"
 run/canvas_textures/default_texture_filter=1
 
 [display]
