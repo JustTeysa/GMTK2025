@@ -25,16 +25,12 @@ stream_7/stream = ExtResource("9_7ym8b")
 
 [node name="AudioBGs" type="Node2D" node_paths=PackedStringArray("timer", "audioPlayer")]
 script = ExtResource("1_k4anv")
-timer = NodePath("Timer")
+timer = NodePath("BG_OneShot_Looping/Timer")
 minimumTimerInterval = 1.0
 maximumTimerInterval = 4.0
-audioPlayer = NodePath("Timer/BG_OneShot_Looping")
+audioPlayer = NodePath("BG_OneShot_Looping")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-autostart = true
-
-[node name="BG_OneShot_Looping" type="AudioStreamPlayer2D" parent="Timer"]
+[node name="BG_OneShot_Looping" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_w2jtn")
 volume_db = -18.0
 max_distance = 1200.0
@@ -42,3 +38,7 @@ attenuation = 2.0
 max_polyphony = 2
 panning_strength = 1.5
 bus = &"BGs"
+
+[node name="Timer" type="Timer" parent="BG_OneShot_Looping"]
+wait_time = 10.0
+autostart = true
